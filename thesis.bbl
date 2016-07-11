@@ -1,0 +1,47 @@
+\begin{thebibliography}{1}
+
+\bibitem{DSP0}
+``Patrón de diseño.''
+  \url{https://es.wikipedia.org/wiki/Patr%C3%B3n_de_dise%C3%B1o}, consultado el
+  9 de julio de 2016.
+
+\bibitem{MVP0}
+``Model-view-presenter.''
+  \url{https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter},
+  consultado el 10 de julio de 2016.
+
+\bibitem{MVP1}
+``Differences between mvc and mvp for beginners.''
+  \url{http://www.codeproject.com/Articles/288928/Differences-between-MVC-and-MVP-for-Beginners},
+  consultado el 10 de julio de 2016.
+
+\bibitem{DSP1}
+E.~Freeman, E.~Freeman, K.~Sierra, and B.~Bates, {\em Head First: Design
+  Patterns}.
+\newblock O'Reilly, 1~ed., 2004.
+
+\bibitem{SNG0}
+``Singleton pattern.'' \url{https://en.wikipedia.org/wiki/Singleton_pattern},
+  consultado el 10 de julio de 2016.
+
+\bibitem{SCRM0}
+``Scrum (software development).''
+  \url{https://en.wikipedia.org/wiki/Scrum_%28software_development%29},
+  consultado el 7 de julio de 2016.
+
+\bibitem{SCRM1}
+``Scrum basics.''
+  \url{http://www.scrumguides.org/docs/scrumguide/v1/Scrum-Guide-ES.pdf},
+  consultado el 7 de julio de 2016.
+
+\bibitem{SCRM12}
+K.~Rubin, {\em Essential Scrum: A practical guide to the most popular agile
+  process}.
+\newblock Addison-Wesley Professional, 1~ed., 2012.
+
+\bibitem{SCRM2}
+``Artefactos en scrum: claves para una organización diaria.''
+  \url{http://www.desarrolloweb.com/articulos/artefactos-scrum.html},
+  consultado el 7 de julio de 2016.
+
+\end{thebibliography}

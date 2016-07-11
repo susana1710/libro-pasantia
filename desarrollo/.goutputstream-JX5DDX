@@ -1,0 +1,163 @@
+\section{Concepción} \label{sect:Concepcion}
+
+En esta fase toman parte dos etapas fundamentales. La primera de ellas es la etapa de captura de requerimientos sobre los cuales se diseñará la solución y la segunda, es la elaboración de una primera aproximación de la solución. De la solución inicial se obtuvo una solución final producto del refinamiento.
+
+Al inicio de esta etapa se realizaron reuniones que permitieran recaudar material existente sobre algún producto similar. Una vez con este material a la mano, se procede al análisis y entendimiento del mismo. Posteriormente se realizaron reuniones periódicas con el \textit{dueño del producto} (Alexander Ramírez) que fue el encargado de dar a conocer los requerimientos principales necesarios para realizar el prototipo. Es importante destacar que durante la realización de las reuniones participaron miembros de la empresa que están muy familiarizados con el ambiente bancario. La información suministrada por los participantes fue clave en lo que respecta al entendimiento del proyecto.
+
+A partir de las reuniones mencionadas anteriormente, se determinaron los requerimientos funcionales y los actores del sistema. Quedó claro que al arquitectura del prototipo no subyace únicamente en la elaboración de un sistema de software. También se debía elaborar una arquitectura de un sistema que pudiera trabajar de manera distribuida y fuera escalable.  
+
+\subsection{La Arquitectura del Sistema}
+
+De las diferentes reuniones se capturaron una serie de requerimientos que sugerían el diseño de una arquitectura de sistema en lugar a una arquitectura de software. El sistema debe cumplir con las siguientes características:
+
+\begin{itemize}
+
+\item \textbf{Escalable}
+
+Es muy importante que el sistema pueda crecer según van creciendo las necesidades del banco. Incrementar el poder de procesamiento del banco debe ser un proceso ajustable y sencillo.
+
+\item \textbf{Económico}
+
+En la actualidad los bancos utilizan \textit{midrange computers} con un gran poder de procesamiento pero estas computadoras son muy costosas (comparandolas con computadoras normales). Entre las más comunes destaca la \textit{AS/400}, esta computadoras han sido desarolladas por IBM. Los sistemas que corren sobre ellas utilizan tecnologías CAMBIAR ESTO -> muy viejas(NO MENCIONAR VIEJAS, ESTAS TECNOLOGIAS FUERON DISENADAS SEGUN UN PROPOSITO PERO YA NO SE INVIERTE DEMASIADO EN ELLAS. LA WEB ES ALGO QUE ESTA MEJORANDO DIA A DIA RESPALDADA POR UNA COMUNIDAD OPENSOURCE Y LIBRE). Con tecnologías Web se desea crear un sistema que brinde las mismas capacidades que tienen los cores bancarios pero que sea económico.
+
+\item \textbf{Seguro}
+
+Los canales sobre los cuales se transmite la información deben ser seguros. 
+
+\item \textbf{Alcanzable} 
+
+Se desea realizar un banco moderno que se pueda comunicar con cualquier dispositivo capaz de conectarse a la Web.
+
+\item \textbf{Disponibilidad} (MENCIONAR AL RESPECTO)
+
+\item \textbf{Auditable} 
+
+Los bancos manejan mucho dinero, por lo tanto, es necesario que toda operación que se realice quede registrada para poder realizar auditorias posteriores. Las auditorias deben ser fáciles de realizar.
+\end{itemize}
+
+Dadas las restricciones mencionadas anteriormente, se diseñó una arquitectura de sistema que cumpliera con los requerimientos, tal como muestra la figura ~\ref{fig:solucionGeneral}.A continuación se muestra como se llegó Luego a tal solución, que realmente fue la conjunción de diversas soluciones específicas.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.5,type=png,ext=.png,read=.png]{imagenes/esquemaGeneral}
+  \caption{Solución general.}
+  \label{fig:solucionGeneral}
+\end{figure}
+
+\subsubsection{Solución Distribuida}
+
+Se decidió optar por un sistema distribuido para cumplir con los requerimientos de costos y escalabilidad.  Un sistema distribuido es un sistema de software en el cual componentes (nodos) dentro de una red se comunican a través de mensajes para lograr un objetivo en común. Los nodos pertenecientes a la red tienen tareas especificas que cumplir y el objetivo en común es alcanzado cuando se unen los resultados de todas estas tareas.
+
+Un sistema basado en una arquitectura distribuida ofrece mayor flexibilidad. Un banco pequeño podría comenzar con un sistema de unos pocos nodos e ir añadiéndole según sus necesidades. Entre las principales características que aporta este modelo tenemos:
+
+\begin{itemize}
+\item MENCIONAR DISPONIBILIDAD EN ALGUNA PARTE ACA.
+\item Por su flexibilidad y escalabilidad, permite que la empresa crezca según le sea necesario.
+\item Agregar poder de computo es tan sencillo como encender un nuevo nodo y agregarlo a la red.
+\item Tener el poder de computo distribuido es más económico por las siguientes razones:
+\begin{itemize}
+\item Este modelo tiene planteado utilizar computadoras comunes en contraposición a un \textit{midrange computers} que tienen unos altos precios en el mercado.
+\item Si un \textit{midrange computers} se ha quedado corto a nivel de computo, es necesario utilizar uno poderoso para alcanzar los objetivos. Migrar un sistema
+ requiere una fuerte inversión de dinero. Mientras tanto con un sistema distribuido, no es necesario realizar ninguna migración, basta con agregar la cantidad de nodos necesarios para seguir trabajando normalmente.
+\end{itemize}
+\end{itemize}
+
+En la figura ~\ref{fig:CoreDistribuido} se muestra una primera aproximación de diseño para darle solución a los requerimientos de escalabilidad y costos económicos. El esquema muestra básicamente una serie de \textit{nodos core} que se encargaran de realizar todas las operaciones básicas de un banco, como lo son depósitos, transferencias, creación de cuentas, entre otras. Estos nodos también se encargaran de toda la comunicación hacia la base de datos. Por otro lado se encuentran los \textit{nodos de servicios web}, estos se encargan de realizar las verificaciones correspondientes de la información suministrada. Los nodos core y los nodos de servicio web se comunican directamente. La comunicación de agentes externos (aplicaciones web, moviles, entre otras) con el core bancario, se realizará a través de los nodos de servicios web que expondrán una interfaz clara de comunicación al exterior.
+
+\begin{figure}
+  \center
+  \includegraphics[scale=0.5,type=png,ext=.png,read=.png]{imagenes/Sistemas distribuidos}
+  \caption{Diseño inicial de una solución distribuida.}
+  \label{fig:CoreDistribuido}
+\end{figure}
+
+\subsubsection{Base de Datos}
+
+En cuanto a la administración de la información se planteaban dos opciones. Una de ellas era utilizar un manejador de base de datos relacional y por otro lado se planteaba utilizar una base de datos nosql. La base de datos nosql aporta escalabilidad ya que estas suelen ser distribuidas y flexibilidad porque no utilizan un modelo de datos rígido. Por otro lado, los manejadores relacionales implementan soporte transaccional (cumplen con las propiedades ACID) como fue mencionado en el marco tecnológico (capitulo ~\ref{chap:Marco Tecnologico}). 
+
+Durante el proceso de concepción se decidió que la información almacenada por el banco perduraría y no convenía eliminarla. La información tiene un valor muy preciado y actualmente utilizado BI (Business Intelligence) se pueden realizar una cantidad de funcionalidades que le agreguen valor al producto. Esta decisión dificultaba el uso de de una base de datos relacional ya que ellas al administrar una gran cantidad de información sus tiempos de respuesta empeoran. No era conveniente utilizar una base de datos nosql porque ellas no garantizan las propiedades ACID y en el negocio bancario el manejo del dinero debe ser muy cuidadoso y no se pueden permitir errores como lecturas sucias. 
+
+Por estas razones se tomo la decisión de utilizar los dos manejadores de base de datos. Se utilizaría el manejador de base de datos relacional para garantizar la transaccionalidad y solo administraría la información que hace referencia al dinero. Se utilizaría la base de datos nosql para administrar el resto de la información. De esta manera se obtendría la escalabilidad que proporcionan las bases de datos nosql y el manejo transaccional que aportan los manejadores relacionales. Al incluir la base de datos nosql en el esquema de administración de los datos se libera de una gran carga al manejador relacional y de esta forma los tiempos de respuesta serian mejores. 
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.5,type=png,ext=.png,read=.png]{imagenes/Distribucion de datos}
+  \caption{Esquema de distribución de datos.}
+  \label{fig:DistribucionDeDatos}
+\end{figure}
+
+La figura ~\ref{fig:DistribucionDeDatos} muestra una representación de la arquitectura de  administración de datos que interactua con el sistema bancario.
+
+\subsubsection{Seguridad}
+
+Unos de los requerimientos principales de cualquier sistema bancario es que sea seguro. Se debe garantizar que la información no será alterada ni vista por usuarios sin los permisos correspondientes. Por esta razón, todos los canales de comunicación existentes entre los nodos del sistema bancario estarán cifrados. Se decidió utilizar el protocolo TLS. Este protocolo utiliza criptografía asimétrica para negociar el intercambio de claves necesarias para utilizar posteriormente criptografía convencional (simétrica). Es importante mencionar que para realizar el intercambio mencionado anteriormente se utilizan certificados X.509 y existe todo un proceso para obtener un certificado avalado por alguna autoridad. Cuando se habla de certificados X.509 no se puede dejar de mencionar a las autoridades certificadoras. Estas autoridades son entidades que emiten certificados digitales. Esto permite a otras dos entidades que quieren comunicarse confiar en las credenciales mostradas, si estas han sido firmadas por alguna autoridad certificadora de confianza en común. De esta manera se puede realizar la comunicación segura entre dos entidades desconocidas si las dos confían en alguna autoridad certificadora reconocida.
+
+Para el sistema se toma como autoridad certificadora a la entidad bancaria en si. Los actores que quieren intercambiar información son los \textit{nodos core} y los \textit{nodos de servicio web}. Por esta razón un nodo core se comunica con un nodo de servicio web si y solo si cada estos nodos poseen un certificado digital firmado por la entidad bancaria. Por lo tanto, en este esquema existen dos tipos de certificados, los que pertenecen a los nodos de servicio web y los que pertenecen a los core. 
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.5,type=png,ext=.png,read=.png]{imagenes/certificates}
+  \caption{Conexión entre dos nodos que tienen certificados firmados por la autoridad.}
+  \label{fig:TLS}
+\end{figure}
+
+La figura ~\ref{fig:TLS} Muestra a un nodo cliente (nodo de servicio web) y uno servidor (nodo core) comunicándose. Cada uno utiliza un certificado firmado por la autoridad certificadora (la entidad bancaria). Es importante aclarar que la comunicación no se puede realizar utilizando certificados auto firmados (firmados por el mismo nodo) y tampoco si alguno de los nodos carece de certificado.
+
+\subsubsection{Alcance}
+
+Para asegurar que el sistema sea alcanzable es necesario tener en cuenta que dispositivos utilizarán el mismo. Se desea que el sistema esté orientado a brindar comodidad a los clientes de la entidad financiera mientras realizan operaciones bancarias. Hoy en día esta comodidad se ve reflejada mediante el uso de dispositivos telefonicos, tabletas, computadoras personales, entre otros. Todos estos dispositivos son capaces de manejar diferentes tecnologías pero todos coinciden en el soporte para la tecnología web. Por esta razón se decidió que el protocolo http será usado en las comunicaciones entre la interfaz del banco y las aplicaciones que la utilizan. De esta forma se garantiza que cualquier dispositivo moderno sea capaz de interactuar con el banco.
+
+\subsubsection{Auditabilidad}
+
+Uno de los requerimientos más importantes a cumplir es el que compete a toda operación realizada por el sistema. Estas operaciones deben poder ser verificadas en cualquier momento para detectar anomalías. Si el sistema actúa de manera errada por alguna razón esto garantiza que el error puede ser rastreado y solucionado rápidamente. 
+
+Debido que el sistema bancario está compuesto por una red de nodos, es necesario que cada uno de ellos mantenga registrada la información particular que maneja. Sin embargo resulta inconveniente tener que verificar cada nodo para encontrar la información que se desea. No resulta práctico tener la información registrada pero que el proceso para obtenerla sea complicado. Es de considerar que las auditorias que se realicen sobre el sistema las hará en su mayoría un ser humano.  Debido a que ese proceso suele ser tedioso, es de intención que el sistema bancario brinde al usuario la mayor comodidad al momento de presentar la información. Por esto se decidió que que la información aún cuando puede ser registrada locamente en cada nodo perteneciente al sistema, será almacenada también en un servidor  dedicado a manejar esta información y presentarla cómodamente. 
+
+La figura ~\ref{fig:logs} muestra como cada nodo perteneciente al sistema bancario está en la obligación de registrar las operaciones que realizan. Luego esta información es enviada a un servidor centralizado que se encargará de facilitarla vía web.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.5,type=png,ext=.png,read=.png]{imagenes/logs}
+  \caption{Arquitectura del sistema de logs.}
+  \label{fig:logs}
+\end{figure}
+
+\subsection{La Arquitectura de Software}
+
+(HABLAR DE LA IMPORTANCIA QUE TIENE LA WEB 2.0 EN ESTA INTRODUCCION) -> (PUEDE QUE NO DIRECTAMENTE PARA ESTE SISTEMA PERO PARA LOS SISTEMAS QUE LO UTILIZARAN) -> (DE ALLI EL DISENO DE LA BASE DE DATOS)
+
+Esta etapa contempla el diseño de la estructura de datos sobre la cual se basará todo el sistema y las funcionalidades que serán expuestas. Esta estructura funcionará en la arquitectura del sistema que fue mencionada anteriormente. Se desea destacar que las funcionalidades resultantes de este proceso de diseño se pretende sean los mas simples y atómicas posibles. El sistema no pretende ser algo complejo, la simplicidad del mismo radica en que no está concebido para ser utilizado por seres humanos (como usuarios finales). El sistema pretende ser utilizado por aplicaciones desarrolladas para y por los seres humanos. La simplicidad y atomicidad de las funcionalidades tiene un propósito claro, brindar flexibilidad de uso. Dicha flexibilidad permitirá unir los resultados de las diferentes funcionalidades expuestas por el sistema, de esta forma elaborar funcionaliades mucho más complejas, que exploten al máximo las bondades que ofrece la estructura de datos y que se realicen fácilmente.
+
+\subsubsection{Estructura de Datos}
+
+La estructura de datos es la base de la mayoría de los sistemas utilizados hoy en día. La información es altamente valorada en la actualidad y un banco debe ser garante de proteger, tanto la información de sus clientes como su dinero. Hoy en día grandes empresas de software, como lo son google y facebook prestan servicios gratuitos a sus usuarios pero se lucran a través de la venta de información o prestando servicios de publicidad  utilizando la misma, entre otras cosas. Bien es sabido que la información que almacenan los bancos es privada y no puede ser vendida, pero no deja de ser muy valiosa. Con ella se pude realizar procesos de inteligencia de negocios que permitan, por ejemplo, otorgar tarjetas de crédito (o aumentos de crédito) más fácilmente a clientes que hayan cambiado de residencia de una zona pobre a una zona de clase media. Por lo tanto, con el diseño de la estructura de datos se pretende lo siguiente: 
+\begin{itemize}
+\item Ofrecer las operaciones que tradicionalmente ofrece un sistema bancario actual. 
+\item Poder crear funcionalidades más amigables que le permitan al usuario sentirse cómodo con los sistemas que utilicen esta plataforma bancaria.
+\item La información debe persistir, de esta forma se pueden desarrollar procesos de inteligencia de negocios que le brinden mayores utilidades a la entidad financiera y una mayor comodidad a el usuario final.
+\end{itemize}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4,type=png,ext=.png,read=.png,angle=90,origin=c]{imagenes/datos}
+  \caption{Estructura de datos del sistema bancario.}
+  \label{fig:datos}
+\end{figure}
+
+La figura ~\ref{fig:datos} muestra la estructura de datos diseñada con el fin de garantizar lo mencionado anteriormente. Con esta arquitectura de datos se pueden realizar funcionalidades novedosas ademas de las que convencionalmente utiliza un banco. Alguna de estas funcionalidades podrían ser:
+\begin{itemize}
+\item Realizar transferencias a persona de las cuales se desconoce el numero de cuenta.
+\item Permite definir un monto por defecto para realizar retiros de efectivo rápidamente por los cajeros automáticos. 
+\item Definir a que cuenta será transferido dinero proveniente de cierto grupo de personas.
+\end{itemize}
+
+\subsubsection{Funcionalidades}
+
+Las funcionalidades que expondrá el prototipo bancario son funcionalidades muy simples y estas serán expuestas utilizando el protocolo IFF (ver anexos). Al ser este un sistema que utiliza tecnología web, se decidió ver todas las clases mostradas en la figura  ~\ref{fig:datos} como recursos y se diseñó un protocolo de comunicación basado en el protocolo IFX y utilizando los principios de una arquitectura REST. El protocolo IFF prescribe que todo (en el modelo de datos) es un recurso y para realizar alguna operación sobre los recursos, se debe realizar una petición y se retornará una respuesta. Cada petición está asociada a un recurso y sobre estos recursos se pueden realizar las siguientes operaciones:
+\begin{itemize}
+\item Add (añadir)
+\item Mod (modificar)
+\item Del (eliminar)
+\item Can (cancelar)
+\item Inq (consultar)
+\end{itemize}
+Es de vital importancia utilizar un protocolo de comunicación para interactuar con el sistema bancario. Esto brindará unas reglas de comunicación claras lo cual facilitará el uso del sistema y la aceptabilidad del mismo. Si el protocolo se llega a estandarizar en diversos sistemas bancarios (como lo hizo el IFX en Estados Unidos) el resultado será que con una sola aplicación un usuario podrá acceder a sus cuentas en múltiples entidades financieras y realizar las operaciones de su agrado.
