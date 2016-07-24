@@ -1,0 +1,124 @@
+\section{Desarrollo} \label{sect:desarrollo}
+
+Durante esta fase se implementó progresivamente la versión alfa del prototipo funcional. A continuación se presentará los \textit{sprints} realizados, sus objetivos y los resultados obtenidos al final de cada uno.
+
+\subsection{Sprint 1}
+
+\subsubsection{Objetivos}
+	\begin{itemize}
+	\item Mostrar información del balance de una cuenta
+	\item Permitir la creación de un nuevo gasto
+	\end{itemize}
+
+\subsubsection{Resultados}
+\begin{itemize}
+\item Se creó la interfaz para ver el total de ingresos, gastos y el balance de la cuenta
+\item Se crearon las consultas necesarias a la base de datos para obtener el total de ingresos, gastos y balance
+\item Se creó la interfaz para la creación de un nuevo gasto
+\item Se creó la consulta para insertar un nuevo gasto en la base de datos
+\end{itemize}
+
+\subsection{Sprint 2}
+
+\subsubsection{Objetivos}
+\begin{itemize}
+\item Mostrar la lista de categorías
+\item Permitir la creación de un nuevo ingreso
+\item Permitir guardar fotos de un $\entry$
+\item Asociar un $\entry$ a una categoría
+\end{itemize}
+
+\subsubsection{Resultados}
+\begin{itemize}
+\item Se creó en la base de datos del dispositivo una consulta para guardar la lista de categorías por defecto
+\item Se creó la interfaz para listar las categorías guardadas en la aplicación
+\item Se adaptó y reutilizó la vista existente para crear un gasto para permitir la creación de un ingreso
+\item Se agregó la funcionalidad de tomar fotos relacionadas a un $\entry$
+\item Se creó la consulta para guardar en la base de datos el nombre de las fotos tomadas
+\item se agregó la funcionalidad para poder asociar un $\entry$ a una categoría existente
+
+\end{itemize}
+
+\subsection{Sprint 3}
+\subsubsection{Objetivos}
+\begin{itemize}
+\item Mostrar la lista de $\entries$ del mes actual
+\item Mostrar los detalles de los $\entries$ existentes
+\item Permitir editar y borrar un $\entry$ existente
+\item Implementar una calculadora para guardar el monto de un $\entry$
+\end{itemize}
+
+\subsubsection{Resultados}
+\begin{itemize}
+\item Se creó la interfaz para mostrar una lista con los gastos y otra con los ingresos del mes actual
+\item Se creó la consulta en la base de datos para obtener los $\entries$
+\item Se agregó la funcionalidad para ver los detalles de un $\entry$ ya existente, y poder editarlo
+\item Se agregó la funcionalidad para eliminar $\entries$
+\item Se creó la interfaz para usar la calculadora que permita ingresar el monto de un $\entry$
+\end{itemize}
+
+\subsection{Sprint 4}
+\subsubsection{Objetivos}
+\begin{itemize}
+\item Permitir el manejo de nuevas cuentas
+\end{itemize}
+
+\subsubsection{Resultados}
+\begin{itemize}
+
+\item Se creó la interfaz para crear una nueva cuenta
+\item Se creó la consulta en la base de datos para persistir cuentas
+\item Se implementó la funcionalidad para listar las cuentas del usuario 
+\item Se implementó la funcionalidad para cambiar de cuenta
+\item Se implementó la funcionalidad para editar el nombre de una cuenta existente
+\item Se implementó la funcionalidad para eliminar cuentas existentes
+\item Se implementó la funcionalidad para cambiar el estado de una cuenta: activa o archivada
+\item Se implementó la funcionalidad para ver la lista de $\entries$ de una cuenta desde su creacion hasta la fecha actual
+
+\end{itemize}
+
+
+\subsection{Sprint 5}
+\subsubsection{Objetivos}
+\begin{itemize}
+\item Permitir el manejo de las fotos de un $\entry$
+\item Permitir el manejo de las categorias
+\end{itemize}
+
+\subsubsection{Resultados}
+\begin{itemize}
+\item Se agregó la funcionalidad para ver las fotos de un $\entry$
+\item Se agregó la funcionalidad para borrar las fotos de un $\entry$
+\item Se agregó la funcionalidad para cambiar la ubicacion en el dispositivo de las fotos tomadas de un $\entry$
+\item Se agregó la funcionalidad para crear una categoría
+\item Se agregó la funcionalidad para eliminar una categoría existente
+\item Se agregó la funcionalidad para editar una categoría existentes
+\end{itemize}
+
+
+
+\subsection{Sprint 6}
+\subsubsection{Objetivos}
+\begin{itemize}
+\item Mostrar un reporte con la lista de $\entries$ asociados a una cuenta, en un rango de fecha dado
+\item Mostrar un reporte con el balance total por categorías asociadas a una cuenta, en un rango de fecha dado
+\item Permitir el envío de los reportes en un archivo PDF a otras personas
+
+\end{itemize}
+
+\subsubsection{Resultados}
+\begin{itemize}
+\item Se implementó la funcionalidad para listar los $\entries$ de una cuenta en el rango de fecha ingresado por el usuario
+\item Se implementó la funcionalidad para listar el balance total de las categorías de una cuenta en el rango de fecha ingresado por el usuario
+\item Se creó la funcionalidad para compartir el reporte con la lista de $\entries$,incluyendo las fotos, de la cuenta en el rango de fecha ingresado.
+\item Se creó la funcionalidad para compartir el reporte con la lista de $\entries$, sin incluir las fotos, de la cuenta en el rango de fecha ingresado.
+\item Se creó la funcionalidad para compartir el reporte con el balance total de las categorías de la cuenta en el rango de fecha ingresado.
+\end{itemize}
+
+\subsection{Sprint 7}
+\subsubsection{Objetivos}
+
+\subsubsection{Resultados}
+
+
+

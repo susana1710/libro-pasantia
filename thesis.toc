@@ -1,0 +1,47 @@
+\select@language {spanish}
+\contentsline {chapter}{\'Indice general}{\es@scroman {vi}}{chapter*.2}
+\contentsline {chapter}{\'{I}ndice de cuadros}{\es@scroman {viii}}{chapter*.3}
+\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {ix}}{chapter*.4}
+\contentsline {chapter}{Lista de S\IeC {\'\i }mbolos y Abreviaturas}{\es@scroman {x}}{chapter*.6}
+\contentsline {chapter}{Introducci\IeC {\'o}n}{1}{section*.7}
+\contentsline {chapter}{Bibliograf\'{\i }a}{2}{chapter*.9}
+\contentsline {chapter}{\numberline {A}Intercambio de Informaci\IeC {\'o}n Financiera (IFF)}{4}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Tipo de datos}{5}{section.Alph1.1}
+\contentsline {subsection}{\numberline {A.1.1}Cadena de caracteres}{5}{subsection.Alph1.1.1}
+\contentsline {subsection}{\numberline {A.1.2}Enumeraci\IeC {\'o}n}{6}{subsection.Alph1.1.2}
+\contentsline {subsection}{\numberline {A.1.3}Tiempo y Hora}{6}{subsection.Alph1.1.3}
+\contentsline {subsection}{\numberline {A.1.4}Entero}{6}{subsection.Alph1.1.4}
+\contentsline {subsection}{\numberline {A.1.5}Decimal}{6}{subsection.Alph1.1.5}
+\contentsline {subsection}{\numberline {A.1.6}Booleano}{7}{subsection.Alph1.1.6}
+\contentsline {section}{\numberline {A.2}Tipos de Enumeraci\IeC {\'o}n}{7}{section.Alph1.2}
+\contentsline {subsection}{\numberline {A.2.1}Correspondiente a personVerifyType}{7}{subsection.Alph1.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Correspondiente a nameAddrType}{7}{subsection.Alph1.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Correspondiente a addrType}{8}{subsection.Alph1.2.3}
+\contentsline {subsection}{\numberline {A.2.4}Correspondiente a cardStatusCode}{8}{subsection.Alph1.2.4}
+\contentsline {subsection}{\numberline {A.2.5}Correspondiente a accountStatusCode}{8}{subsection.Alph1.2.5}
+\contentsline {subsection}{\numberline {A.2.6}Correspondiente a cardType}{8}{subsection.Alph1.2.6}
+\contentsline {subsection}{\numberline {A.2.7}Correspondiente a brand}{9}{subsection.Alph1.2.7}
+\contentsline {subsection}{\numberline {A.2.8}Correspondiente a transType}{9}{subsection.Alph1.2.8}
+\contentsline {subsection}{\numberline {A.2.9}Correspondiente a acctType}{9}{subsection.Alph1.2.9}
+\contentsline {subsection}{\numberline {A.2.10}Correspondiente a contactInfo}{10}{subsection.Alph1.2.10}
+\contentsline {section}{\numberline {A.3}Recursos}{10}{section.Alph1.3}
+\contentsline {subsection}{\numberline {A.3.1}Recursos concretos}{10}{subsection.Alph1.3.1}
+\contentsline {subsubsection}{\numberline {A.3.1.1}Nombre de usuario ``login''}{11}{subsubsection.Alph1.3.1.1}
+\contentsline {subsubsection}{\numberline {A.3.1.2}Cliente ``customer''}{11}{subsubsection.Alph1.3.1.2}
+\contentsline {subsubsection}{\numberline {A.3.1.3}Informaci\IeC {\'o}n del banco ``bankInformation''}{13}{subsubsection.Alph1.3.1.3}
+\contentsline {subsubsection}{\numberline {A.3.1.4}Direcci\IeC {\'o}n ``address''}{14}{subsubsection.Alph1.3.1.4}
+\contentsline {subsubsection}{\numberline {A.3.1.5}Informaci\IeC {\'o}n de contacto ``contactInfo''}{16}{subsubsection.Alph1.3.1.5}
+\contentsline {subsubsection}{\numberline {A.3.1.6}Informaci\IeC {\'o}n personal ``personalInfo''}{19}{subsubsection.Alph1.3.1.6}
+\contentsline {subsubsection}{\numberline {A.3.1.7}Preferencia ``preference''}{21}{subsubsection.Alph1.3.1.7}
+\contentsline {subsubsection}{\numberline {A.3.1.8}Transferencias a terceros ``registeredRecipient''}{23}{subsubsection.Alph1.3.1.8}
+\contentsline {subsubsection}{\numberline {A.3.1.9}Persona ``person''}{25}{subsubsection.Alph1.3.1.9}
+\contentsline {subsubsection}{\numberline {A.3.1.10}Conocido ``known''}{26}{subsubsection.Alph1.3.1.10}
+\contentsline {subsubsection}{\numberline {A.3.1.11}Miembro de un grupo ``groupMember''}{27}{subsubsection.Alph1.3.1.11}
+\contentsline {subsubsection}{\numberline {A.3.1.12}Grupo ``group''}{28}{subsubsection.Alph1.3.1.12}
+\contentsline {subsubsection}{\numberline {A.3.1.13}Estado de la cuenta ``accountStatus''}{29}{subsubsection.Alph1.3.1.13}
+\contentsline {subsubsection}{\numberline {A.3.1.14}Estado de la tarjeta ``cardStatus''}{30}{subsubsection.Alph1.3.1.14}
+\contentsline {subsubsection}{\numberline {A.3.1.15}Tarjeta ``card''}{31}{subsubsection.Alph1.3.1.15}
+\contentsline {subsubsection}{\numberline {A.3.1.16}Balance ``balance''}{33}{subsubsection.Alph1.3.1.16}
+\contentsline {subsubsection}{\numberline {A.3.1.17}Transacci\IeC {\'o}n ``transaction''}{33}{subsubsection.Alph1.3.1.17}
+\contentsline {subsubsection}{\numberline {A.3.1.18}Transacci\IeC {\'o}n ``transaction''}{36}{subsubsection.Alph1.3.1.18}
+\contentsline {subsection}{\numberline {A.3.2}Recursos abstractos}{39}{subsection.Alph1.3.2}
