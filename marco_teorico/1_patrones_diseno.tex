@@ -2,13 +2,6 @@
 
 Un patrón de diseño es una solución general y repetible a problemas que suelen presentarse en el proceso de diseño de software. Para que una solución pueda ser considerada como un patrón de diseño debe ser reutilizable, es decir, que se pueda aplicar a diferentes problemas de diseño en diferentes situaciones \cite{DSP0}. A continuación se describen los patrones utilizados en el diseño de la solución del proyecto.
 
-\subsection{Modelo Vista Controlador (MVC)}
-
-Es un patrón de arquitectura de \textit{software} que divide una aplicación  en tres partes que están interconectadas: los datos y la lógica de negocio (modelo), la interfaz de usuario (vista) y el módulo encargado de gestionar las comunicaciones (controlador). Esto se utiliza para separar la representación de la información de la forma en que dicha información es presentada al usuario.
-
-\subsection{Modelo Vista Presentador (MVP)}
-
-Es una derivación del patrón Modelo Vista Controlador (MVC) que se utiliza generalmente para construir interfaces de usuario \cite{MVP0}. En este patrón, la interacción entre el modelo y la vista se logra únicamente a través del presentador, mientras que en el MVC la vista en ocasiones puede comunicarse directamente con el modelo. Otra diferencia con el patrón MVC es que en este último las peticiones son recibidas por el controlador, éste se comunica con el modelo para pedir los datos y luego se encarga de mostrar la vista adecuada. En el patrón MVP las peticiones son recibidas por la vista y delegadas al presentador, que es quien se comunica con el modelo para obtener los datos \cite{MVP1}.
 
 \subsection{\textit{Singleton}}
 
@@ -16,5 +9,7 @@ El \textit{singleton} es un patrón de diseño que asegura que la clase sólo ti
 
 \subsection{\textit{Adapter}}
 
-Transforma la interfaz de una clase en otra interfaz que el cliente espera. Esto permite que una clase que no pueda utilizar la primera interfaz, sí pueda hacerlo a través de la otra \cite{DSP1}. 
+Transforma la interfaz de una clase en otra interfaz que el cliente espera. Esto permite que una clase que no pueda utilizar la primera interfaz, sí pueda hacerlo a través de la otra \cite{DSP1}.
+
+\subsection{\textit{Factory}} 
 

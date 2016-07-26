@@ -1,47 +1,58 @@
 \select@language {spanish}
-\contentsline {chapter}{\'Indice general}{\es@scroman {vi}}{chapter*.2}
-\contentsline {chapter}{\'{I}ndice de cuadros}{\es@scroman {viii}}{chapter*.3}
-\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {ix}}{chapter*.4}
-\contentsline {chapter}{Lista de S\IeC {\'\i }mbolos y Abreviaturas}{\es@scroman {x}}{chapter*.6}
-\contentsline {chapter}{Introducci\IeC {\'o}n}{1}{section*.7}
-\contentsline {chapter}{Bibliograf\'{\i }a}{2}{chapter*.9}
-\contentsline {chapter}{\numberline {A}Intercambio de Informaci\IeC {\'o}n Financiera (IFF)}{4}{appendix.Alph1}
-\contentsline {section}{\numberline {A.1}Tipo de datos}{5}{section.Alph1.1}
-\contentsline {subsection}{\numberline {A.1.1}Cadena de caracteres}{5}{subsection.Alph1.1.1}
-\contentsline {subsection}{\numberline {A.1.2}Enumeraci\IeC {\'o}n}{6}{subsection.Alph1.1.2}
-\contentsline {subsection}{\numberline {A.1.3}Tiempo y Hora}{6}{subsection.Alph1.1.3}
-\contentsline {subsection}{\numberline {A.1.4}Entero}{6}{subsection.Alph1.1.4}
-\contentsline {subsection}{\numberline {A.1.5}Decimal}{6}{subsection.Alph1.1.5}
-\contentsline {subsection}{\numberline {A.1.6}Booleano}{7}{subsection.Alph1.1.6}
-\contentsline {section}{\numberline {A.2}Tipos de Enumeraci\IeC {\'o}n}{7}{section.Alph1.2}
-\contentsline {subsection}{\numberline {A.2.1}Correspondiente a personVerifyType}{7}{subsection.Alph1.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Correspondiente a nameAddrType}{7}{subsection.Alph1.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Correspondiente a addrType}{8}{subsection.Alph1.2.3}
-\contentsline {subsection}{\numberline {A.2.4}Correspondiente a cardStatusCode}{8}{subsection.Alph1.2.4}
-\contentsline {subsection}{\numberline {A.2.5}Correspondiente a accountStatusCode}{8}{subsection.Alph1.2.5}
-\contentsline {subsection}{\numberline {A.2.6}Correspondiente a cardType}{8}{subsection.Alph1.2.6}
-\contentsline {subsection}{\numberline {A.2.7}Correspondiente a brand}{9}{subsection.Alph1.2.7}
-\contentsline {subsection}{\numberline {A.2.8}Correspondiente a transType}{9}{subsection.Alph1.2.8}
-\contentsline {subsection}{\numberline {A.2.9}Correspondiente a acctType}{9}{subsection.Alph1.2.9}
-\contentsline {subsection}{\numberline {A.2.10}Correspondiente a contactInfo}{10}{subsection.Alph1.2.10}
-\contentsline {section}{\numberline {A.3}Recursos}{10}{section.Alph1.3}
-\contentsline {subsection}{\numberline {A.3.1}Recursos concretos}{10}{subsection.Alph1.3.1}
-\contentsline {subsubsection}{\numberline {A.3.1.1}Nombre de usuario ``login''}{11}{subsubsection.Alph1.3.1.1}
-\contentsline {subsubsection}{\numberline {A.3.1.2}Cliente ``customer''}{11}{subsubsection.Alph1.3.1.2}
-\contentsline {subsubsection}{\numberline {A.3.1.3}Informaci\IeC {\'o}n del banco ``bankInformation''}{13}{subsubsection.Alph1.3.1.3}
-\contentsline {subsubsection}{\numberline {A.3.1.4}Direcci\IeC {\'o}n ``address''}{14}{subsubsection.Alph1.3.1.4}
-\contentsline {subsubsection}{\numberline {A.3.1.5}Informaci\IeC {\'o}n de contacto ``contactInfo''}{16}{subsubsection.Alph1.3.1.5}
-\contentsline {subsubsection}{\numberline {A.3.1.6}Informaci\IeC {\'o}n personal ``personalInfo''}{19}{subsubsection.Alph1.3.1.6}
-\contentsline {subsubsection}{\numberline {A.3.1.7}Preferencia ``preference''}{21}{subsubsection.Alph1.3.1.7}
-\contentsline {subsubsection}{\numberline {A.3.1.8}Transferencias a terceros ``registeredRecipient''}{23}{subsubsection.Alph1.3.1.8}
-\contentsline {subsubsection}{\numberline {A.3.1.9}Persona ``person''}{25}{subsubsection.Alph1.3.1.9}
-\contentsline {subsubsection}{\numberline {A.3.1.10}Conocido ``known''}{26}{subsubsection.Alph1.3.1.10}
-\contentsline {subsubsection}{\numberline {A.3.1.11}Miembro de un grupo ``groupMember''}{27}{subsubsection.Alph1.3.1.11}
-\contentsline {subsubsection}{\numberline {A.3.1.12}Grupo ``group''}{28}{subsubsection.Alph1.3.1.12}
-\contentsline {subsubsection}{\numberline {A.3.1.13}Estado de la cuenta ``accountStatus''}{29}{subsubsection.Alph1.3.1.13}
-\contentsline {subsubsection}{\numberline {A.3.1.14}Estado de la tarjeta ``cardStatus''}{30}{subsubsection.Alph1.3.1.14}
-\contentsline {subsubsection}{\numberline {A.3.1.15}Tarjeta ``card''}{31}{subsubsection.Alph1.3.1.15}
-\contentsline {subsubsection}{\numberline {A.3.1.16}Balance ``balance''}{33}{subsubsection.Alph1.3.1.16}
-\contentsline {subsubsection}{\numberline {A.3.1.17}Transacci\IeC {\'o}n ``transaction''}{33}{subsubsection.Alph1.3.1.17}
-\contentsline {subsubsection}{\numberline {A.3.1.18}Transacci\IeC {\'o}n ``transaction''}{36}{subsubsection.Alph1.3.1.18}
-\contentsline {subsection}{\numberline {A.3.2}Recursos abstractos}{39}{subsection.Alph1.3.2}
+\contentsline {chapter}{\'Indice general}{\es@scroman {v}}{chapter*.1}
+\contentsline {chapter}{Introducci\IeC {\'o}n}{1}{section*.3}
+\contentsline {chapter}{\numberline {1}Entorno Empresarial}{2}{chapter.1}
+\contentsline {chapter}{\numberline {2}Marco Te\IeC {\'o}rico}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Patrones de dise\IeC {\~n}o}{3}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}\textit {Singleton}}{3}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}\textit {Adapter}}{4}{subsection.2.1.2}
+\contentsline {chapter}{\numberline {3}Marco Tecnol\IeC {\'o}gico}{5}{chapter.3}
+\contentsline {chapter}{\numberline {4}Marco Metodol\IeC {\'o}gico}{6}{chapter.4}
+\contentsline {section}{\numberline {4.1}Scrum}{6}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Roles}{6}{subsection.4.1.1}
+\contentsline {subsubsection}{\textit {Product owner}}{7}{section*.5}
+\contentsline {subsubsection}{\textit {Scrum master}}{7}{section*.6}
+\contentsline {subsubsection}{Equipo de desarrollo}{7}{section*.7}
+\contentsline {subsection}{\numberline {4.1.2}Actividades}{7}{subsection.4.1.2}
+\contentsline {subsubsection}{\textit {Sprint planning}}{8}{section*.8}
+\contentsline {subsubsection}{Ejecuci\IeC {\'o}n del \textit {sprint}}{8}{section*.9}
+\contentsline {subsubsection}{\textit {Daily scrum}}{8}{section*.10}
+\contentsline {subsubsection}{\textit {Sprint review}}{8}{section*.11}
+\contentsline {subsubsection}{\textit {Sprint retrospective}}{9}{section*.12}
+\contentsline {subsection}{\numberline {4.1.3}Artefactos}{9}{subsection.4.1.3}
+\contentsline {subsubsection}{\textit {Product backlog}}{9}{section*.13}
+\contentsline {subsubsection}{\textit {Sprint backlog}}{9}{section*.14}
+\contentsline {chapter}{\numberline {5}Desarrollo de la aplicacion}{10}{chapter.5}
+\contentsline {section}{\numberline {5.1}Investigacion}{10}{section.5.1}
+\contentsline {section}{\numberline {5.2}Diseno}{11}{section.5.2}
+\contentsline {section}{\numberline {5.3}Desarrollo}{11}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Sprint 1}{11}{subsection.5.3.1}
+\contentsline {subsubsection}{Objetivos}{11}{section*.15}
+\contentsline {subsubsection}{Resultados}{11}{section*.16}
+\contentsline {subsubsection}{Actividades}{12}{section*.17}
+\contentsline {subsection}{\numberline {5.3.2}Sprint 2}{12}{subsection.5.3.2}
+\contentsline {subsubsection}{Objetivos}{12}{section*.18}
+\contentsline {subsubsection}{Resultados}{12}{section*.19}
+\contentsline {subsubsection}{Actividades}{13}{section*.20}
+\contentsline {subsection}{\numberline {5.3.3}Sprint 3}{14}{subsection.5.3.3}
+\contentsline {subsubsection}{Objetivos}{14}{section*.21}
+\contentsline {subsubsection}{Resultados}{14}{section*.22}
+\contentsline {subsubsection}{Actividades}{14}{section*.23}
+\contentsline {subsection}{\numberline {5.3.4}Sprint 4}{16}{subsection.5.3.4}
+\contentsline {subsubsection}{Objetivos}{16}{section*.24}
+\contentsline {subsubsection}{Resultados}{16}{section*.25}
+\contentsline {subsubsection}{Actividades}{16}{section*.26}
+\contentsline {subsection}{\numberline {5.3.5}Sprint 5}{17}{subsection.5.3.5}
+\contentsline {subsubsection}{Objetivos}{17}{section*.27}
+\contentsline {subsubsection}{Resultados}{17}{section*.28}
+\contentsline {subsubsection}{Actividades}{18}{section*.29}
+\contentsline {subsection}{\numberline {5.3.6}Sprint 6}{18}{subsection.5.3.6}
+\contentsline {subsubsection}{Objetivos}{18}{section*.30}
+\contentsline {subsubsection}{Resultados}{19}{section*.31}
+\contentsline {subsubsection}{Actividades}{19}{section*.32}
+\contentsline {subsection}{\numberline {5.3.7}Sprint 7}{21}{subsection.5.3.7}
+\contentsline {subsubsection}{Objetivos}{21}{section*.33}
+\contentsline {subsubsection}{Resultados}{21}{section*.34}
+\contentsline {subsubsection}{Resultados}{21}{section*.35}
+\contentsline {chapter}{\numberline {6}Conclusiones y Recomendaciones}{22}{chapter.6}
+\contentsline {chapter}{Bibliograf\'{\i }a}{23}{chapter*.36}

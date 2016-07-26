@@ -1,0 +1,204 @@
+\section{Desarrollo} \label{sect:desarrollo}
+
+Durante esta fase se implementó progresivamente la versión alfa del prototipo funcional. A continuación se presentará los \textit{sprints} realizados, sus objetivos y los resultados obtenidos al final de cada uno.
+
+\subsection{Sprint 1}
+
+\subsubsection{Objetivos}
+	\begin{itemize}
+	\item Mostrar información del balance de una cuenta
+	\item Permitir la creación de un nuevo gasto
+	\end{itemize}
+
+\subsubsection{Resultados}
+\begin{itemize}
+\item Se creó la interfaz para ver el total de ingresos, gastos y el balance de la cuenta
+\item Se crearon las consultas necesarias a la base de datos para obtener el total de ingresos, gastos y balance
+\item Se creó la interfaz para la creación de un nuevo gasto
+\item Se creó la consulta para insertar un nuevo gasto en la base de datos
+\end{itemize}
+
+\subsubsection{Actividades}
+En la primera parte del \textit{sprint} se implementó el modelo de datos del dispositivo móvil.
+
+Se creó la vista principal de la aplicación móvil, donde se muestra el total de ingresos y el de gastos, así como el balance general de la cuenta desde su creación hasta la fecha. Para esto fue necesario crear las consultas a la base de datos para obtener el total de ingresos/gastos de una cuenta y la consulta para obtener el balance total de una cuenta.
+
+También se implementó la vista para crear un nuevo gasto con su fecha, monto y descripción. Para esto fue necesario crear una consulta en la base de datos para guardar un nuevo gasto.
+
+Como se expuso en el capítulo 2, la comunicación entre el modelo y la vista se hace a través de una capa intermedia: el presentador. Por esta razón, también fue necesaria la creación de un presentador para cada vista que permita hacer consultas a la base de datos.
+
+\subsection{Sprint 2}
+
+\subsubsection{Objetivos}
+\begin{itemize}
+\item Mostrar la lista de categorías
+\item Permitir la creación de un nuevo ingreso
+\item Permitir guardar fotos de un $\entry$
+\item Asociar un $\entry$ a una categoría
+\end{itemize}
+
+\subsubsection{Resultados}
+\begin{itemize}
+\item Se creó en la base de datos del dispositivo una consulta para guardar la lista de categorías por defecto
+\item Se creó la interfaz para listar las categorías guardadas en la aplicación
+\item Se adaptó y reutilizó la vista existente para crear un gasto para permitir la creación de un ingreso
+\item Se agregó la funcionalidad de tomar fotos relacionadas a un $\entry$
+\item Se creó la consulta para guardar en la base de datos el nombre de las fotos tomadas
+\item se agregó la funcionalidad para poder asociar un $\entry$ a una categoría existente
+
+\end{itemize}
+
+\subsubsection{Actividades}
+
+En este \textit{sprint} se creó la vista para mostrar las categorías presentes en el dispositivo.
+
+Se creó una consulta para guardar en la base de datos una nueva categoría con su nombre y un ícono que la represente. Además, se creó una consulta para guardar en la base de datos una lista de categorías por defecto.
+
+También se adaptó el $activity$ asociado a la creación de un gasto, de manera que se pueda reutilizar esta vista para la creación de un ingreso. 
+
+Por otra parte, se implementó la funcionalidad para tomar y guardar fotos asociadas a un $\entry$. Para esto se tuvo que crear un método que permita abrir la aplicación de la cámara del dispositivo desde la aplicación móvil. Luego, se tuvo que adaptar el $\activity$ para la creación de un $entry$ para mostrar las miniaturas de las fotos tomadas. Se puso un límite por parte de la empresa para que el máximo de fotos que se puedan guardar por $\entry$ sean 3.
+
+Por último, se modificó la vista para la creación de un $\entry$ para que se permitiera asociar una categoría. Se tenía como requerimiento guardar las cuatro categorías que se utilizaron más recientemente. Para esto, se tuvo que crear los métodos necesarios para persistir en el dispositivo móvil las categorias mas recientes. Dado que esta información no tiene una estructura compleja, se decidió utilizar un objeto que provee la plataforma de Android, llamado \textit{SharedPreferences}, que permite guardar un conjunto de pares clave-valor. En este caso, se guardó una lista con las categorías más recientes.
+
+%Para la funcionalidad de tomar fotos se quiso en un principio darle la libertad al usuario para que escoja la calidad con la que se debía tomar la foto. Sin embargo, luego de investigar al respecto, se supo que para 
+
+
+\subsection{Sprint 3}
+\subsubsection{Objetivos}
+\begin{itemize}
+\item Mostrar la lista de $\entries$ del mes actual
+\item Mostrar los detalles de los $\entries$ existentes
+\item Permitir editar y borrar un $\entry$ existente
+\item Implementar una calculadora para guardar el monto de un $\entry$
+\end{itemize}
+
+\subsubsection{Resultados}
+\begin{itemize}
+\item Se creó la interfaz para mostrar una lista con los gastos y otra con los ingresos del mes actual
+\item Se creó la consulta en la base de datos para obtener los $\entries$ del mes actual
+\item Se agregó la funcionalidad para ver los detalles de un $\entry$ ya existente, y poder editarlo
+\item Se agregó la funcionalidad para eliminar $\entries$
+\item Se creó la interfaz para usar la calculadora que permita ingresar el monto de un$\entry$
+\end{itemize}
+
+\subsubsection{Actividades}
+En primer lugar, se adaptó la vista principal de la aplicación para mostrar el total de ingresos y gastos únicamente durante el mes actual. Para esto, se tuvo que modificar la consulta a la base de datos para obtener el total de ingresos/gastos dado un rango de fecha.
+
+Se implementó la funcionalidad para navegar a la lista de ingresos o de gastos del mes desde la vista principal de la aplicación. Para esto, se creó una vista general donde se pueda mostrar una lista de $\entries$, con su descripción (o categoría, en caso de que no tenga descripción), su fecha y su monto. Esta vista se reutilizó, y dependiendo del tipo de $\entry$ que se quiere mostrar (ingreso o gasto), se personaliza.
+
+Por otra parte, se creó la funcionalidad para eliminar $\entries$ existentes desde la vista mencionada en el párrafo anterior.
+
+También se creó la funcionalidad para editar un $\entry$ existente. Para esto no fue necesario crear una vista nueva, sino que se adaptó la que se tenía para la creación de un nuevo $\entry$, de manera que se muestre la información relacionada adicho $entry$ (fecha, monto, categoría, descripción y fotos).
+
+Por último, se tenía como requerimiento mostrar una calculadora para ingresar el monto de un $entry$, en lugar de un teclado numérico común. Por esta razón, se tuvo que modificar la vista de creación de un $\entry$ para incluir la nueva funcionalidad. 
+
+Para este último requerimiento fue necesario crear un teclado virtual personalizado, pues el teclado numérico del dispositivo no incluye los operadores matemáticos básicos. Se creó el formato del teclado, el cual incluye las teclas presentes en una calculadora básica. También se tuvo que manejar el uso de las teclas: detectar qué tecla fue presionada y realizar una acción en base a esta. Se utilizó una librería para evaluar fórmulas dada una cadena de caracteres.
+
+Para la calculadora, se tenía que mostrar el símbolo decimal de acuerdo con el país para el cual está configurado el teléfono, ya que en algunos países se usa la coma (,) como separador y en otros el punto (.). Por esta razón, se tuvo que obtener el país de configuración del teléfono para decidir qué símbolo decimal mostrar.
+
+
+
+\subsection{Sprint 4}
+\subsubsection{Objetivos}
+\begin{itemize}
+\item Permitir el manejo de nuevas cuentas
+\end{itemize}
+
+\subsubsection{Resultados}
+\begin{itemize}
+
+\item Se creó la interfaz para crear una nueva cuenta
+\item Se creó la consulta en la base de datos para persistir cuentas
+\item Se implementó la funcionalidad para listar las cuentas del usuario 
+\item Se implementó la funcionalidad para cambiar de cuenta
+\item Se implementó la funcionalidad para editar el nombre de una cuenta existente
+\item Se implementó la funcionalidad para eliminar cuentas existentes
+\item Se implementó la funcionalidad para cambiar el estado de una cuenta: activa o archivada
+\item Se implementó la funcionalidad para ver la lista de $\entries$ de una cuenta desde su creacion hasta la fecha actual
+
+\end{itemize}
+
+\subsubsection{Actividades}
+En la ejecución de los \textit{sprints} anteriores se estuvo trabajando con una sola cuenta creada por defecto en la aplicación. Para este \textit{sprint}, se decidió agregar la funcionalidad para poder manejar nuevas cuentas. 
+
+Para esto, se creó la vista que permite agregar una nueva cuenta, con su nombre y la moneda en la que van a estar sus $\entries$.
+
+Se creó una vista para mostrar la lista de cuentas guardadas. Se implementó la funcionalidad para cambiar el estado de una cuenta: activa o archivada. La lista de cuentas se muestra segun su estado, es decir, se muestra una lista para la lista de cuentas activas y una para las cuentas archivadas. 
+
+Además, se implementaron las funcionalidades para editar el nombre de una cuenta y eliminar cuentas ya existentes.
+
+También se creó la funcionalidad para cambiar la cuenta que se está mostrando actualmente en el dispositivo.
+
+Por último, se adapto la vista existente para mostrar la lista de $\entries$, de manera que se pueda mostrar todos los $\entries$ (ingreos y gastos en una misma lista) asociados a la cuenta que se muestra actualmente.
+
+
+
+
+\subsection{Sprint 5}
+\subsubsection{Objetivos}
+\begin{itemize}
+\item Permitir el manejo de las fotos de un $\entry$
+\item Permitir el manejo de las categorias
+\end{itemize}
+
+\subsubsection{Resultados}
+\begin{itemize}
+\item Se agregó la funcionalidad para ver las fotos de un $\entry$
+\item Se agregó la funcionalidad para borrar las fotos de un $\entry$
+\item Se agregó la funcionalidad para cambiar la ubicacion en el dispositivo de las fotos tomadas de un $\entry$
+\item Se agregó la funcionalidad para crear una categoría
+\item Se agregó la funcionalidad para eliminar una categoría existente
+\item Se agregó la funcionalidad para editar una categoría existentes
+\end{itemize}
+
+\subsubsection{Actividades}
+La primera parte del \textit{sprint} se dedicó al manejo de las fotos. En primer lugar se creó la vista para poder ver en pantalla completa las fotos de un $\entry$ (esto se hace desde la vista de creación de un $\entry$). También se implementó la funcionalidad para eliminar una foto.
+
+Por otra parte, se creo la vista de configuraciones de la aplicación. En esta vista se agregó una opción para cambiar la ubicación en el dispositivo en la que se guardan los archivos de las fotos: memoria interna o memoria extraíble.
+
+La egunda parte del \textit{sprint} se dedicó al manejo de las categorías. Se creó la interfaz para agregar una nueva categoría. Por último, se agregaron las funcionalidades para editar y eliminar categorias existentes.
+
+
+\subsection{Sprint 6}
+\subsubsection{Objetivos}
+\begin{itemize}
+\item Mostrar un reporte con la lista de $\entries$ asociados a una cuenta, en un rango de fecha dado
+\item Mostrar un reporte con el balance total por categorías asociadas a una cuenta, en un rango de fecha dado
+\item Permitir el envío de los reportes en un archivo PDF a otras personas
+
+\end{itemize}
+
+\subsubsection{Resultados}
+\begin{itemize}
+\item Se implementó la funcionalidad para listar los $\entries$ de una cuenta en el rango de fecha ingresado por el usuario
+\item Se implementó la funcionalidad para listar el balance total de las categorías de una cuenta en el rango de fecha ingresado por el usuario
+\item Se creó la funcionalidad para compartir el reporte con la lista de $\entries$,incluyendo las fotos, de la cuenta en el rango de fecha ingresado.
+\item Se creó la funcionalidad para compartir el reporte con la lista de $\entries$, sin incluir las fotos, de la cuenta en el rango de fecha ingresado.
+\item Se creó la funcionalidad para compartir el reporte con el balance total de las categorías de la cuenta en el rango de fecha ingresado.
+\end{itemize}
+
+\subsubsection{Actividades}
+Este \textit{sprint} se dedicó exclusivamente al manejo de los reportes. Se tenía como requerimiento el manejo de dos tipos de reportes: reporte de balance general y reporte por categorías. Para la generación de ambos reportes, se puede especificar una cuenta y un rango de fechas. El reporte de balance general incluye la lista de todos los $\entries$ de la cuenta escogida, dentro del rango de fechas establecido. El reporte por categorías incluye únicamente el monto total de todos los $\entries$ (es decir, la suma de ingresos y gastos) divididos por categorías, de la cuenta y rango de fechas escogidos.
+
+Se creó la vista para mostrar el reporte de balance general, que muestra una lista con los $\entries$ asociados, sus montos, fechas y descripción (o categoría, en caso de que la descripción sea nula). También se creó la vista para el reporte por categoría, donde se muestra una lista con con el nombre de cada categoría y la suma total de los ingresos y gastos correspondientes. En este último caso, se omitieron las categorías que no tenían $\entries$ asociados (es decir, categorías cuyo monto total es cero).
+
+Luego, se creó la funcionalidad para generar un archivo PDF con la información de los reportes descritos anteriormente. Para esto se usó una librería que provee la plataforma de Android para la creación de archivos PDF.  
+
+Se tenía como requerimiento que el usuario pueda escoger generar un archivo con el reporte de balance general incluyendo las fotos de los $\entries$ asociados, o sin incluirlas.
+
+Luego se implementaron los métodos necesarios para crear un archivo PDF con el reporte del balance general. Esta funcionalidad luego se adaptó para permitir también la creación del reporte por categorías. Para la escritura del PDF, se tuvo que lidiar manualmente con la paginación. 
+
+Por último, se creó la funcionalidad para compartir este archivo PDF con otras personas a través de otras aplicaciones instaladas en el dispositivo móvil. Dentro de estas aplicaciones se incluyen las de correo electrónico y mensajería móvil que soporten el envío de archivos.
+
+Durante la creacion del archivo PDF se presentaron diferentes dificultades. En primer lugar, las librerias existentes en Java para generar archivos con dicha extension hacen uso de otras librerias, las cuales no son soportadas directamente en la plataforma de Android. Por esta razon, en un principio se decidio utilizar una adaptación de una librería de Java para poder ser utilizada en Android. Sin embargo, no se encontró documentación suficiente que permitiera entender su uso. Por esta razón, se decidió finalmente utilizar una librería nativa de Android que facilita la creación de archivos PDF, pero que sólo está disponible para versiones de Android a partir de la 4.4
+
+
+\subsection{Sprint 7}
+\subsubsection{Objetivos}
+
+\subsubsection{Resultados}
+
+\subsubsection{Resultados}
+
+
+

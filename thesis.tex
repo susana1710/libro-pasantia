@@ -17,6 +17,7 @@
 % Macros personalizados
 \newcommand{\entry}{\textit{entry}}
 \newcommand{\entries}{\textit{entries}}
+\newcommand{\activity}{\textit{activity}}
 
 % Para escribir algoritmos
 \usepackage{listings}
@@ -178,7 +179,7 @@
 
 
 % Pagina de resumen
-%\input{intro/resumen.tex}
+\input{intro/resumen.tex}
 
 % Pagina de dedicatoria (opcional)
 %\input{intro/dedicatoria.tex}
@@ -221,19 +222,20 @@
 % Incluye los archivos deseados - El contenido de su proyecto de grado/pasantia larga.
 \phantomsection
 \addcontentsline{toc}{chapter}{Introducción}
-%\input{intro/intro.tex}
+\input{intro/intro.tex}
 %
-%\input{empresa/empresa.tex}
+\input{empresa/empresa.tex}
 
 \input{marco_teorico/0_marco_teorico.tex}
 \input{marco_teorico/1_patrones_diseno.tex}
+\input{marco_teorico/2_patrones_arquitectura.tex}
 %\input{marco_teorico/2_SOA.tex}
 %\input{marco_teorico/3_REST.tex}
 %\input{marco_teorico/4_ROA.tex}
 %\input{marco_teorico/5_EDP.tex}
 %\input{marco_teorico/6_DBMS.tex}
 
-%\input{marco_tecnologico/0_marco_tecnologico.tex}
+\input{marco_tecnologico/0_marco_tecnologico.tex}
 %\input{marco_tecnologico/1_twisted.tex}
 %\input{marco_tecnologico/2_couchbase.tex}
 %\input{marco_tecnologico/3_postgresql.tex}
@@ -247,14 +249,15 @@
 \input{marco_metodologico/1_scrum.tex}
 
 \input{desarrollo/0_desarrollo.tex}
-\input{desarrollo/1_concepcion.tex}
-\input{desarrollo/2_construccion.tex}
+\input{desarrollo/1_investigacion.tex}
+\input{desarrollo/2_diseno.tex}
+\input{desarrollo/3_sprints.tex}
 
 %\input{pruebas/0_pruebas.tex}
 %
 %\input{retos_logros/0_retos_logros.tex}
 %
-%\input{conclusiones/conclusiones.tex}
+\input{conclusiones/conclusiones.tex}
 
 
 % Crea el glosario 
