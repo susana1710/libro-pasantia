@@ -9,7 +9,7 @@ Se implementaron vistas para crear, editar y eliminar gastos. Para estos gastos,
 
 También se crearon vistas para el manejo de categorías, que incluyen la creación, edición y eliminación de las mismas.
 
-Luego de la creación de las principales funcionalidades del sistema, mencionadas en los párrafos anteriores, se introdujo el concepto de "cuentas". Hasta el momento, los gastos estaban asociadosa una única cuenta por defecto. Por esta razón, también se creó una funcionalidad para agregar nuevas cuentas, y poder crear nuevos gastos dentro de dichas cuentas.
+Luego de la creación de las principales funcionalidades del sistema, mencionadas en los párrafos anteriores, se introdujo el concepto de "cuentas". Hasta el momento, los gastos estaban asociados a una única cuenta por defecto. Por esta razón, también se creó una funcionalidad para agregar nuevas cuentas, y poder crear nuevos gastos dentro de dichas cuentas.
 
 Como se explicó en la sección anterior, es necesario guardar toda esta información en la base de datos local de cada dispositivo. Para ello, se utilizó la librería SQLite.
 
@@ -18,13 +18,17 @@ La vista de reporte de balance general muestra una lista de gastos e ingresos fi
 
 Para mantener la lógica separada de la interfaz gráfica, se utilizó el patrón de arquitectura MVP o Modelo Vista Presentador, descrito en el capítulo 2. De esta manera, toda acción en la vista que requiera realizar operaciones sobre la base de datos, se realizó por medio de una capa intermedia: el presentador.
 
+En la figura 5.4 se muestran capturas de pantallas de algunas de las funcionalidades de la aplicación móvil
+
 Por otra parte, se creó un servidor al que se pueda enviar información desde la aplicación móvil. 
 
-Para permitir el acceso a la aplicación móvil, se creó un servicio web que permita hacer la autenticación del usuario. La aplicación envia al servidor un JSON con los datos del usuario (nombre de usuario y contraseña) por medio de una petición HTTP POST.
+Para permitir el acceso a la aplicación móvil, se creó un servicio web que permita hacer la autenticación del usuario. La aplicación envía al servidor un JSON con los datos del usuario (nombre de usuario y contraseña) por medio de una petición HTTP POST.
 
 Se creó un servicio web que recibe un archivo PDF que contiene el reporte de gastos. Además del archivo, recibe la suma de gastos por cada categoría y el total de gastos. Estos datos se enviaron por medio de una petición HTTP Post Multipart, compuesta por un archivo y un JSON. Para la conversión de objetos de Java a JSON, y viceversa, se utilizó la librería GSON tanto en el servidor como en la aplicación móvil. Para persistir esta información, se utilizó Hibernate y MySQL como manejador de base de datos.
 
-También se creó una aplicación web que permita aprobar o rechazar los reportes enviados al servidor.
+También se creó una aplicación web que permita aprobar o rechazar los reportes enviados al servidor. Además de esto, la herramienta utilizada para el desarrollo del servidor trae consigo algunas funcionalidades por defecto: iniciar sesión y el manejo de usuarios (agregar, modificar y eliminar usuarios).
+
+En la figura 5.5 se muestran capturas de pantallas de las funcionalidades del servidor.
 
 El desarrollo del componente servidor se realizó con el IDE Eclipse. Se utilizó el \textit{framework} AppFuse, que integra a su vez otros \textit{frameworks} que facilitan el desarrollo web. Se utilizó Spring para la implementación de los servicios web que permiten recibir datos desde la aplicación móvil. Para crear la aplicación web, se utilizó Tapestry. Para el despliegue del servidor, se utilizó Maven y Jetty.
 
@@ -32,7 +36,7 @@ El proyecto se desarrolló bajo el marco de trabajo de \textit{Scrum}, descrito 
 
 A continuación se presentarán las iteraciones (\textit{sprints}), durante las cuales se desarrollaron las funcionalidades descritas en los párrafos anteriores. Para cada iteración, se mencionarán sus objetivos, resultados y una breve descripción de las actividades realizadas.
 
-\subsection{Sprint 1}
+\subsection{Iteración 1}
 
 \subsubsection{Objetivos}
 	\begin{itemize}
@@ -47,7 +51,7 @@ A continuación se presentarán las iteraciones (\textit{sprints}), durante las 
 \end{itemize}
 
 \subsubsection{Actividades}
-En la primera parte del \textit{sprint} se implementó el modelo de datos del dispositivo móvil.
+En la primera parte de la iteración se implementó el modelo de datos del dispositivo móvil.
 
 Se creó la vista principal de la aplicación móvil, donde se muestra el total de ingresos y el de gastos, así como el balance general. Para esto, fue necesario crear consultas a la base de datos que permitieran obtener el total de ingresos/gastos de una cuenta.  También se realizó una consulta que permite obtener el balance total de una cuenta.
 
@@ -55,7 +59,7 @@ Por otro lado se implementó una vista que permite crear un nuevo gasto, con su 
 
 Como se expuso anteriormente, la comunicación entre el modelo y la vista se hace a través de una capa intermedia: el presentador. Por esta razón, también fue necesaria la creación de un presentador para cada vista que permita hacer consultas a la base de datos.
 
-\subsection{Sprint 2}
+\subsection{Iteración 2}
 
 \subsubsection{Objetivos}
 \begin{itemize}
@@ -76,7 +80,7 @@ Como se expuso anteriormente, la comunicación entre el modelo y la vista se hac
 
 \subsubsection{Actividades}
 
-En este \textit{sprint} se creó la vista para mostrar las categorías presentes en el dispositivo.
+En esta iteración se creó la vista para mostrar las categorías presentes en el dispositivo.
 
 Se creó una consulta para guardar en la base de datos una nueva categoría con su nombre y un ícono que la represente. Además, se creó una consulta para guardar en la base de datos una lista de categorías por defecto.
 
@@ -84,9 +88,9 @@ También se adaptó la vista existente para la creación de un gasto, de manera 
 
 Por otra parte, se implementó la funcionalidad para tomar y guardar fotos asociadas a un ingreso/gasto. Para esto se tuvo que crear un método que permita abrir la aplicación de la cámara del dispositivo desde la aplicación móvil. Luego, se tuvo que adaptar la vista para la creación de un ingreso/gasto para mostrar las miniaturas de las fotos tomadas. Se puso un límite por parte de la empresa para que el máximo de fotos que se puedan guardar por ingreso/gasto sean 3.
 
-Por último, se modificó la vista para la creación de un ingreso/gasto para que se permitiera asociar una categoría. Se tenía como requerimiento guardar las cuatro categorías que se utilizaron más recientemente. Para esto, se tuvo que crear los métodos necesarios para persistir en el dispositivo móvil las categorias más recientes. Dado que esta información no tiene una estructura compleja, se decidió utilizar un objeto que provee la plataforma de Android, llamado \textit{SharedPreferences}, que permite guardar un conjunto de pares clave-valor. En este caso, se guardó una lista con las categorías más recientes.
+Por último, se modificó la vista para la creación de un ingreso/gasto para que se permitiera asociar una categoría. Se tenía como requerimiento guardar las cuatro categorías que se utilizaron más recientemente. Para esto, se tuvo que crear los métodos necesarios para persistir en el dispositivo móvil las categorías más recientes. Dado que esta información no tiene una estructura compleja, se decidió utilizar un objeto que provee la plataforma de Android, llamado \textit{SharedPreferences}, que permite guardar un conjunto de pares clave-valor. En este caso, se guardó una lista con las categorías más recientes.
 
-\subsection{Sprint 3}
+\subsection{Iteración 3}
 \subsubsection{Objetivos}
 \begin{itemize}
 \item Mostrar la lista de ingresos/gastos del mes actual
@@ -110,7 +114,7 @@ Se implementó la funcionalidad para navegar a la lista de ingresos o de gastos 
 
 Por otra parte, se creó la funcionalidad para eliminar ingresos/gastos existentes desde la vista mencionada en el párrafo anterior.
 
-También se creó la funcionalidad para editar un ingreso/gasto existente. Para esto no fue necesario crear una vista nueva, sino que se adaptó la que se tenía para la creación de un nuevo ingreso/gasto, de manera que se muestre la información relacionada adicho $entry$ (fecha, monto, categoría, descripción y fotos).
+También se creó la funcionalidad para editar un ingreso/gasto existente. Para esto no fue necesario crear una vista nueva, sino que se adaptó la que se tenía para la creación de un nuevo ingreso/gasto, de manera que se muestre la información relacionada a dicho $entry$ (fecha, monto, categoría, descripción y fotos).
 
 Por último, se tenía como requerimiento mostrar una calculadora para ingresar el monto de un ingreso/gasto, en lugar de un teclado numérico común. Por esta razón, se tuvo que modificar la vista de creación de un ingreso/gasto para incluir la nueva funcionalidad. 
 
@@ -120,7 +124,7 @@ Para la calculadora, se tenía que mostrar el símbolo decimal de acuerdo con el
 
 
 
-\subsection{Sprint 4}
+\subsection{Iteración 4}
 \subsubsection{Objetivos}
 \begin{itemize}
 \item Permitir el manejo de nuevas cuentas
@@ -135,16 +139,16 @@ Para la calculadora, se tenía que mostrar el símbolo decimal de acuerdo con el
 \item Se implementó la funcionalidad para editar el nombre de una cuenta existente
 \item Se implementó la funcionalidad para eliminar cuentas existentes
 \item Se implementó la funcionalidad para cambiar el estado de una cuenta: activa o archivada
-\item Se implementó la funcionalidad para ver la lista de ingresos/gastos de una cuenta desde su creacion hasta la fecha actual
+\item Se implementó la funcionalidad para ver la lista de ingresos/gastos de una cuenta desde su creación hasta la fecha actual
 
 \end{itemize}
 
 \subsubsection{Actividades}
-En la ejecución de los \textit{sprints} anteriores se estuvo trabajando con una sola cuenta creada por defecto en la aplicación. Para este \textit{sprint}, se decidió agregar la funcionalidad para poder manejar nuevas cuentas. 
+En la ejecución de las iteraciones anteriores se estuvo trabajando con una sola cuenta creada por defecto en la aplicación. Para esta iteración, se decidió agregar la funcionalidad para poder manejar nuevas cuentas. 
 
 Para esto, se creó la vista que permite agregar una nueva cuenta, con su nombre y la moneda en la que van a estar sus ingresos/gastos.
 
-Se creó una vista para mostrar la lista de cuentas guardadas. Se implementó la funcionalidad para cambiar el estado de una cuenta: activa o archivada. La lista de cuentas se muestra segun su estado, es decir, se muestra una lista para la lista de cuentas activas y una para las cuentas archivadas. 
+Se creó una vista para mostrar la lista de cuentas guardadas. Se implementó la funcionalidad para cambiar el estado de una cuenta: activa o archivada. La lista de cuentas se muestra según su estado, es decir, se muestra una lista para la lista de cuentas activas y una para las cuentas archivadas. 
 
 Además, se implementaron las funcionalidades para editar el nombre de una cuenta y eliminar cuentas ya existentes.
 
@@ -155,32 +159,32 @@ Por último, se adapto la vista existente para mostrar la lista de ingresos/gast
 
 
 
-\subsection{Sprint 5}
+\subsection{Iteración 5}
 \subsubsection{Objetivos}
 \begin{itemize}
 \item Permitir el manejo de las fotos de un ingreso/gasto
-\item Permitir el manejo de las categorias
+\item Permitir el manejo de las categorías
 \end{itemize}
 
 \subsubsection{Resultados}
 \begin{itemize}
 \item Se agregó la funcionalidad para ver las fotos de un ingreso/gasto
 \item Se agregó la funcionalidad para borrar las fotos de un ingreso/gasto
-\item Se agregó la funcionalidad para cambiar la ubicacion en el dispositivo de las fotos tomadas de un ingreso/gasto
+\item Se agregó la funcionalidad para cambiar la ubicación en el dispositivo de las fotos tomadas de un ingreso/gasto
 \item Se agregó la funcionalidad para crear una categoría
 \item Se agregó la funcionalidad para eliminar una categoría existente
 \item Se agregó la funcionalidad para editar una categoría existentes
 \end{itemize}
 
 \subsubsection{Actividades}
-La primera parte del \textit{sprint} se dedicó al manejo de las fotos. En primer lugar se creó la vista para poder ver en pantalla completa las fotos de un ingreso/gasto (esto se hace desde la vista de creación de un ingreso/gasto). También se implementó la funcionalidad para eliminar una foto.
+La primera parte de la iteración se dedicó al manejo de las fotos. En primer lugar se creó la vista para poder ver en pantalla completa las fotos de un ingreso/gasto (esto se hace desde la vista de creación de un ingreso/gasto). También se implementó la funcionalidad para eliminar una foto.
 
 Por otra parte, se creo la vista de configuraciones de la aplicación. En esta vista se agregó una opción para cambiar la ubicación en el dispositivo en la que se guardan los archivos de las fotos: memoria interna o memoria extraíble.
 
-La egunda parte del \textit{sprint} se dedicó al manejo de las categorías. Se creó la interfaz para agregar una nueva categoría. Por último, se agregaron las funcionalidades para editar y eliminar categorias existentes.
+La segunda parte del \textit{sprint} se dedicó al manejo de las categorías. Se creó la interfaz para agregar una nueva categoría. Por último, se agregaron las funcionalidades para editar y eliminar categorías existentes.
 
 
-\subsection{Sprint 6}
+\subsection{Iteración 6}
 \subsubsection{Objetivos}
 \begin{itemize}
 \item Mostrar un reporte con la lista de ingresos/gastos asociados a una cuenta, en un rango de fecha dado
@@ -199,7 +203,7 @@ La egunda parte del \textit{sprint} se dedicó al manejo de las categorías. Se 
 \end{itemize}
 
 \subsubsection{Actividades}
-Este \textit{sprint} se dedicó exclusivamente al manejo de los reportes. Se tenía como requerimiento el manejo de dos tipos de reportes: reporte de balance general y reporte por categorías. Para la generación de ambos reportes, se puede especificar una cuenta y un rango de fechas. El reporte de balance general incluye la lista de todos los ingresos/gastos de la cuenta escogida, dentro del rango de fechas establecido. El reporte por categorías incluye únicamente el monto total de todos los ingresos/gastos (es decir, la suma de ingresos y gastos) divididos por categorías, de la cuenta y rango de fechas escogidos.
+Esta iteración se dedicó exclusivamente al manejo de los reportes. Se tenía como requerimiento el manejo de dos tipos de reportes: reporte de balance general y reporte por categorías. Para la generación de ambos reportes, se puede especificar una cuenta y un rango de fechas. El reporte de balance general incluye la lista de todos los ingresos/gastos de la cuenta escogida, dentro del rango de fechas establecido. El reporte por categorías incluye únicamente el monto total de todos los ingresos/gastos (es decir, la suma de ingresos y gastos) divididos por categorías, de la cuenta y rango de fechas escogidos.
 
 Se creó una vista para mostrar el reporte de balance general, que muestra una lista con los ingresos/gastos asociados, sus montos, fechas y descripción (o categoría, en caso de que la descripción sea nula). También se creó una vista para el reporte por categoría, donde se muestra una lista con con el nombre de cada categoría y la suma total de los ingresos y gastos correspondientes.
 
@@ -211,10 +215,10 @@ Luego se implementaron los métodos necesarios para crear un archivo PDF con el 
 
 Por último, se creó la funcionalidad para compartir este archivo PDF con otras personas a través de otras aplicaciones instaladas en el dispositivo móvil. Dentro de estas aplicaciones se incluyen las de correo electrónico y mensajería móvil que soporten el envío de archivos.
 
-Durante la creacion del archivo PDF se presentaron diferentes dificultades. En primer lugar, las librerias existentes en Java para generar archivos con dicha extension hacen uso de otras librerias, las cuales no son soportadas directamente en la plataforma de Android. Por esta razon, en un principio se decidio utilizar una adaptación de una librería de Java para poder ser utilizada en Android. Sin embargo, no se encontró documentación suficiente que permitiera entender su uso. Por esta razón, se decidió finalmente utilizar una librería nativa de Android que facilita la creación de archivos PDF, pero que sólo está disponible para versiones de Android a partir de la 4.4. Esta decisión se apoyó en el hecho de que aproximadamente el 78,5\% de los usuarios de Android utilizan una versión mayor o igual a 4.4 \cite{USG1}. 
+Durante la creación del archivo PDF se presentaron diferentes dificultades. En primer lugar, las librerías existentes en Java para generar archivos con dicha extension hacen uso de otras librerías, las cuales no son soportadas directamente en la plataforma de Android. Por esta razón, en un principio se decidió utilizar una adaptación de una librería de Java para poder ser utilizada en Android. Sin embargo, no se encontró documentación suficiente que permitiera entender su uso. Por esta razón, se decidió finalmente utilizar una librería nativa de Android que facilita la creación de archivos PDF, pero que sólo está disponible para versiones de Android a partir de la 4.4. Esta decisión se apoyó en el hecho de que aproximadamente el 78,5\% de los usuarios de Android utilizan una versión mayor o igual a 4.4 \cite{USG1}. 
 
 
-\subsection{Sprint 7}
+\subsection{Iteración 7}
 \subsubsection{Objetivos}
 \begin{itemize}
 \item Crear un servicio web para permitir la autenticación de un usuario
@@ -246,6 +250,8 @@ También se creó un módulo para el envío de correos electrónicos. Esto se hi
 
 Luego de esto se creó la página web a través de la cual un supervisor puede ver la lista de reportes recibidos, así como aprobarlos o rechazarlos.
 
-Para esto, se creó una vista que muestre la lista de reportes pendientes por reivisión (es decir, que aún no han sido aprobados ni rechazados). En esta vista se agregó una opción para poder descargar el archivo PDF de cada reporte, así como opciones para aprobarlo/rechazarlo.
+Para esto, se creó una vista que muestre la lista de reportes pendientes por revisión (es decir, que aún no han sido aprobados ni rechazados). En esta vista se agregó una opción para poder descargar el archivo PDF de cada reporte, así como opciones para aprobarlo/rechazarlo.
 
 Finalmente, se adaptó la vista mencionada anteriormente para poder mostrar una lista de los reportes ya revisados (es decir, que ya fueron aprobados o rechazados).
+
+\subsection{Iteración 8}
