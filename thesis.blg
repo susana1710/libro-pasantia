@@ -3,44 +3,58 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 The style file: ieeetr.bst
 Database file #1: myrefs.bib
-You've used 7 entries,
+Repeated entry---line 105 of file myrefs.bib
+ : @misc{GIT1
+ :           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 160 of file myrefs.bib
+ : @misc{JTY1
+ :           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 190 of file myrefs.bib
+ : @misc{HTTP0
+ :            ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "HTTP1"
+You've used 32 entries,
             1876 wiz_defined-function locations,
-            509 strings with 4359 characters,
-and the built_in function-call counts, 875 in all, are:
-= -- 76
-> -- 23
+            615 strings with 7390 characters,
+and the built_in function-call counts, 3540 in all, are:
+= -- 315
+> -- 62
 < -- 0
-+ -- 12
-- -- 5
-* -- 38
-:= -- 109
-add.period$ -- 9
-call.type$ -- 7
-change.case$ -- 7
++ -- 41
+- -- 9
+* -- 125
+:= -- 368
+add.period$ -- 36
+call.type$ -- 32
+change.case$ -- 32
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 38
-empty$ -- 131
-format.name$ -- 5
-if$ -- 232
+cite$ -- 32
+duplicate$ -- 148
+empty$ -- 585
+format.name$ -- 9
+if$ -- 985
 int.to.chr$ -- 0
-int.to.str$ -- 7
-missing$ -- 4
-newline$ -- 26
-num.names$ -- 2
-pop$ -- 40
+int.to.str$ -- 32
+missing$ -- 8
+newline$ -- 103
+num.names$ -- 4
+pop$ -- 188
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 32
+skip$ -- 173
 stack$ -- 0
 substring$ -- 0
-swap$ -- 2
+swap$ -- 4
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 2
-width$ -- 8
-write$ -- 52
+while$ -- 4
+width$ -- 34
+write$ -- 210
+(There were 3 error messages)

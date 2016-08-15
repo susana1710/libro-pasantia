@@ -1,1 +1,58 @@
-\section{Diseno} \label{sect:Diseno}
+\section{Análisis y diseño de la solución} \label{sect:Diseno}
+
+En esta fase tuvo lugar dos etapas fundamentales para el desarrollo: análisis del problema y diseño de la solución.
+
+Para comprender mejor el problema presentado, se realizó una reunión con el dueño del producto (\textit{product owner}). En esta reunión se realizó el primer levantamiento y refinamiento de requerimientos. A partir de estos requerimientos, se diseñó una arquitectura base que diera solución al problema.
+
+
+\subsection{Análisis del problema}
+
+Como se mencionó anteriormente, se necesita una aplicación móvil que permita a los trabajadores de la compañía registrar gastos personales que posteriormente serán reembolsados. El reporte de estos gastos debe ser enviado a un servidor web. También se requiere una aplicación web que permita aprobar o rechazar los reportes enviados.
+
+La aplicación móvil debe permitir la creación de cuentas con diferentes monedas. Para cada una de estas cuentas, se pueden registrar gastos, a los cuales se puede asociar un monto y una fecha. Además, se pueden tomar fotos de las facturas o recibos de dichos gastos.
+
+Dado que la empresa realiza el reembolso de gastos en determinadas áreas, es necesario que estos gastos puedan asociarse a categorías que los identifiquen. Además, se debe permitir la creación de nuevas categorías en caso de que en algún momento la empresa decida incluir nuevos rubros.
+
+También se quiere poder realizar consultas de los gastos registrados en un rango de fechas y generar un reporte de dichos gastos.
+
+Por último, se quiere que los supervisores de la compañía puedan tener acceso a los reportes de gastos mensuales de los trabajadores. Los supervisores deben poder aprobar o rechazar dichos reportes.
+
+\subsection{Diseño de la solución}
+
+\subsubsection{Arquitectura base}
+
+Dados los requerimientos anteriores, se diseñó una arquitectura base para solucionar el problema. Como se muestra en la figura 5.1, es una arquitectura cliente-servidor, donde el componente móvil juega el papel de cliente.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/arquitectura_base}
+  \caption{Arquitectura base de la solución}
+  \label{fig:arquitecturaBase}
+\end{figure}
+
+Por medio de la aplicación móvil se podrá hacer el registro de los gastos personales. El servidor permitirá la revisión de los reportes de gastos, así como su aprobación o rechazo.
+
+Toda la información relacionada a los gastos (fecha, monto, categorías, fotos) será creada y guardada localmente en cada dispositivo móvil. Cada dispositivo podrá enviar al servidor su reporte de gastos en forma de un archivo PDF. La comunicación entre la aplicación móvil y el servidor se hace por medio de servicios web que presta este último.
+
+Estos reportes deberán ser guardados en la base de datos del servidor. Además, a través de una aplicación web, se podrá aprobar o rechazar los reportes recibidos.
+
+\subsubsection{Componentes del sistema}
+
+Para comprender mejor la solución propuesta y cómo desarrollarla según las especificaciones del dueño del producto (\textit{Product Owner}), se dividió el sistema según sus componentes. Para cada componente se establecieron las herramientas a utilizar, así como el protocolo de comunicación entre ellos.
+
+El servidor web cuenta con el \textit{framework} AppFuse, que internamente trabaja con Spring y Tapestry. Con Spring se implementan los servicios web a través de un \textit{Manager}. Cada \textit{Manager} accede a los POJO's por medio de un DAO. Además, Spring también cuenta con el \textit{framework} Hibernate para la persistencia de los datos, utilizando como manejador de base de datos MySQL. Con Tapestry se logra la creación de la aplicación web. Con Jetty se proveen los servicios mediante el protocolo HTTP para la comunicación con la aplicación web y la aplicación móvil.
+
+Por otra parte, en el dispositivo móvil Android corre una aplicación nativa que sigue el patrón MVP. Para la persistencia de los datos dentro del dispositivo se cuenta con SQLite. A través de la librería Retrofit, la aplicación se comunica con el servidor web. Esta comunicación se realiza mediante el protocolo HTTP, como se mencionó anteriormente.
+
+\subsubsection{Estructura de datos}
+
+Para dar lugar al desarrollo del sistema, fue necesario diseñar un modelo de datos que permita mantener la información necesaria en el dispositivo móvil, y otro para mantener información en el servidor.
+
+En la figura 5.2 se puede observar el modelo de datos de la aplicación móvil. Como se observa, cada cuenta puede tener asociado múltiples gastos e ingresos. Para cada gasto/ingreso, se debe tener información de su monto, fecha y descripción. Estos también pueden estar asociados a alguna categoría, aunque no es un requisito. Además, se tiene una clase que representa las fotos que puede tener un gasto/ingreso. 
+
+
+Por otra parte, en la figura 5.3 se puede observar la estructura de datos del servidor. En este caso, se tiene información de los usuarios.
+
+Cada usuario tiene asociado un nombre de usuario y una contraseña. Con estos datos, la aplicación puede conectarse al servidor para la autenticación y el envío de reportes. 
+
+También se tienen los datos de los reportes recibidos, así como su estado: aprobado, rechazado o pendiente por revisión.
