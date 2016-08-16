@@ -3,22 +3,27 @@
 Durante esta fase se implementó progresivamente la versión alfa del prototipo funcional. 
 
 Se creó un componente móvil y un servidor para dar solución al problema de registro y control de gastos.
+
 Para cumplir con los requerimientos del componente móvil, se desarrolló una aplicación para el sistema operativo Android, y se trabajó con el IDE Android Studio.
 
 Se implementaron vistas para crear, editar y eliminar gastos. Para estos gastos, se debe guardar su monto, fecha, descripción, fotos de recibos y categoría a la que pertenecen. Posteriormente, se decidió extender la funcionalidad de creación de gastos para permitir también el manejo de ingresos. 
 
 También se crearon vistas para el manejo de categorías, que incluyen la creación, edición y eliminación de las mismas.
 
-Luego de la creación de las principales funcionalidades del sistema, mencionadas en los párrafos anteriores, se introdujo el concepto de "cuentas". Hasta el momento, los gastos estaban asociados a una única cuenta por defecto. Por esta razón, también se creó una funcionalidad para agregar nuevas cuentas, y poder crear nuevos gastos dentro de dichas cuentas.
+Luego de la creación de las principales funcionalidades del sistema, mencionadas en los párrafos anteriores, se introdujo el concepto de \"cuentas\". Hasta el momento, los gastos estaban asociados a una única cuenta por defecto. Por esta razón, también se creó una funcionalidad para agregar nuevas cuentas, y poder crear nuevos gastos dentro de dichas cuentas.
 
 Como se explicó en la sección anterior, es necesario guardar toda esta información en la base de datos local de cada dispositivo. Para ello, se utilizó la librería SQLite.
 
 Además, también se crearon dos vistas para reportes de gastos: una para reportes de balance general, y otra para reporte de gastos por categorías.
 La vista de reporte de balance general muestra una lista de gastos e ingresos filtrados por fecha. La vista de reporte por categorías muestra una lista de categorías con la suma total de los gastos e ingresos de dichas categorías, filtradas por fecha.
 
-Para mantener la lógica separada de la interfaz gráfica, se utilizó el patrón de arquitectura MVP o Modelo Vista Presentador, descrito en el capítulo 2. De esta manera, toda acción en la vista que requiera realizar operaciones sobre la base de datos, se realizó por medio de una capa intermedia: el presentador.
+Para mantener la lógica separada de la interfaz gráfica, se utilizó el patrón de arquitectura MVP o Modelo Vista Presentador, descrito en el capítulo 2. De esta manera, toda acción en la vista que requiera realizar operaciones sobre la base de datos, se realizó por medio de una capa intermedia: el presentador. 
 
-En la figura 5.4 se muestran capturas de pantallas de algunas de las funcionalidades de la aplicación móvil
+Para lograr esto, fue necesario en primer lugar implementar el modelo descrito en la figura 5.4. Se creó la base de datos con cada una de sus tablas, así como las clases (POJO's) que permitieron dar un nivel de abstracción mayor para el mapeo con la base de datos.
+
+También se crearon las vistas necesarias, lo que incluyó tanto las interfaces gráficas como la lógica necesaria para manejar las acciones del usuario (actividades). Para cada vista, se creó una clase que actuó como la capa de presentador, quien era invocado por la vista para realizar acciones sobre el modelo. La vista se encargó de la creación de los objetos correspondientes al modelo, para luego pedir alguna acción al presentador sobre dichos objetos. El presentador tenía la función de invocar al modelo para realizar los cambios necesarios en la base de datos. 
+
+En la figura 5.6 se muestran capturas de pantallas de algunas de las funcionalidades de la aplicación móvil
 
 Por otra parte, se creó un servidor al que se pueda enviar información desde la aplicación móvil. 
 
@@ -28,7 +33,7 @@ Se creó un servicio web que recibe un archivo PDF que contiene el reporte de ga
 
 También se creó una aplicación web que permita aprobar o rechazar los reportes enviados al servidor. Además de esto, la herramienta utilizada para el desarrollo del servidor trae consigo algunas funcionalidades por defecto: iniciar sesión y el manejo de usuarios (agregar, modificar y eliminar usuarios).
 
-En la figura 5.5 se muestran capturas de pantallas de las funcionalidades del servidor.
+En la figura 5.7 se muestran capturas de pantallas de las funcionalidades del servidor.
 
 El desarrollo del componente servidor se realizó con el IDE Eclipse. Se utilizó el \textit{framework} AppFuse, que integra a su vez otros \textit{frameworks} que facilitan el desarrollo web. En este caso, se trabajó en conjunto con Spring y Tapestry.
 
@@ -244,7 +249,7 @@ Durante la creación del archivo PDF se presentaron diferentes dificultades. En 
 
 En esta iteración se creó el servidor web al cual la aplicación móvil puede enviar peticiones.
 
-En primer lugar, se creó el proyecto en AppFuse, con Tapestry como \textit{framework} para el desarrollo de la aplicación web. Utilizando Hibernate con MySQL, se crearon las tablas necesarias para implementar el modelo de datos mostrado en la figura 5.3.
+En primer lugar, se creó el proyecto en AppFuse, con Tapestry como \textit{framework} para el desarrollo de la aplicación web. Utilizando Hibernate con MySQL, se crearon las tablas necesarias para implementar el modelo de datos mostrado en la figura 5.5.
 
 Luego, se creó el servicio web para la autenticación de un usuario. 
 

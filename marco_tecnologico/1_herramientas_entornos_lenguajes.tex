@@ -2,8 +2,27 @@
 
 
 \subsection{Android}
-Es un sistema operativo de código abiertos basado en el sistema operativo Linux, utilizado principalmente para dispositivos móviles\cite{AND1}. Es la plataforma para la cual se desarrolló la aplicación.
-s
+Es un sistema operativo de código abiertos basado en el sistema operativo Linux, utilizado principalmente para dispositivos móviles\cite{AND1}. Es la plataforma para la cual se desarrolló la aplicación. 
+
+La plataforma de Android está basada en una arquitectura que tiene diferentes capas que van desde servicios de bajo nivel del sistema operativo, que interactúan directamente con el \textit{hardware}, hasta las aplicaciones. Además, Android provee un kit de desarrollo de \textit{software} (SDK por sus siglas en inglés), que permite crear aplicaciones \cite{AND3}.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.6,type=png,ext=.png,read=.png]{imagenes/android_architecture}
+  \caption{Arquitectura de la plataforma de Android}
+  \label{fig:androidArchitecture}
+\end{figure}
+
+La capa de más bajo nivel es la del kernel de Linux, como se puede observar en la figura 3.1. Provee un nivel de abstracción para la comunicación con el \textit{hardware} del dispositivo, y contiene los \textit{drivers} esenciales para el funcionamiento de dicho \textit{hardware}. Además, provee servicios del sistema operativo, como el manejo de memoria y procesos \cite{AND3}.
+
+Encima de esta capa se encuentra la de librerías, dentro de las cuales se encuentra SQLite, que permite guardar datos de las aplicaciones \cite{AND3}.
+
+En conjunto con la librerías, está la sección de Android \textit{Runtime} en el segundo nivel. Dentro de ella se encuentra un componente llamado Máquina Virtual de Dalvik (DVM por sus siglas en inglés), que es una máquina virtual de Java diseñada y optimizada especialmente para Android. Además de la DVM, provee un conjunto de librerías que permite desarrollar aplicaciones en Android utilizando el lenguaje de programación Java \cite{AND3}.
+
+La tercera capa de abajo hacia arriba corresponde al \textit{framework} de las aplicaciones. En ella se proveen servicios de alto nivel mediante clases de Java. Estos servicios pueden ser utilizados dentro de las aplicaciones. Dentro de estos servicios destaca el Manejador de Actividades (\textit{Activity Manager}), que se encarga de controlar todas las actividades de una aplicación. Una actividad (\textit{activity}) es un componente que provee una pantalla con la cual el usuario final puede interactuar. Generalmente, a cada actividad corresponde una interfaz de usuario \cite{AND3}.
+
+Por último, se encuentra la capa de aplicaciones, que es donde se encuentran instaladas las aplicaciones \cite{AND3}.
+
 \subsection{Java}
 Es un lenguaje de programación de alto nivel orientado a objetos, que puede correr virtualmente en cualquier computadora \cite{JAV1}. Es el lenguaje en el que están desarrolladas la mayoría de las aplicaciones de Android \cite{AND2}. Se utilizó tanto para la programación de la aplicación móvil como del servidor.
 

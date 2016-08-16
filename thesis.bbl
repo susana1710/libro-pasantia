@@ -5,9 +5,9 @@
   \url{http://digitalicagroup.com/}, consultado el 30 de julio de 2016.
 
 \bibitem{DSP0}
-``Patrón de diseño.''
-  \url{https://es.wikipedia.org/wiki/Patr%C3%B3n_de_dise%C3%B1o}, consultado el
-  9 de julio de 2016.
+E.~Gamma, R.~Helm, R.~Johnson, and J.~Vlissides, {\em Dessign Patterns.
+  Elements of Reusable Object-Oriented SOftware}.
+\newblock Addison-Wesley, 1~ed.
 
 \bibitem{DSP1}
 E.~Freeman, E.~Freeman, K.~Sierra, and B.~Bates, {\em Head First: Design
@@ -51,14 +51,24 @@ D.~Garlan and M.~Shaw, {\em An introduction to Software Engineer}.
 ``Web service.'' \url{https://en.wikipedia.org/wiki/Web_service}, consultado el
   2 de agosto de 2016.
 
-\bibitem{HTTP0}
-``Post(http).'' \url{https://en.wikipedia.org/wiki/POST_%28HTTP%29}, consultado
-  el 2 de agosto de 2016.
+\bibitem{HTTP2}
+``Http made really easy.'' \url{http://www.jmarshall.com/easy/http/#whatis},
+  consultado el 15 de agosto de 2016.
+
+\bibitem{HTTP3}
+``Http methods get vs post.''
+  \url{http://www.w3schools.com/tags/ref_httpmethods.asp}, consultado el 15 de
+  agosto de 2016.
 
 \bibitem{AND1}
 ``What is android os?.''
   \url{https://www.techopedia.com/definition/14873/android-os}, consultado el
   30 de julio de 2016.
+
+\bibitem{AND3}
+``Android architecture.''
+  \url{http://www.tutorialspoint.com/android/android_architecture.htm},
+  consultado el 16 de agosto de 2016.
 
 \bibitem{JAV1}
 ``What is java? definition and meaning.''
@@ -119,20 +129,15 @@ S.~Chacon and B.~Straub, {\em Pro Git: Everything you ned to know about Git}.
 ``Retrofit.'' \url{http://square.github.io/retrofit/}, consultado el 30 de
   julio de 2016.
 
-\bibitem{SCRM0}
-``Scrum (software development).''
-  \url{https://en.wikipedia.org/wiki/Scrum_%28software_development%29},
-  consultado el 7 de julio de 2016.
+\bibitem{SCRM12}
+K.~Rubin, {\em Essential Scrum: A practical guide to the most popular agile
+  process}.
+\newblock Addison-Wesley Professional, 1~ed., 2012.
 
 \bibitem{SCRM1}
 ``Scrum basics.''
   \url{http://www.scrumguides.org/docs/scrumguide/v1/Scrum-Guide-ES.pdf},
   consultado el 7 de julio de 2016.
-
-\bibitem{SCRM12}
-K.~Rubin, {\em Essential Scrum: A practical guide to the most popular agile
-  process}.
-\newblock Addison-Wesley Professional, 1~ed., 2012.
 
 \bibitem{SCRM2}
 ``Artefactos en scrum: claves para una organización diaria.''

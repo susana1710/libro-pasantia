@@ -1,58 +1,94 @@
 \select@language {spanish}
-\contentsline {chapter}{\'Indice general}{\es@scroman {v}}{chapter*.1}
-\contentsline {chapter}{Introducci\IeC {\'o}n}{1}{section*.3}
-\contentsline {chapter}{\numberline {1}Entorno Empresarial}{2}{chapter.1}
-\contentsline {chapter}{\numberline {2}Marco Te\IeC {\'o}rico}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Patrones de dise\IeC {\~n}o}{3}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}\textit {Singleton}}{3}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}\textit {Adapter}}{4}{subsection.2.1.2}
-\contentsline {chapter}{\numberline {3}Marco Tecnol\IeC {\'o}gico}{5}{chapter.3}
-\contentsline {chapter}{\numberline {4}Marco Metodol\IeC {\'o}gico}{6}{chapter.4}
-\contentsline {section}{\numberline {4.1}Scrum}{6}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Roles}{6}{subsection.4.1.1}
-\contentsline {subsubsection}{\textit {Product owner}}{7}{section*.5}
-\contentsline {subsubsection}{\textit {Scrum master}}{7}{section*.6}
-\contentsline {subsubsection}{Equipo de desarrollo}{7}{section*.7}
-\contentsline {subsection}{\numberline {4.1.2}Actividades}{7}{subsection.4.1.2}
-\contentsline {subsubsection}{\textit {Sprint planning}}{8}{section*.8}
-\contentsline {subsubsection}{Ejecuci\IeC {\'o}n del \textit {sprint}}{8}{section*.9}
-\contentsline {subsubsection}{\textit {Daily scrum}}{8}{section*.10}
-\contentsline {subsubsection}{\textit {Sprint review}}{8}{section*.11}
-\contentsline {subsubsection}{\textit {Sprint retrospective}}{9}{section*.12}
-\contentsline {subsection}{\numberline {4.1.3}Artefactos}{9}{subsection.4.1.3}
-\contentsline {subsubsection}{\textit {Product backlog}}{9}{section*.13}
-\contentsline {subsubsection}{\textit {Sprint backlog}}{9}{section*.14}
-\contentsline {chapter}{\numberline {5}Desarrollo de la aplicacion}{10}{chapter.5}
-\contentsline {section}{\numberline {5.1}Investigacion}{10}{section.5.1}
-\contentsline {section}{\numberline {5.2}Diseno}{11}{section.5.2}
-\contentsline {section}{\numberline {5.3}Desarrollo}{11}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Sprint 1}{11}{subsection.5.3.1}
-\contentsline {subsubsection}{Objetivos}{11}{section*.15}
-\contentsline {subsubsection}{Resultados}{11}{section*.16}
-\contentsline {subsubsection}{Actividades}{12}{section*.17}
-\contentsline {subsection}{\numberline {5.3.2}Sprint 2}{12}{subsection.5.3.2}
-\contentsline {subsubsection}{Objetivos}{12}{section*.18}
-\contentsline {subsubsection}{Resultados}{12}{section*.19}
-\contentsline {subsubsection}{Actividades}{13}{section*.20}
-\contentsline {subsection}{\numberline {5.3.3}Sprint 3}{14}{subsection.5.3.3}
-\contentsline {subsubsection}{Objetivos}{14}{section*.21}
-\contentsline {subsubsection}{Resultados}{14}{section*.22}
-\contentsline {subsubsection}{Actividades}{14}{section*.23}
-\contentsline {subsection}{\numberline {5.3.4}Sprint 4}{16}{subsection.5.3.4}
-\contentsline {subsubsection}{Objetivos}{16}{section*.24}
-\contentsline {subsubsection}{Resultados}{16}{section*.25}
-\contentsline {subsubsection}{Actividades}{16}{section*.26}
-\contentsline {subsection}{\numberline {5.3.5}Sprint 5}{17}{subsection.5.3.5}
-\contentsline {subsubsection}{Objetivos}{17}{section*.27}
-\contentsline {subsubsection}{Resultados}{17}{section*.28}
-\contentsline {subsubsection}{Actividades}{18}{section*.29}
-\contentsline {subsection}{\numberline {5.3.6}Sprint 6}{18}{subsection.5.3.6}
-\contentsline {subsubsection}{Objetivos}{18}{section*.30}
-\contentsline {subsubsection}{Resultados}{19}{section*.31}
-\contentsline {subsubsection}{Actividades}{19}{section*.32}
-\contentsline {subsection}{\numberline {5.3.7}Sprint 7}{21}{subsection.5.3.7}
-\contentsline {subsubsection}{Objetivos}{21}{section*.33}
-\contentsline {subsubsection}{Resultados}{21}{section*.34}
-\contentsline {subsubsection}{Resultados}{21}{section*.35}
-\contentsline {chapter}{\numberline {6}Conclusiones y Recomendaciones}{22}{chapter.6}
-\contentsline {chapter}{Bibliograf\'{\i }a}{23}{chapter*.36}
+\contentsline {chapter}{\'{I}ndice general}{\es@scroman {iv}}{chapter*.1}
+\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {viii}}{chapter*.2}
+\contentsline {chapter}{Introducci\IeC {\'o}n}{1}{section*.4}
+\contentsline {chapter}{\numberline {1}Entorno Empresarial}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Descripci\IeC {\'o}n de la empresa}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Misi\IeC {\'o}n}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}Visi\IeC {\'o}n}{4}{section.1.3}
+\contentsline {section}{\numberline {1.4}Estructura organizacional}{4}{section.1.4}
+\contentsline {section}{\numberline {1.5}Ubicaci\IeC {\'o}n del pasante}{5}{section.1.5}
+\contentsline {chapter}{\numberline {2}Marco Te\IeC {\'o}rico}{6}{chapter.2}
+\contentsline {section}{\numberline {2.1}Patrones de dise\IeC {\~n}o}{6}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}\textit {Singleton}}{6}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}\textit {Adapter}}{7}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}\textit {Facade}}{7}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Patrones de arquitectura}{7}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Modelo Vista Controlador (MVC)}{7}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Modelo Vista Presentador (MVP)}{7}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Arquitectura cliente-servidor}{8}{section.2.3}
+\contentsline {section}{\numberline {2.4}Servicio web}{8}{section.2.4}
+\contentsline {section}{\numberline {2.5}HTTP (\textit {Hypertext Transfer Protocol})}{9}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}HTTP GET}{9}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}HTTP POST}{9}{subsection.2.5.2}
+\contentsline {chapter}{\numberline {3}Marco Tecnol\IeC {\'o}gico}{10}{chapter.3}
+\contentsline {section}{\numberline {3.1}Herramientas, entornos y lenguajes}{10}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Android}{10}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Java}{12}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}MySQL}{12}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}SQLite}{12}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Maven}{13}{subsection.3.1.5}
+\contentsline {subsection}{\numberline {3.1.6}Jetty}{13}{subsection.3.1.6}
+\contentsline {subsection}{\numberline {3.1.7}Android Studio}{13}{subsection.3.1.7}
+\contentsline {subsection}{\numberline {3.1.8}Eclipse}{13}{subsection.3.1.8}
+\contentsline {subsection}{\numberline {3.1.9}Git}{13}{subsection.3.1.9}
+\contentsline {section}{\numberline {3.2}\textit {Frameworks y librer\IeC {\'\i }as}}{14}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}AppFuse}{14}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Hibernate}{14}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Spring}{14}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Tapestry}{14}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Gson}{14}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.6}Retrofit}{14}{subsection.3.2.6}
+\contentsline {chapter}{\numberline {4}Marco Metodol\IeC {\'o}gico}{15}{chapter.4}
+\contentsline {section}{\numberline {4.1}Scrum}{15}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Roles}{15}{subsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.1.1}Due\IeC {\~n}o del producto (\textit {Product owner})}{16}{subsubsection.4.1.1.1}
+\contentsline {subsubsection}{\numberline {4.1.1.2}Facilitador de Scrum (\textit {Scrum master})}{16}{subsubsection.4.1.1.2}
+\contentsline {subsubsection}{\numberline {4.1.1.3}Equipo de desarrollo}{16}{subsubsection.4.1.1.3}
+\contentsline {subsection}{\numberline {4.1.2}Actividades}{16}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}Planeaci\IeC {\'o}n de la iteraci\IeC {\'o}n (\textit {Sprint planning})}{17}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.2}Ejecuci\IeC {\'o}n de la iteraci\IeC {\'o}n (\textit {Sprint execution})}{17}{subsubsection.4.1.2.2}
+\contentsline {subsubsection}{\numberline {4.1.2.3}Reuni\IeC {\'o}n diaria (\textit {Daily scrum})}{17}{subsubsection.4.1.2.3}
+\contentsline {subsubsection}{\numberline {4.1.2.4}Revisi\IeC {\'o}n de la iteraci\IeC {\'o}n (\textit {Sprint review})}{17}{subsubsection.4.1.2.4}
+\contentsline {subsubsection}{\numberline {4.1.2.5}Retrospectiva de la iteraci\IeC {\'o}n (\textit {Sprint retrospective})}{18}{subsubsection.4.1.2.5}
+\contentsline {subsection}{\numberline {4.1.3}Artefactos}{18}{subsection.4.1.3}
+\contentsline {subsubsection}{\numberline {4.1.3.1}Documento de historias de usuario (\textit {Product backlog})}{18}{subsubsection.4.1.3.1}
+\contentsline {subsubsection}{\numberline {4.1.3.2}Lista de tareas de la iteraci\IeC {\'o}n (\textit {Sprint backlog})}{18}{subsubsection.4.1.3.2}
+\contentsline {chapter}{\numberline {5}Desarrollo de la aplicaci\IeC {\'o}n}{19}{chapter.5}
+\contentsline {section}{\numberline {5.1}Investigaci\IeC {\'o}n}{19}{section.5.1}
+\contentsline {section}{\numberline {5.2}An\IeC {\'a}lisis y dise\IeC {\~n}o de la soluci\IeC {\'o}n}{20}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}An\IeC {\'a}lisis del problema}{20}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Dise\IeC {\~n}o de la soluci\IeC {\'o}n}{21}{subsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2.1}Estructura de datos}{23}{subsubsection.5.2.2.1}
+\contentsline {section}{\numberline {5.3}Desarrollo}{26}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Iteraci\IeC {\'o}n 1}{29}{subsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.1.1}Objetivos}{29}{subsubsection.5.3.1.1}
+\contentsline {subsubsection}{\numberline {5.3.1.2}Resultados}{29}{subsubsection.5.3.1.2}
+\contentsline {subsubsection}{\numberline {5.3.1.3}Actividades}{29}{subsubsection.5.3.1.3}
+\contentsline {subsection}{\numberline {5.3.2}Iteraci\IeC {\'o}n 2}{30}{subsection.5.3.2}
+\contentsline {subsubsection}{\numberline {5.3.2.1}Objetivos}{30}{subsubsection.5.3.2.1}
+\contentsline {subsubsection}{\numberline {5.3.2.2}Resultados}{30}{subsubsection.5.3.2.2}
+\contentsline {subsubsection}{\numberline {5.3.2.3}Actividades}{31}{subsubsection.5.3.2.3}
+\contentsline {subsection}{\numberline {5.3.3}Iteraci\IeC {\'o}n 3}{32}{subsection.5.3.3}
+\contentsline {subsubsection}{\numberline {5.3.3.1}Objetivos}{32}{subsubsection.5.3.3.1}
+\contentsline {subsubsection}{\numberline {5.3.3.2}Resultados}{32}{subsubsection.5.3.3.2}
+\contentsline {subsubsection}{\numberline {5.3.3.3}Actividades}{32}{subsubsection.5.3.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Iteraci\IeC {\'o}n 4}{33}{subsection.5.3.4}
+\contentsline {subsubsection}{\numberline {5.3.4.1}Objetivos}{33}{subsubsection.5.3.4.1}
+\contentsline {subsubsection}{\numberline {5.3.4.2}Resultados}{34}{subsubsection.5.3.4.2}
+\contentsline {subsubsection}{\numberline {5.3.4.3}Actividades}{34}{subsubsection.5.3.4.3}
+\contentsline {subsection}{\numberline {5.3.5}Iteraci\IeC {\'o}n 5}{35}{subsection.5.3.5}
+\contentsline {subsubsection}{\numberline {5.3.5.1}Objetivos}{35}{subsubsection.5.3.5.1}
+\contentsline {subsubsection}{\numberline {5.3.5.2}Resultados}{35}{subsubsection.5.3.5.2}
+\contentsline {subsubsection}{\numberline {5.3.5.3}Actividades}{35}{subsubsection.5.3.5.3}
+\contentsline {subsection}{\numberline {5.3.6}Iteraci\IeC {\'o}n 6}{36}{subsection.5.3.6}
+\contentsline {subsubsection}{\numberline {5.3.6.1}Objetivos}{36}{subsubsection.5.3.6.1}
+\contentsline {subsubsection}{\numberline {5.3.6.2}Resultados}{36}{subsubsection.5.3.6.2}
+\contentsline {subsubsection}{\numberline {5.3.6.3}Actividades}{37}{subsubsection.5.3.6.3}
+\contentsline {subsection}{\numberline {5.3.7}Iteraci\IeC {\'o}n 7}{38}{subsection.5.3.7}
+\contentsline {subsubsection}{\numberline {5.3.7.1}Objetivos}{38}{subsubsection.5.3.7.1}
+\contentsline {subsubsection}{\numberline {5.3.7.2}Resultados}{39}{subsubsection.5.3.7.2}
+\contentsline {subsubsection}{\numberline {5.3.7.3}Actividades}{39}{subsubsection.5.3.7.3}
+\contentsline {subsection}{\numberline {5.3.8}Iteraci\IeC {\'o}n 8}{40}{subsection.5.3.8}
+\contentsline {chapter}{\numberline {6}Conclusiones y Recomendaciones}{41}{chapter.6}
+\contentsline {chapter}{Bibliograf\'{\i }a}{42}{chapter*.15}
