@@ -30,7 +30,13 @@ También se creó una aplicación web que permita aprobar o rechazar los reporte
 
 En la figura 5.5 se muestran capturas de pantallas de las funcionalidades del servidor.
 
-El desarrollo del componente servidor se realizó con el IDE Eclipse. Se utilizó el \textit{framework} AppFuse, que integra a su vez otros \textit{frameworks} que facilitan el desarrollo web. Se utilizó Spring para la implementación de los servicios web que permiten recibir datos desde la aplicación móvil. Para crear la aplicación web, se utilizó Tapestry. Para el despliegue del servidor, se utilizó Maven y Jetty.
+El desarrollo del componente servidor se realizó con el IDE Eclipse. Se utilizó el \textit{framework} AppFuse, que integra a su vez otros \textit{frameworks} que facilitan el desarrollo web. En este caso, se trabajó en conjunto con Spring y Tapestry.
+
+Se utilizó Spring para la implementación de los servicios web que permiten recibir datos desde la aplicación móvil. Estos servicios se implementaron mediante una clase \textit{Manager}, la cual accede a los POJO's mediante un DAO. Además, Spring también cuenta con el \textit{framework} Hibernate para la persistencia de los datos, utilizando como manejador de base de datos MySQL.
+
+Para crear la aplicación web, se utilizó Tapestry. Con Jetty se proveen los servicios, mediante el protocolo HTTP, que permiten la comunicación con la aplicación web y la aplicación  móvil.
+
+Por otra parte, a través de la librería Retrofit, la aplicación se comunica con el servidor web utlizando el protocolo HTTP. La comunicación con la base de datos del dispositivo y con los servicios web se realizan en la capa del presentador. Por su parte, en la vista se maneja toda la interfaz gráfica a través de la cual el usuario interactúa con la aplicación, y toda la lógica necesaria para la comunicación con la capa de modelo y el presentador.
 
 El proyecto se desarrolló bajo el marco de trabajo de \textit{Scrum}, descrito en el capitulo 1. Durante la ejecución de las iteraciones, se implementaron las funcionalidades planificadas, así como las pruebas necesarias para validarlas.
 

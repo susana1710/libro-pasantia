@@ -4,7 +4,6 @@ En esta fase tuvo lugar dos etapas fundamentales para el desarrollo: análisis d
 
 Para comprender mejor el problema presentado, se realizó una reunión con el dueño del producto (\textit{product owner}). En esta reunión se realizó el primer levantamiento y refinamiento de requerimientos. A partir de estos requerimientos, se diseñó una arquitectura base que diera solución al problema.
 
-
 \subsection{Análisis del problema}
 
 Como se mencionó anteriormente, se necesita una aplicación móvil que permita a los trabajadores de la compañía registrar gastos personales que posteriormente serán reembolsados. El reporte de estos gastos debe ser enviado a un servidor web. También se requiere una aplicación web que permita aprobar o rechazar los reportes enviados.
@@ -19,9 +18,9 @@ Por último, se quiere que los supervisores de la compañía puedan tener acceso
 
 \subsection{Diseño de la solución}
 
-\subsubsection{Arquitectura base}
+\subsubsection*{Arquitectura base}
 
-Dados los requerimientos anteriores, se diseñó una arquitectura base para solucionar el problema. Como se muestra en la figura 5.1, es una arquitectura cliente-servidor, donde el componente móvil juega el papel de cliente.
+Dados los requerimientos anteriores, se diseñó una arquitectura base para solucionar el problema. Se dividió el sistema según sus componentes: servidor web, dispositivos móviles y cliente web. Como se muestra en la figura 5.1, es una arquitectura cliente-servidor, donde el componente móvil y la aplicación web juegan el papel de cliente. En este caso, la aplicación móvil actúa como un cliente activo, pues es quien manejará los datos relevantes. El servidor solo recibirá esta información, sin poder modificarla. Esto corresponde a una arquitectura del tipo cliente activo-servidor pasivo, descrita en el capítulo 2.
 
 \begin{figure}[ht]
   \centering
@@ -36,13 +35,9 @@ Toda la información relacionada a los gastos (fecha, monto, categorías, fotos)
 
 Estos reportes deberán ser guardados en la base de datos del servidor. Además, a través de una aplicación web, se podrá aprobar o rechazar los reportes recibidos.
 
-\subsubsubsection{Arquitectura de \textit{software}}
+\subsubsection*{Arquitectura de \textit{software}}
 
-Para comprender mejor la solución propuesta y cómo desarrollarla según las especificaciones del dueño del producto (\textit{Product Owner}), se dividió el sistema según sus componentes: servidor web, servidor de base de datos, dispositivos móviles y cliente web. Para cada componente se establecieron las herramientas a utilizar, así como el protocolo de comunicación entre ellos. 
-
-El servidor web cuenta con el \textit{framework} AppFuse, que internamente trabaja con Spring y Tapestry. Con Spring se implementan los servicios web a través de un \textit{Manager}. Cada \textit{Manager} accede a los POJO's por medio de un DAO. Además, Spring también cuenta con el \textit{framework} Hibernate para la persistencia de los datos, utilizando como manejador de base de datos MySQL. Con Tapestry se logra la creación de la aplicación web. Con Jetty se proveen los servicios mediante el protocolo HTTP, que permiten la comunicación con la aplicación web y la aplicación móvil.
-
-Por otra parte, en los dispositivos móviles Android corre una aplicación nativa que sigue el patrón MVP descrito en el capítulo 2. A través de la librería Retrofit, la aplicación se comunica con el servidor web mediante el protocolo HTTP, como se mencionó anteriormente. La comunicación con la base de datos del dispositivo y con los servicios web se realizan en la capa del presentador. Por su parte, en la vista se maneja toda la interfaz gráfica a través de la cual el usuario interactúa con la aplicación, y toda la lógica necesaria para la comunicación con la capa de modelo y el presentador.
+Para los componentes mencionados anteriormente, se definieron los patrón de arquitectura de \textit{software} sobre los cuales se crearon. Para el servidor se utilizó el patrón Modelo Vista Controlador (MVC) y para la aplicación móvil el Modelo Vista Presentador (MVP).
 
 \subsubsection{Estructura de datos}
 
@@ -52,7 +47,7 @@ En la figura 5.2 se puede observar el diagrama de clases que representa el model
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/class_diagram_mobile}
+  \includegraphics[scale=0.6,type=png,ext=.png,read=.png]{imagenes/class_diagram_mobile}
   \caption{Diagrama de clases de la aplicación móvil}
   \label{fig:classDiagramMobile}
 \end{figure}
@@ -64,14 +59,14 @@ A continuación se describirán cada una de estas clases, así como sus atributo
 	\item \textbf{\textit{Entry}}: representa un registro dentro de una cuenta, y puede ser de dos tipos: ingreso o gasto. Almacena información del monto, fecha y descripción.
 	\item \textbf{\textit{Category}}: representa las clases a las que puede pertenecer un \textit{entry}. Puede ser de dos tipos: categoría de ingresos o categoría de gastos. Almacena información general (nombre) y un ícono que la representa.
 	\item \textbf{\textit{Photo}}: representa las fotos asociadas a un \textit{entry}. Almacena información del \textit{entry} al que pertenece, y la ruta del archivo dentro del dispositivo móvil.
-\end{itemize}}
+\end{itemize}
 
 
 Por otra parte, en la figura 5.3 se puede observar la estructura de datos del servidor. En este caso, se tienen dos clases: \textit{user} y \textit{report}.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/class_diagram_server}
+  \includegraphics[scale=0.6,type=png,ext=.png,read=.png]{imagenes/class_diagram_server}
   \caption{Diagrama de clases del servidor}
   \label{fig:classDiagramServer}
 \end{figure}
