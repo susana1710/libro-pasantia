@@ -50,7 +50,7 @@ Como se muestra en la figura 5.2, el modelo incluye tanto los POJO's, DAO's como
   \label{fig:mvc}
 \end{figure}
 
-Por su parte, MVP es una derivación del patrón MVC, como se observa en la figura 5.3. El modelo incluye tanto la base de datos como los POJO's utilizados para el mapeo con objetos de la base de datos. La vista está formada por las actividades (\textit{activities}) definidos en el capítulo 2, y las interfaces de usuario.
+Por su parte, MVP es una derivación del patrón MVC, como se observa en la figura 5.3. El modelo incluye tanto la base de datos como los POJO's, los cuales fueron utilizados para establecer una correspondencia entre objetos de la aplicación con registros de la base de datos. La vista está formada por las actividades (\textit{activities}) definidos en el capítulo 2, y las interfaces de usuario.
  
 En este caso, las acciones de usuario son recibidas por la vista. Luego, la vista se comunica con el presentador, que pide los datos al modelo. Al terminar de trabajo, el modelo notifica al presentador, y este último se encarga de modificar la vista a través de una interfaz.
 
