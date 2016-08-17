@@ -20,10 +20,9 @@ Para mostrar los gastos e ingresos guardados, se creó una vista para listarlos.
 \begin{figure}[ht]
   \centering
   \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/expenses_list}
-  \caption{Interfaz para listar gastos}
+ \caption{Interfaz para listar gastos}
   \label{fig:interfazListarGastos}
 \end{figure}
-
 \begin{figure}[ht]
   \centering
   \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/incomes_list}
@@ -42,7 +41,7 @@ También se crearon vistas para el manejo de categorías, que incluyen la creaci
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/incomes_categories}
+  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/income_categories}
   \caption{Interfaz para listar categorías de ingresos}
   \label{fig:interfazListarCategoriasIngresos}
 \end{figure}
@@ -83,7 +82,7 @@ La vista de reporte de balance general muestra una lista de gastos e ingresos fi
   \centering
   \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/categories_report}
   \caption{Interfaz para mostrar el balance por categorías}
-  \label{fig:interfazReporteCategorias
+  \label{fig:interfazReporteCategorias}
 \end{figure}
 
 Para mantener la lógica separada de la interfaz gráfica, se utilizó el patrón de arquitectura MVP o Modelo Vista Presentador, descrito en el capítulo 2. De esta manera, toda acción en la vista que requiera realizar operaciones sobre la base de datos, se realizó por medio de una capa intermedia: el presentador. 
