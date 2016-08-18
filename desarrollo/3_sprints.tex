@@ -4,7 +4,18 @@ Durante esta fase se implementó progresivamente la versión alfa del prototipo 
 
 Se creó un componente móvil y un servidor para dar solución al problema de registro y control de gastos.
 
-Para cumplir con los requerimientos del componente móvil, se desarrolló una aplicación para el sistema operativo Android, y se trabajó con el IDE Android Studio.
+Para cumplir con los requerimientos del componente móvil, se creó una aplicación para el sistema operativo Android, y se trabajó con el IDE Android Studio.
+
+ El desarrollo de la aplicación implicó la creación de múltiples vistas (tanto interfaces de usuario como la lógica para manejar acciones de usuario), y de diversas consultas a la base de datos, muchas de las cuales realizaban modificaciones a la misma.
+
+En primer lugar, se creó la interfaz de la vista principal de la aplicación, donde se muestra el total de ingresos, el total de gastos y el balance general.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/dashboard}
+  \caption{Interfaz principal de la aplicación}
+  \label{fig:interfazDashboard}
+\end{figure}
 
 Se implementó una vista para crear y editar gastos. Para estos gastos, se debe guardar su monto, fecha, descripción, fotos de recibos y categoría a la que pertenecen. Posteriormente, se decidió extender la funcionalidad de creación de gastos para permitir también el manejo de ingresos. 
 
@@ -73,7 +84,7 @@ La vista de reporte de balance general muestra una lista de gastos e ingresos fi
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/balance_report}
+  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/general_report}
   \caption{Interfaz para mostrar el balance general}
   \label{fig:interfazReporteBalanceGeneral}
 \end{figure}
@@ -91,27 +102,37 @@ Para lograr esto, fue necesario en primer lugar implementar el modelo descrito e
 
 También se crearon las vistas necesarias, lo que incluyó tanto las interfaces gráficas como la lógica necesaria para manejar las acciones del usuario (actividades). Para cada vista, se creó una clase que actuó como la capa de presentador, quien era invocado por la vista para realizar acciones sobre el modelo. La vista se encargó de la creación de los objetos correspondientes al modelo, para luego pedir alguna acción al presentador sobre dichos objetos. El presentador tenía la función de invocar al modelo para realizar los cambios necesarios en la base de datos.
 
-En la figura 5.6 se muestran capturas de pantallas de algunas de las funcionalidades de la aplicación móvil
-
 Por otra parte, se creó un servidor al que se pueda enviar información desde la aplicación móvil. 
 
 Para permitir el acceso a la aplicación móvil, se creó un servicio web que permita hacer la autenticación del usuario. La aplicación envía al servidor un JSON con los datos del usuario (nombre de usuario y contraseña) por medio de una petición HTTP POST.
 
 Se creó un servicio web que recibe un archivo PDF que contiene el reporte de gastos. Además del archivo, recibe la suma de gastos por cada categoría y el total de gastos. Estos datos se enviaron por medio de una petición HTTP Post Multipart, compuesta por un archivo y un JSON. Para la conversión de objetos de Java a JSON, y viceversa, se utilizó la librería GSON tanto en el servidor como en la aplicación móvil. Para persistir esta información, se utilizó Hibernate y MySQL como manejador de base de datos.
 
-También se creó una aplicación web que permita aprobar o rechazar los reportes enviados al servidor. Además de esto, la herramienta utilizada para el desarrollo del servidor trae consigo algunas funcionalidades por defecto: iniciar sesión y el manejo de usuarios (agregar, modificar y eliminar usuarios).
+También se creó una aplicación web que permita aprobar o rechazar los reportes enviados al servidor (ver figuras 5.11 y 5.12). Además de esto, la herramienta utilizada para el desarrollo del servidor trae consigo algunas funcionalidades por defecto: iniciar sesión y el manejo de usuarios (agregar, modificar y eliminar usuarios).
 
-En la figura 5.7 se muestran capturas de pantallas de las funcionalidades del servidor.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/pending_reports}
+  \caption{Interfaz para listar reportes pendientes de revisión}
+  \label{fig:interfazListarReportesPendientes}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/reviewed_reports}
+  \caption{Interfaz para listar reportes aprobados/rechazados}
+  \label{fig:interfazListarReportesRevisados}
+\end{figure}
 
 El desarrollo del componente servidor se realizó con el IDE Eclipse. Se utilizó el \textit{framework} AppFuse, que integra a su vez otros \textit{frameworks} que facilitan el desarrollo web. En este caso, se trabajó en conjunto con Spring y Tapestry.
 
-Se utilizó Spring para la implementación de los servicios web que permiten recibir datos desde la aplicación móvil. Estos servicios se implementaron mediante una clase \textit{Manager}, la cual accede a los POJO's mediante un DAO. Además, Spring también cuenta con el \textit{framework} Hibernate para la persistencia de los datos, utilizando como manejador de base de datos MySQL.
+Se utilizó Spring para la implementación de los servicios web que permiten recibir datos desde la aplicación móvil. Estos servicios se implementaron utilizando el patrón \textit{Facade}, mediante una clase \textit{Manager}, la cual accede a los POJO's mediante un DAO (para más información, ver capítulo 2). Además, Spring también cuenta con el \textit{framework} Hibernate para la persistencia de los datos, utilizando como manejador de base de datos MySQL.
 
 Para crear la aplicación web, se utilizó Tapestry. Con Jetty se proveen los servicios, mediante el protocolo HTTP, que permiten la comunicación con la aplicación web y la aplicación  móvil.
 
 Por otra parte, a través de la librería Retrofit, la aplicación se comunica con el servidor web utlizando el protocolo HTTP. La comunicación con la base de datos del dispositivo y con los servicios web se realizan en la capa del presentador. Por su parte, en la vista se maneja toda la interfaz gráfica a través de la cual el usuario interactúa con la aplicación, y toda la lógica necesaria para la comunicación con la capa de modelo y el presentador.
 
-El proyecto se desarrolló bajo el marco de trabajo de \textit{Scrum}, descrito en el capitulo 1. Durante la ejecución de las iteraciones, se implementaron las funcionalidades planificadas, así como las pruebas necesarias para validarlas.
+El proyecto se desarrolló bajo el marco de trabajo de \textit{Scrum}, descrito en el capítulo 1. Durante la ejecución de las iteraciones, se implementaron las funcionalidades planificadas, así como las pruebas necesarias para validarlas.
 
 A continuación se presentarán las iteraciones (\textit{sprints}), durante las cuales se desarrollaron las funcionalidades descritas en los párrafos anteriores. Para cada iteración, se mencionarán sus objetivos, resultados y una breve descripción de las actividades realizadas.
 
@@ -130,13 +151,13 @@ A continuación se presentarán las iteraciones (\textit{sprints}), durante las 
 \end{itemize}
 
 \subsubsection{Actividades}
-En la primera parte de la iteración se implementó el modelo de datos del dispositivo móvil.
+En la primera parte de la iteración se implementó el modelo de datos del dispositivo móvil, lo que implicó la creación de la base de datos con sus tablas, así como los POJO's correspondientes.
 
 Se creó la vista principal de la aplicación móvil, donde se muestra el total de ingresos y el de gastos, así como el balance general. Para esto, fue necesario crear consultas a la base de datos que permitieran obtener el total de ingresos/gastos de una cuenta.  También se realizó una consulta que permite obtener el balance total de una cuenta.
 
 Por otro lado se implementó una vista que permite crear un nuevo gasto, con su fecha, monto y descripción.
 
-Como se expuso anteriormente, la comunicación entre el modelo y la vista se hace a través de una capa intermedia: el presentador. Por esta razón, también fue necesaria la creación de un presentador para cada vista que permita hacer consultas a la base de datos.
+%Como se expuso anteriormente, la comunicación entre el modelo y la vista se hace a través de una capa intermedia: el presentador. Por esta razón, también fue necesaria la creación de un presentador para cada vista que permita hacer consultas a la base de datos.
 
 \subsection{Iteración 2}
 
@@ -144,7 +165,7 @@ Como se expuso anteriormente, la comunicación entre el modelo y la vista se hac
 \begin{itemize}
 \item Mostrar la lista de categorías
 \item Permitir la creación de un nuevo ingreso
-\item Permitir guardar fotos de un $\entry$
+\item Permitir guardar fotos de un ingreso/gasto
 \item Asociar un ingreso/gasto a una categoría
 \end{itemize}
 
@@ -191,17 +212,15 @@ En primer lugar, se adaptó la vista principal de la aplicación para mostrar el
 
 Se implementó la funcionalidad para navegar a la lista de ingresos o de gastos del mes desde la vista principal de la aplicación. Para esto, se creó una vista general donde se pueda mostrar una lista de ingresos/gastos, con su descripción (o categoría, en caso de que no tenga descripción), su fecha y su monto.
 
-Por otra parte, se creó la funcionalidad para eliminar ingresos/gastos existentes desde la vista mencionada en el párrafo anterior.
+Por otra parte, se creó la funcionalidad para eliminar ingresos/gastos existentes desde la vista mencionada en el párrafo anterior, lo que implicó realizar cambios a la vista y la creación de una consulta que permitiera eliminar de la base de datos un ingreso/gasto.
 
-También se creó la funcionalidad para editar un ingreso/gasto existente. Para esto no fue necesario crear una vista nueva, sino que se adaptó la que se tenía para la creación de un nuevo ingreso/gasto, de manera que se muestre la información relacionada a dicho $entry$ (fecha, monto, categoría, descripción y fotos).
+También se creó la funcionalidad para editar un ingreso/gasto existente. Para esto no fue necesario crear una vista nueva, sino que se adaptó la que se tenía para la creación de un nuevo ingreso/gasto, de manera que se muestre la información relacionada (fecha, monto, categoría, descripción y fotos).
 
 Por último, se tenía como requerimiento mostrar una calculadora para ingresar el monto de un ingreso/gasto, en lugar de un teclado numérico común. Por esta razón, se tuvo que modificar la vista de creación de un ingreso/gasto para incluir la nueva funcionalidad. 
 
 Para este último requerimiento fue necesario crear un teclado virtual personalizado, pues el teclado numérico del dispositivo no incluye los operadores matemáticos básicos. Se creó el formato del teclado, el cual incluye las teclas presentes en una calculadora básica. También se tuvo que manejar el uso de las teclas: detectar qué tecla fue presionada y realizar una acción en base a esta. Se utilizó una librería para evaluar fórmulas dada una cadena de caracteres.
 
 Para la calculadora, se tenía que mostrar el símbolo decimal de acuerdo con el país para el cual está configurado el teléfono, ya que en algunos países se usa la coma (,) como separador y en otros el punto (.). Por esta razón, se tuvo que obtener el país de configuración del teléfono para decidir qué símbolo decimal mostrar.
-
-
 
 \subsection{Iteración 4}
 \subsubsection{Objetivos}
@@ -227,16 +246,13 @@ En la ejecución de las iteraciones anteriores se estuvo trabajando con una sola
 
 Para esto, se creó la vista que permite agregar una nueva cuenta, con su nombre y la moneda en la que van a estar sus ingresos/gastos.
 
-Se creó una vista para mostrar la lista de cuentas guardadas. Se implementó la funcionalidad para cambiar el estado de una cuenta: activa o archivada. La lista de cuentas se muestra según su estado, es decir, se muestra una lista para la lista de cuentas activas y una para las cuentas archivadas. 
+Se creó una vista para mostrar la lista de cuentas guardadas. Se implementó la funcionalidad para cambiar el estado de una cuenta: activa o archivada. Esto implicó modificar la vista de la lista de cuentas, así como la creación de una consulta que permita cambiar el estado de una cuenta. La lista de cuentas se muestra según su estado, es decir, se muestra una lista para la lista de cuentas activas y una para las cuentas archivadas. 
 
-Además, se implementaron las funcionalidades para editar el nombre de una cuenta y eliminar cuentas ya existentes.
+Además, se implementaron las funcionalidades para editar el nombre de una cuenta y eliminar cuentas ya existentes. Para ello se crearon consultas a la base de datos que permitieran la modificación y eliminación de cuentas.
 
-También se creó la funcionalidad para cambiar la cuenta que se está mostrando actualmente en el dispositivo.
+También se creó la funcionalidad para cambiar la cuenta que se está mostrando actualmente en el dispositivo. Para mostrar la lista de cuentas activas, de las cuales de puede escoger alguna para el cambio, se agregó una barra lateral (\textit{sidebar}) a la vista principal de la aplicación.
 
 Por último, se adapto la vista existente para mostrar la lista de ingresos/gastos, de manera que se pueda mostrar todos los ingresos/gastos (en una misma lista) asociados a la cuenta que se muestra actualmente.
-
-
-
 
 \subsection{Iteración 5}
 \subsubsection{Objetivos}
@@ -256,12 +272,13 @@ Por último, se adapto la vista existente para mostrar la lista de ingresos/gast
 \end{itemize}
 
 \subsubsection{Actividades}
-La primera parte de la iteración se dedicó al manejo de las fotos. En primer lugar se creó la vista para poder ver en pantalla completa las fotos de un ingreso/gasto (esto se hace desde la vista de creación de un ingreso/gasto). También se implementó la funcionalidad para eliminar una foto.
+La primera parte de la iteración se dedicó al manejo de las fotos. En primer lugar se creó la vista para poder ver en pantalla completa las fotos de un ingreso/gasto (esto se hace desde la vista de creación de un ingreso/gasto). 
+
+También se implementó la funcionalidad para eliminar una foto, para lo que se tuvo que crear una consulta a la base de datos para eliminar registros de la tabla correspondiente.
 
 Por otra parte, se creo la vista de configuraciones de la aplicación. En esta vista se agregó una opción para cambiar la ubicación en el dispositivo en la que se guardan los archivos de las fotos: memoria interna o memoria extraíble.
 
-La segunda parte del \textit{sprint} se dedicó al manejo de las categorías. Se creó la interfaz para agregar una nueva categoría. Por último, se agregaron las funcionalidades para editar y eliminar categorías existentes.
-
+La segunda parte del \textit{sprint} se dedicó al manejo de las categorías. Se creó la vista para agregar una nueva categoría. Se modificó la vista existente para la creación de una nueva categoría, de manera que se soporte también la edición. Para estas funcionalidades fue necesario crear consultas a la base de datos que permitieran agregar, editar y eliminar categorías.
 
 \subsection{Iteración 6}
 \subsubsection{Objetivos}
@@ -276,15 +293,15 @@ La segunda parte del \textit{sprint} se dedicó al manejo de las categorías. Se
 \begin{itemize}
 \item Se implementó la funcionalidad para listar los ingresos/gastos de una cuenta en el rango de fecha ingresado por el usuario
 \item Se implementó la funcionalidad para listar el balance total de las categorías de una cuenta en el rango de fecha ingresado por el usuario
-\item Se creó la funcionalidad para compartir el reporte con la lista de $\entries$,incluyendo las fotos, de la cuenta en el rango de fecha ingresado.
-\item Se creó la funcionalidad para compartir el reporte con la lista de $\entries$, sin incluir las fotos, de la cuenta en el rango de fecha ingresado.
+\item Se creó la funcionalidad para compartir el reporte con la lista de gastos e ingresos, incluyendo las fotos, de la cuenta en el rango de fecha ingresado.
+\item Se creó la funcionalidad para compartir el reporte con la lista de gastos e ingresos, sin incluir las fotos, de la cuenta en el rango de fecha ingresado.
 \item Se creó la funcionalidad para compartir el reporte con el balance total de las categorías de la cuenta en el rango de fecha ingresado.
 \end{itemize}
 
 \subsubsection{Actividades}
 Esta iteración se dedicó exclusivamente al manejo de los reportes. Se tenía como requerimiento el manejo de dos tipos de reportes: reporte de balance general y reporte por categorías. Para la generación de ambos reportes, se puede especificar una cuenta y un rango de fechas. El reporte de balance general incluye la lista de todos los ingresos/gastos de la cuenta escogida, dentro del rango de fechas establecido. El reporte por categorías incluye únicamente el monto total de todos los ingresos/gastos (es decir, la suma de ingresos y gastos) divididos por categorías, de la cuenta y rango de fechas escogidos.
 
-Se creó una vista para mostrar el reporte de balance general, que muestra una lista con los ingresos/gastos asociados, sus montos, fechas y descripción (o categoría, en caso de que la descripción sea nula). También se creó una vista para el reporte por categoría, donde se muestra una lista con con el nombre de cada categoría y la suma total de los ingresos y gastos correspondientes.
+Se creó una vista para mostrar el reporte de balance general, que muestra una lista con los ingresos/gastos asociados, sus montos, fechas y descripción (o categoría, en caso de que la descripción sea nula). También se creó una vista para el reporte por categoría, donde se muestra una lista con con el nombre de cada categoría y la suma total de los ingresos y gastos correspondientes. 
 
 Luego, se creó la funcionalidad para generar un archivo PDF con la información de los reportes descritos anteriormente. Para esto se usó una librería que provee la plataforma de Android para la creación de archivos PDF.  
 
@@ -294,7 +311,7 @@ Luego se implementaron los métodos necesarios para crear un archivo PDF con el 
 
 Por último, se creó la funcionalidad para compartir este archivo PDF con otras personas a través de otras aplicaciones instaladas en el dispositivo móvil. Dentro de estas aplicaciones se incluyen las de correo electrónico y mensajería móvil que soporten el envío de archivos.
 
-Durante la creación del archivo PDF se presentaron diferentes dificultades. En primer lugar, las librerías existentes en Java para generar archivos con dicha extension hacen uso de otras librerías, las cuales no son soportadas directamente en la plataforma de Android. Por esta razón, en un principio se decidió utilizar una adaptación de una librería de Java para poder ser utilizada en Android. Sin embargo, no se encontró documentación suficiente que permitiera entender su uso. Por esta razón, se decidió finalmente utilizar una librería nativa de Android que facilita la creación de archivos PDF, pero que sólo está disponible para versiones de Android a partir de la 4.4. %Esta decisión se apoyó en el hecho de que aproximadamente el 78,5\% de los usuarios de Android utilizan una versión mayor o igual a 4.4 . 
+%Durante la creación del archivo PDF se presentaron diferentes dificultades. En primer lugar, las librerías existentes en Java para generar archivos con dicha extension hacen uso de otras librerías, las cuales no son soportadas directamente en la plataforma de Android. Por esta razón, en un principio se decidió utilizar una adaptación de una librería de Java para poder ser utilizada en Android. Sin embargo, no se encontró documentación suficiente que permitiera entender su uso. Por esta razón, se decidió finalmente utilizar una librería nativa de Android que facilita la creación de archivos PDF, pero que sólo está disponible para versiones de Android a partir de la 4.4. %Esta decisión se apoyó en el hecho de que aproximadamente el 78,5\% de los usuarios de Android utilizan una versión mayor o igual a 4.4 . 
 
 
 \subsection{Iteración 7}
@@ -317,19 +334,19 @@ Durante la creación del archivo PDF se presentaron diferentes dificultades. En 
 
 En esta iteración se creó el servidor web al cual la aplicación móvil puede enviar peticiones.
 
-En primer lugar, se creó el proyecto en AppFuse, con Tapestry como \textit{framework} para el desarrollo de la aplicación web. Utilizando Hibernate con MySQL, se crearon las tablas necesarias para implementar el modelo de datos mostrado en la figura 5.5.
+En primer lugar, se creó el proyecto en AppFuse, con Tapestry como \textit{framework} para el desarrollo de la aplicación web. Utilizando Hibernate con MySQL, se crearon los POJO's y las tablas necesarias para implementar el modelo de datos mostrado en la figura 5.5.
 
-Luego, se creó el servicio web para la autenticación de un usuario. 
+Luego, se utilizó Spring para crear el servicio web que permitiera la autenticación de un usuario.
 
-Una vez creado, se implementó en la aplicación móvil una funcionalidad que permite iniciar sesión en el dispositivo. Para esto fue necesario crear una interfaz y los métodos necesarios para conectarse al servicio web para la autenticación del usuario.
+Una vez creado, se implementó en la aplicación móvil una funcionalidad que permite iniciar sesión en el dispositivo. Para esto fue necesario crear una vista y los métodos necesarios para conectarse al servicio web para la autenticación del usuario.
 
 Por otra parte, se creó un servicio web para recibir un reporte de gastos. Era necesario enviar tanto el archivo PDF con la información de los gastos, como un resumen de los totales por las categorías de interés para la empresa. Por esta razón, la comunicación entre la aplicación móvil y el servidor para el envío de reportes se hizo a través de una petición HTTP POST Multipart, que contiene el archivo PDF y un JSON con el resumen mencionado anteriormente.
 
 También se creó un módulo para el envío de correos electrónicos. Esto se hizo para notificar al supervisor cuando un nuevo reporte llega al servidor, así como para enviar el archivo PDF adjunto al correo.
 
-Luego de esto se creó la página web a través de la cual un supervisor puede ver la lista de reportes recibidos, así como aprobarlos o rechazarlos.
+Luego de esto se creó la página web a través de la cual un supervisor puede ver la lista de reportes recibidos, así como aprobarlos o rechazarlos. Para esto, se creó una vista y un controlador que permitan el manejo de las acciones de usuario.
 
-Para esto, se creó una vista que muestre la lista de reportes pendientes por revisión (es decir, que aún no han sido aprobados ni rechazados). En esta vista se agregó una opción para poder descargar el archivo PDF de cada reporte, así como opciones para aprobarlo/rechazarlo.
+Se creó una vista que muestre la lista de reportes pendientes por revisión (es decir, que aún no han sido aprobados ni rechazados). En esta vista se agregó una opción para poder descargar el archivo PDF de cada reporte, así como opciones para aprobarlo/rechazarlo.
 
 Finalmente, se adaptó la vista mencionada anteriormente para poder mostrar una lista de los reportes ya revisados (es decir, que ya fueron aprobados o rechazados).
 
