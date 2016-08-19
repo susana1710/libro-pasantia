@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+The style file: ieeetr.bst
+Database file #1: myrefs.bib
+Repeated entry---line 103 of file myrefs.bib
+ : @misc{GIT1
+ :           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 158 of file myrefs.bib
+ : @misc{JTY1
+ :           ,
+I'm skipping whatever remains of this entry
+Warning--empty year in DSP0
+You've used 40 entries,
+            1876 wiz_defined-function locations,
+            646 strings with 8372 characters,
+and the built_in function-call counts, 4444 in all, are:
+= -- 393
+> -- 83
+< -- 0
++ -- 53
+- -- 13
+* -- 162
+:= -- 461
+add.period$ -- 45
+call.type$ -- 40
+change.case$ -- 40
+chr.to.int$ -- 0
+cite$ -- 41
+duplicate$ -- 185
+empty$ -- 731
+format.name$ -- 13
+if$ -- 1234
+int.to.chr$ -- 0
+int.to.str$ -- 40
+missing$ -- 10
+newline$ -- 128
+num.names$ -- 5
+pop$ -- 236
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 216
+stack$ -- 0
+substring$ -- 0
+swap$ -- 5
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 5
+width$ -- 42
+write$ -- 261
+(There were 2 error messages)

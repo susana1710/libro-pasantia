@@ -11,15 +11,3 @@ Es el método más común de HTTP, que permite pedir datos de un recurso en espe
 Es uno de los diferentes métodos de peticiones que soporta el protocolo HTTP, que permite enviar datos a un recurso, los cuales deben ser procesados. Se requiere que los datos sean enviados dentro del cuerpo del mensaje \cite{HTTP3}.
 
 Para enviar estos datos dentro de una petición POST, existen diferentes tipos de codificación. Entre estos tipos está Multipart, que permite enviar mensajes con varias partes combinadas en un solo cuerpo \cite{HTTP1}.
-
-\section{POJO \textit{Plain Old Java Object}}
-
-Es una instancia de una clase que no extiende ni implementa ninguna otra \cite{POJO0}. Sirve para promover el uso de clases simples que no dependen de ningún \textit{framework} \cite{POJO1}.
-
-\section{DAO \textit{Data Access Object}}
-
-Es un objeto que provee una interfaz abstracta para realizar operaciones sobre una base de datos u otro mecanismo de persistencia. Esconde todos los detalles de implementación a sus clientes, por lo que la interfaz expuesta por un DAO no cambia \cite{DAO0}.
-
-\section{\textit{Manager}}
-
-Es una interfaz que se utiliza para actuar como puente entre la capa de persistencia (base de datos) y la capa web. Dentro del \textit{manager} se incluye la lógica de negocios de la aplicación. Se suele implementar en conjunto con DAO's. \cite{MNG0}

@@ -6,7 +6,7 @@ Se creó un componente móvil y un servidor para dar solución al problema de re
 
 Para cumplir con los requerimientos del componente móvil, se desarrolló una aplicación para el sistema operativo Android, y se trabajó con el IDE Android Studio.
 
-Se implementó una vista para crear y editar gastos. Para estos gastos, se debe guardar su monto, fecha, descripción, fotos de recibos y categoría a la que pertenecen. Posteriormente, se decidió extender la funcionalidad de creación de gastos para permitir también el manejo de ingresos. 
+Se implementó una vista para crear y editar gastos (ver figura 5.6). Para estos gastos, se debe guardar su monto, fecha, descripción, fotos de recibos y categoría a la que pertenecen. Posteriormente, se decidió extender la funcionalidad de creación de gastos para permitir también el manejo de ingresos. 
 
 \begin{figure}[ht]
   \centering
@@ -15,74 +15,47 @@ Se implementó una vista para crear y editar gastos. Para estos gastos, se debe 
   \label{fig:interfazCrearEntry}
 \end{figure}
 
-Para mostrar los gastos e ingresos guardados, se creó una vista para listarlos. En las listas se muestran la descripción/categoría a la que pertenece cada entrada, su monto y su fecha. Dentro de cada lista, se permite ver los detalles de cada gasto/ingreso, editarlos y eliminarlos. Además, también se permite filtrar las listas por palabras claves.
+Para mostrar los gastos e ingresos guardados, se creó una vista para listarlos (ver figura 5.7). En las listas se muestran la descripción/categoría a la que pertenece cada entrada, su monto y su fecha. Dentro de cada lista, se permite ver los detalles de cada gasto/ingreso, editarlos y eliminarlos. Además, también se permite filtrar las listas por palabras claves.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/expenses_list}
- \caption{Interfaz para listar gastos}
+  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/entries}
+ \caption{Interfaz para listar \textit{entries}. Izquierda: Lista de gastos. Derecha: Lista de ingresos.}
   \label{fig:interfazListarGastos}
 \end{figure}
-\begin{figure}[ht]
-  \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/incomes_list}
-  \caption{Interfaz para listar ingresos}
-  \label{fig:interfazListarIngresos}
-\end{figure}
 
-También se crearon vistas para el manejo de categorías, que incluyen la creación, edición y eliminación de las mismas. Estas categorías pueden ser de dos tipos: categorías de gastos o categorías de ingresos.
+También se crearon vistas para el manejo de categorías. Se creó una vista para la creación/edición de categorías, y otra para listarlas (ver figura 5.8). Estas categorías pueden ser de dos tipos: categorías de gastos o categorías de ingresos.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/expense_categories}
-  \caption{Interfaz para listar categorías de gastos}
-  \label{fig:interfazListarCategoriasGastos}
-\end{figure}
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/income_categories}
-  \caption{Interfaz para listar categorías de ingresos}
-  \label{fig:interfazListarCategoriasIngresos}
+  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/categories}
+  \caption{Interfaz para listar categorías. Izquierda: Lista de categorías de gastos. Derecha: Lista de categorías de ingresos.}
+  \label{fig:interfazListarCategorias}
 \end{figure}
 
 Luego de la creación de las principales funcionalidades del sistema, mencionadas en los párrafos anteriores, se introdujo el concepto de \"cuentas\". Hasta el momento, los gastos estaban asociados a una única cuenta por defecto. Por esta razón, también se creó una funcionalidad para agregar nuevas cuentas, y poder crear nuevos gastos dentro de dichas cuentas. Estas cuentas pueden ser de dos tipos: activas o archivadas; la navegación entre cuentas se hace únicamente con las cuentas activas. 
 
-Además, también se creó una vista para poder listar las cuentas creadas y guardadas en el dispositivo. Dentro de esta vista, se puede editar, eliminar o cambiar el estado de las cuentas (activa o archivada).
+Además, también se creó una vista para poder listar las cuentas creadas y guardadas en el dispositivo (ver figura 5.9). A partir de esta vista, se puede editar, eliminar o cambiar el estado de las cuentas (activa o archivada).
 
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/active_accounts}
-  \caption{Interfaz para listar cuentas}
-  \label{fig:interfazListarCuentasActivas}
-\end{figure}
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/archived_accounts}
-  \caption{Interfaz para listar cuentas}
-  \label{fig:interfazListarCuentasArchivadas}
+  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/accounts}
+  \caption{Interfaz para listar cuentas. Izquierda: Lista de cuentas activas. Derecha: Lista de cuentas archivadas}
+  \label{fig:interfazListarCuentas}
 \end{figure}
 
 Como se explicó en la sección anterior, es necesario guardar toda esta información en la base de datos local de cada dispositivo. Para ello, se utilizó la librería SQLite.
 
-Además, también se crearon dos vistas para reportes de gastos: una para reportes de balance general, y otra para reporte de gastos por categorías.
+Además, también se crearon dos vistas para reportes de gastos: una para reportes de balance general, y otra para reporte de gastos por categorías (ver figura 5.10).
 
 La vista de reporte de balance general muestra una lista de gastos e ingresos filtrados por fecha. La vista de reporte por categorías muestra una lista de categorías con la suma total de los gastos e ingresos de dichas categorías, filtradas por fecha.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/balance_report}
-  \caption{Interfaz para mostrar el balance general}
-  \label{fig:interfazReporteBalanceGeneral}
-\end{figure}
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/categories_report}
-  \caption{Interfaz para mostrar el balance por categorías}
-  \label{fig:interfazReporteCategorias}
+  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/reports}
+  \caption{Interfaz para mostrar reportes. Izquierda: Lista de \textit{entries} que conforman el reporte de balance general. Derecha: Lista de categorías que conforman el reporte de categorías}
+  \label{fig:interfazReportes}
 \end{figure}
 
 Para mantener la lógica separada de la interfaz gráfica, se utilizó el patrón de arquitectura MVP o Modelo Vista Presentador, descrito en el capítulo 2. De esta manera, toda acción en la vista que requiera realizar operaciones sobre la base de datos, se realizó por medio de una capa intermedia: el presentador. 
@@ -90,8 +63,6 @@ Para mantener la lógica separada de la interfaz gráfica, se utilizó el patró
 Para lograr esto, fue necesario en primer lugar implementar el modelo descrito en la figura 5.4. Se creó la base de datos con cada una de sus tablas, así como las clases (POJO's) que permitieron dar un nivel de abstracción mayor para el mapeo con la base de datos.
 
 También se crearon las vistas necesarias, lo que incluyó tanto las interfaces gráficas como la lógica necesaria para manejar las acciones del usuario (actividades). Para cada vista, se creó una clase que actuó como la capa de presentador, quien era invocado por la vista para realizar acciones sobre el modelo. La vista se encargó de la creación de los objetos correspondientes al modelo, para luego pedir alguna acción al presentador sobre dichos objetos. El presentador tenía la función de invocar al modelo para realizar los cambios necesarios en la base de datos.
-
-En la figura 5.6 se muestran capturas de pantallas de algunas de las funcionalidades de la aplicación móvil
 
 Por otra parte, se creó un servidor al que se pueda enviar información desde la aplicación móvil. 
 
@@ -218,7 +189,7 @@ Para la calculadora, se tenía que mostrar el símbolo decimal de acuerdo con el
 \item Se implementó la funcionalidad para editar el nombre de una cuenta existente
 \item Se implementó la funcionalidad para eliminar cuentas existentes
 \item Se implementó la funcionalidad para cambiar el estado de una cuenta: activa o archivada
-\item Se implementó la funcionalidad para ver la lista de ingresos/gastos de una cuenta desde su creación hasta la fecha actual
+\item Se implementó la funcionalidad para ver la lista de ingresos/gastos de una cuenta
 
 \end{itemize}
 
@@ -234,9 +205,6 @@ Además, se implementaron las funcionalidades para editar el nombre de una cuent
 También se creó la funcionalidad para cambiar la cuenta que se está mostrando actualmente en el dispositivo.
 
 Por último, se adapto la vista existente para mostrar la lista de ingresos/gastos, de manera que se pueda mostrar todos los ingresos/gastos (en una misma lista) asociados a la cuenta que se muestra actualmente.
-
-
-
 
 \subsection{Iteración 5}
 \subsubsection{Objetivos}
@@ -334,3 +302,20 @@ Para esto, se creó una vista que muestre la lista de reportes pendientes por re
 Finalmente, se adaptó la vista mencionada anteriormente para poder mostrar una lista de los reportes ya revisados (es decir, que ya fueron aprobados o rechazados).
 
 \subsection{Iteración 8}
+
+\subsubsection{Objetivos}
+\begin{itemize}
+\item Realizar pruebas unitarias en el servidor y pruebas de integración
+\item Cambiar diseño del archivo de reportes
+\item Permitir cerrar sesión en la aplicación
+\item Filtrar por palabras clave la lista de ingresos/gastos en la aplicación móvil
+\end{itemize}
+\subsubsection{Resultados}
+\begin{itemize}
+\item Se realizaron pruebas unitarias sobre los principales procesos del componente servidor
+\item Se realizaron pruebas de integración entre el servidor y la aplicación móvil
+\item Se agregó una nueva funcionalidad para cerrar sesión en la aplicación móvil
+\item Se agregó una nueva funcionalidad para permitir la búsqueda (filtrado) de gastos/ingresos por palabras clave
+\end{itemize}
+
+\subsubsection{Actividades}

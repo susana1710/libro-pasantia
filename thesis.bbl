@@ -1,0 +1,183 @@
+\begin{thebibliography}{10}
+
+\bibitem{DIG1}
+``Digitalica | the technology partner of your disruptive ideas.''
+  \url{http://digitalicagroup.com/}, consultado el 30 de julio de 2016.
+
+\bibitem{DSP0}
+E.~Gamma, R.~Helm, R.~Johnson, and J.~Vlissides, {\em Dessign Patterns.
+  Elements of Reusable Object-Oriented SOftware}.
+\newblock Addison-Wesley, 1~ed.
+
+\bibitem{DSP1}
+E.~Freeman, E.~Freeman, K.~Sierra, and B.~Bates, {\em Head First: Design
+  Patterns}.
+\newblock O'Reilly, 1~ed., 2004.
+
+\bibitem{SNG0}
+``Singleton pattern.'' \url{https://en.wikipedia.org/wiki/Singleton_pattern},
+  consultado el 10 de julio de 2016.
+
+\bibitem{PDA1}
+``Patrones de arquitectura.''
+  \url{https://es.wikipedia.org/wiki/Patrones_de_arquitectura}, consultado el
+  26 de julio de 2016.
+
+\bibitem{MVC0}
+``Modelo-vista-controlador.''
+  \url{https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador},
+  consultado el 10 de julio de 2016.
+
+\bibitem{MVP0}
+``Model-view-presenter.''
+  \url{https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter},
+  consultado el 10 de julio de 2016.
+
+\bibitem{MVP1}
+``Differences between mvc and mvp for beginners.''
+  \url{http://www.codeproject.com/Articles/288928/Differences-between-MVC-and-MVP-for-Beginners},
+  consultado el 10 de julio de 2016.
+
+\bibitem{ACS0}
+D.~Garlan and M.~Shaw, {\em An introduction to Software Engineer}.
+\newblock World Scientific, 1~ed., 1993.
+
+\bibitem{ACS1}
+``Tipos de arquitectura cliente servidor.''
+  \url{https://www.ibiblio.org/pub/Linux/docs/LuCaS/Manuales-LuCAS/doc-curso-salamanca-LAMP/lamp-teoria-html/ch01s02.html},
+  consultado el 2 de agosto de 2016.
+
+\bibitem{WBS0}
+``Web service.'' \url{https://en.wikipedia.org/wiki/Web_service}, consultado el
+  2 de agosto de 2016.
+
+\bibitem{HTTP2}
+``Http made really easy.'' \url{http://www.jmarshall.com/easy/http/#whatis},
+  consultado el 15 de agosto de 2016.
+
+\bibitem{HTTP3}
+``Http methods get vs post.''
+  \url{http://www.w3schools.com/tags/ref_httpmethods.asp}, consultado el 15 de
+  agosto de 2016.
+
+\bibitem{HTTP1}
+``Rfc1341(mime): 7 the multipart content type.''
+  \url{https://www.w3.org/Protocols/rfc1341/7_2_Multipart.html}, consultado el
+  2 de agosto de 2016.
+
+\bibitem{JSN0}
+``Json.'' \url{http://www.json.org/}, consultado el 9 de agosto de 2016.
+
+\bibitem{POJO0}
+``Pojo.'' \url{http://www.martinfowler.com/bliki/POJO.html}, consultado el 17
+  de agosto de 2016.
+
+\bibitem{POJO1}
+``Understanding pojo.'' \url{https://spring.io/understanding/POJO}, consultado
+  el 17 de agosto de 2016.
+
+\bibitem{DAO0}
+``Core j2ee patterns - data access object.''
+  \url{http://www.oracle.com/technetwork/java/dataaccessobject-138824.html},
+  consultado el 17 de agosto de 2016.
+
+\bibitem{MNG0}
+``Services - appfuse - appfuse confluence.''
+  \url{http://appfuse.org/display/APF/Services}, consultado el 9 de agosto de
+  2016.
+
+\bibitem{AND1}
+``What is android os?.''
+  \url{https://www.techopedia.com/definition/14873/android-os}, consultado el
+  30 de julio de 2016.
+
+\bibitem{AND3}
+``Android architecture.''
+  \url{http://www.tutorialspoint.com/android/android_architecture.htm},
+  consultado el 16 de agosto de 2016.
+
+\bibitem{JAV1}
+``What is java? definition and meaning.''
+  \url{http://www.businessdictionary.com/definition/Java.html}, consultado el
+  26 de julio de 2016.
+
+\bibitem{AND2}
+``Android software development.''
+  \url{https://en.wikipedia.org/wiki/Android_software_development}, consultado
+  el 30 de julio de 2016.
+
+\bibitem{SQL1}
+``What is mysql?.''
+  \url{http://searchenterpriselinux.techtarget.com/definition/MySQL},
+  consultado el 26 de julio de 2016.
+
+\bibitem{SQL2}
+``Sqlite.'' \url{https://es.wikipedia.org/wiki/SQLite}, consultado el 30 de
+  julio de 2016.
+
+\bibitem{MVN1}
+``Maven - introduction.'' \url{https://maven.apache.org/what-is-maven.html},
+  consultado el 30 de julio de 2016.
+
+\bibitem{JTY1}
+``Jetty.'' \url{https://es.wikipedia.org/wiki/Jetty}, consultado el 26 de julio
+  de 2016.
+
+\bibitem{ASD1}
+``Android studio.'' \url{https://es.wikipedia.org/wiki/Android_Studio},
+  consultado el 26 de julio de 2016.
+
+\bibitem{ECL1}
+``Eclipse - the eclipse foundation open source community website.''
+  \url{http://www.eclipse.org/home}, consultado el 30 de julio de 2016.
+
+\bibitem{GIT1}
+S.~Chacon and B.~Straub, {\em Pro Git: Everything you ned to know about Git}.
+\newblock Apress, 2~ed., 2014.
+
+\bibitem{APF1}
+``Home - appfuse - appfuse concluence.''
+  \url{http://appfuse.org/display/APF/Home}, consultado el 26 de julio de 2016.
+
+\bibitem{HBR1}
+``Hibernate.'' \url{https://es.wikipedia.org/wiki/Hibernate}, consultado el 26
+  de julio de 2016.
+
+\bibitem{ATP1}
+``Apache tapestry home page.'' \url{http://tapestry.apache.org/index.html},
+  consultado el 30 de julio de 2016.
+
+\bibitem{GSN1}
+``Github - google/gson.'' \url{https://github.com/google/gson}, consultado el
+  26 de julio de 2016.
+
+\bibitem{RFT1}
+``Retrofit.'' \url{http://square.github.io/retrofit/}, consultado el 30 de
+  julio de 2016.
+
+\bibitem{SCRM12}
+K.~Rubin, {\em Essential Scrum: A practical guide to the most popular agile
+  process}.
+\newblock Addison-Wesley Professional, 1~ed., 2012.
+
+\bibitem{SCRM1}
+``Scrum basics.''
+  \url{http://www.scrumguides.org/docs/scrumguide/v1/Scrum-Guide-ES.pdf},
+  consultado el 7 de julio de 2016.
+
+\bibitem{SCRM2}
+``Artefactos en scrum: claves para una organización diaria.''
+  \url{http://www.desarrolloweb.com/articulos/artefactos-scrum.html},
+  consultado el 7 de julio de 2016.
+
+\bibitem{AND4}
+``Camera | android developers.''
+  \url{https://developer.android.com/guide/topics/media/camera.html},
+  consultado el 17 de agosto de 2016.
+
+\bibitem{USG1}
+``Dashboards | android developers.''
+  \url{https://developer.android.com/about/dashboards/index.html?hl=es},
+  consultado el 29 de julio de 2016.
+
+\end{thebibliography}
