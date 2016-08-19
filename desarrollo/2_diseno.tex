@@ -77,7 +77,7 @@ En la figura 5.4 se puede observar el diagrama de clases que representa el model
 A continuación se describirán cada una de estas clases, así como sus atributos:
 
 \begin{itemize}
-	\item \textbf{\textit{Account}}: representa un conjunto de registros de movimientos de dinero. Almacena información de la moneda en la que estarán los montos de los registros asociados a la misma.
+	\item \textbf{\textit{Account}}: representa un conjunto de registros de movimientos de dinero. Almacena información de su nombre, estado (activa o archivada) y la moneda en la que estarán los montos de los registros dentro de la cuenta.
 	\item \textbf{\textit{Entry}}: representa un registro dentro de una cuenta, y puede ser de dos tipos: ingreso o gasto. Almacena información del monto, fecha y descripción.
 	\item \textbf{\textit{Category}}: representa las clases a las que puede pertenecer un \textit{entry}. Puede ser de dos tipos: categoría de ingresos o categoría de gastos. Almacena información general (nombre) y un ícono que la representa.
 	\item \textbf{\textit{Photo}}: representa las fotos asociadas a un \textit{entry}. Almacena información del \textit{entry} al que pertenece, y la ruta del archivo dentro del dispositivo móvil.
@@ -92,6 +92,7 @@ Por otra parte, en la figura 5.5 se puede observar la estructura de datos del se
   \label{fig:classDiagramServer}
 \end{figure}
 
+A continuación se describirán cada una de estas clases, así como sus atributos:
 
 \begin{itemize}
 	\item \textbf{\textit{User}}: representa los usuarios registrados en el sistema. Almacena información del nombre completo, nombre de usuario, contraseña.
