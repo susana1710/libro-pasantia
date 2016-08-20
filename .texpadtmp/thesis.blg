@@ -3,50 +3,42 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: /Users/susana/libro-pasantia/.texpadtmp/thesis.aux
 The style file: ieeetr.bst
 Database file #1: ../myrefs.bib
-Repeated entry---line 92 of file ../myrefs.bib
- : @misc{GIT1
- :           ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 147 of file ../myrefs.bib
- : @misc{JTY1
- :           ,
-I'm skipping whatever remains of this entry
-You're missing a field name---line 173 of file ../myrefs.bib
+You're missing a field name---line 168 of file ../myrefs.bib
  : 
  : % Title = {POST(HTTP)},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--empty year in DSP0
-You've used 37 entries,
+You've used 38 entries,
             1876 wiz_defined-function locations,
-            634 strings with 8173 characters,
-and the built_in function-call counts, 4141 in all, are:
-= -- 366
-> -- 80
+            638 strings with 8269 characters,
+and the built_in function-call counts, 4242 in all, are:
+= -- 375
+> -- 81
 < -- 0
-+ -- 50
++ -- 51
 - -- 13
-* -- 153
-:= -- 434
-add.period$ -- 42
-call.type$ -- 37
-change.case$ -- 37
+* -- 156
+:= -- 443
+add.period$ -- 43
+call.type$ -- 38
+change.case$ -- 38
 chr.to.int$ -- 0
-cite$ -- 38
-duplicate$ -- 173
-empty$ -- 677
+cite$ -- 39
+duplicate$ -- 177
+empty$ -- 695
 format.name$ -- 13
-if$ -- 1147
+if$ -- 1176
 int.to.chr$ -- 0
-int.to.str$ -- 37
+int.to.str$ -- 38
 missing$ -- 10
-newline$ -- 119
+newline$ -- 122
 num.names$ -- 5
-pop$ -- 218
+pop$ -- 224
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 198
+skip$ -- 204
 stack$ -- 0
 substring$ -- 0
 swap$ -- 5
@@ -56,6 +48,6 @@ top$ -- 0
 type$ -- 0
 warning$ -- 1
 while$ -- 5
-width$ -- 39
-write$ -- 243
-(There were 3 error messages)
+width$ -- 40
+write$ -- 249
+(There was 1 error message)

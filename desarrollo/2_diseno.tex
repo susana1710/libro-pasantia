@@ -69,7 +69,7 @@ En la figura 5.4 se puede observar el diagrama de clases que representa el model
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.6,type=png,ext=.png,read=.png]{imagenes/class_diagram_mobile}
+  \includegraphics[scale=0.65,type=png,ext=.png,read=.png]{imagenes/class_diagram_mobile}
   \caption{Diagrama de clases de la aplicación móvil}
   \label{fig:classDiagramMobile}
 \end{figure}
@@ -78,16 +78,16 @@ A continuación se describirán cada una de estas clases, así como sus atributo
 
 \begin{itemize}
 	\item \textbf{\textit{Account}}: representa un conjunto de registros de movimientos de dinero. Almacena información de su nombre, estado (activa o archivada) y la moneda en la que estarán los montos de los registros dentro de la cuenta.
-	\item \textbf{\textit{Entry}}: representa un registro dentro de una cuenta, y puede ser de dos tipos: ingreso o gasto. Almacena información del monto, fecha y descripción.
-	\item \textbf{\textit{Category}}: representa las clases a las que puede pertenecer un \textit{entry}. Puede ser de dos tipos: categoría de ingresos o categoría de gastos. Almacena información general (nombre) y un ícono que la representa.
-	\item \textbf{\textit{Photo}}: representa las fotos asociadas a un \textit{entry}. Almacena información del \textit{entry} al que pertenece, y la ruta del archivo dentro del dispositivo móvil.
+	\item \textbf{\textit{Entry}}: representa un registro dentro de una cuenta, y puede ser de dos tipos: ingreso o gasto. Almacena información de su \textit{id}, monto, fecha y descripción.
+	\item \textbf{\textit{Category}}: representa las clases a las que puede pertenecer un \textit{entry}. Puede ser de dos tipos: categoría de ingresos o categoría de gastos. Almacena información de su nombre y un ícono que la representa.
+	\item \textbf{\textit{Photo}}: representa las fotos asociadas a un \textit{entry}. Almacena información de su \textit{id}, y la ruta del archivo dentro del dispositivo móvil.
 \end{itemize}
 
-Por otra parte, en la figura 5.5 se puede observar la estructura de datos del servidor. En este caso, se tienen dos clases: \textit{user} y \textit{report}.
+Por otra parte, en la figura 5.5 se puede observar la estructura de datos del servidor. En este caso, se tienen dos clases: \textit{user} y \textit{report}, y una clase asociación, \textit{reviews}.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.6,type=png,ext=.png,read=.png]{imagenes/class_diagram_server}
+  \includegraphics[scale=0.65,type=png,ext=.png,read=.png]{imagenes/class_diagram_server}
   \caption{Diagrama de clases del servidor}
   \label{fig:classDiagramServer}
 \end{figure}
@@ -95,8 +95,8 @@ Por otra parte, en la figura 5.5 se puede observar la estructura de datos del se
 A continuación se describirán cada una de estas clases, así como sus atributos:
 
 \begin{itemize}
-	\item \textbf{\textit{User}}: representa los usuarios registrados en el sistema. Almacena información del nombre completo, nombre de usuario, contraseña.
-	\item \textbf{\textit{Report}}: representa un reporte enviado por un usuario, que contiene información de la suma total de \textit{entries} pertenecientes a ciertas categorías. Almacena información del monto total de entries de cuatro categorías: comida (\textit{food}), transporte (\textit{transportation}), salud (\textit{health}) y deporte (\textit{fitness}). Además, también almacena la fecha en que se envió el reporte, su estado (aprobado, rechazado o sin revisar) y la fecha en que fue revisado. Por último, tiene la ruta del archivo PDF correspondiente al reporte.
+	\item \textbf{\textit{User}}: representa los usuarios registrados en el sistema. Almacena información del nombre, apellido, nombre de usuario y contraseña.
+	\item \textbf{\textit{Report}}: representa un reporte enviado por un usuario, que contiene información de la suma total de \textit{entries} pertenecientes a ciertas categorías. Almacena información de su \textit{id}, monto total de entries de cuatro categorías: comida (\textit{food}), transporte (\textit{transportation}), salud (\textit{health}) y deporte (\textit{fitness}). Además, también almacena la fecha en que se envió el reporte, su estado (aprobado, rechazado o sin revisar) y la fecha en que fue revisado. Por último, tiene la ruta del archivo PDF correspondiente al reporte.
 \end{itemize} 
 
 Estos diagramas sirvieron como base para la creación del modelo tanto del servidor como de la aplicación móvil. 

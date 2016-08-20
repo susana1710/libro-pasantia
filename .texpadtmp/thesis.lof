@@ -12,15 +12,15 @@
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Diagrama de clases de la aplicaci\IeC {\'o}n m\IeC {\'o}vil\relax }}{26}{figure.caption.14}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Diagrama de clases del servidor\relax }}{27}{figure.caption.15}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Interfaz principal de la aplicaci\IeC {\'o}n\relax }}{28}{figure.caption.16}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Interfaz para crear o editar un gasto/ingreso\relax }}{29}{figure.caption.17}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Interfaz para listar gastos\relax }}{30}{figure.caption.18}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Interfaz para listar ingresos\relax }}{31}{figure.caption.19}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Interfaz para listar categor\IeC {\'\i }as de gastos\relax }}{32}{figure.caption.20}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Interfaz para listar categor\IeC {\'\i }as de ingresos\relax }}{33}{figure.caption.21}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Interfaz para listar cuentas\relax }}{34}{figure.caption.22}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Interfaz para listar cuentas\relax }}{35}{figure.caption.23}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Interfaz para mostrar el balance general\relax }}{36}{figure.caption.24}
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Interfaz para mostrar el balance por categor\IeC {\'\i }as\relax }}{37}{figure.caption.25}
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Interfaz para listar reportes pendientes de revisi\IeC {\'o}n\relax }}{38}{figure.caption.26}
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Interfaz para listar reportes aprobados/rechazados\relax }}{39}{figure.caption.27}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Interfaz para crear o editar gastos o ingresos\relax }}{28}{figure.caption.16}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Interfaz para listar gastos\relax }}{29}{figure.caption.17}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Interfaz para listar ingresos\relax }}{29}{figure.caption.17}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Interfaz para listar categor\IeC {\'\i }as de gastos\relax }}{30}{figure.caption.18}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Interfaz para listar categor\IeC {\'\i }as de ingresos\relax }}{30}{figure.caption.18}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Interfaz para listar cuentas activas\relax }}{31}{figure.caption.19}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Interfaz para listar cuentas archivadas\relax }}{31}{figure.caption.19}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Interfaz para mostrar reporte de balance general\relax }}{32}{figure.caption.20}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Interfaz para mostrar reporte por categor\IeC {\'\i }as\relax }}{32}{figure.caption.20}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Interfaz para listar reportes pendientes de revisi\IeC {\'o}n\relax }}{33}{figure.caption.21}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Interfaz para listar reportes aprobados/rechazados\relax }}{34}{figure.caption.22}
 \addvspace {10\p@ }
