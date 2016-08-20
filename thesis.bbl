@@ -6,7 +6,7 @@
 
 \bibitem{DSP0}
 E.~Gamma, R.~Helm, R.~Johnson, and J.~Vlissides, {\em Dessign Patterns.
-  Elements of Reusable Object-Oriented SOftware}.
+  Elements of Reusable Object-Oriented Software}.
 \newblock Addison-Wesley, 1~ed.
 
 \bibitem{DSP1}
@@ -14,33 +14,24 @@ E.~Freeman, E.~Freeman, K.~Sierra, and B.~Bates, {\em Head First: Design
   Patterns}.
 \newblock O'Reilly, 1~ed., 2004.
 
-\bibitem{SNG0}
-``Singleton pattern.'' \url{https://en.wikipedia.org/wiki/Singleton_pattern},
-  consultado el 10 de julio de 2016.
-
-\bibitem{PDA1}
-``Patrones de arquitectura.''
-  \url{https://es.wikipedia.org/wiki/Patrones_de_arquitectura}, consultado el
-  26 de julio de 2016.
+\bibitem{ACS0}
+D.~Garlan and M.~Shaw, {\em An introduction to Software Engineer}.
+\newblock World Scientific, 1~ed., 1993.
 
 \bibitem{MVC0}
 ``Modelo-vista-controlador.''
-  \url{https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador},
-  consultado el 10 de julio de 2016.
+  \url{https://msdn.microsoft.com/en-us/library/ff649643.aspx}, consultado el
+  18 de agosto de 2016.
 
 \bibitem{MVP0}
-``Model-view-presenter.''
-  \url{https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter},
-  consultado el 10 de julio de 2016.
+``Mvc or mvp pattern - what's the difference?.''
+  \url{http://www.codeproject.com/Articles/288928/Differences-between-MVC-and-MVP-for-Beginners},
+  consultado el 18 de agosto de 2016.
 
 \bibitem{MVP1}
 ``Differences between mvc and mvp for beginners.''
   \url{http://www.codeproject.com/Articles/288928/Differences-between-MVC-and-MVP-for-Beginners},
   consultado el 10 de julio de 2016.
-
-\bibitem{ACS0}
-D.~Garlan and M.~Shaw, {\em An introduction to Software Engineer}.
-\newblock World Scientific, 1~ed., 1993.
 
 \bibitem{ACS1}
 ``Tipos de arquitectura cliente servidor.''

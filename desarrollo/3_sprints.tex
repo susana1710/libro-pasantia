@@ -64,23 +64,11 @@ La vista de reporte de balance general muestra una lista de gastos e ingresos fi
 
 \begin{figure}[ht]
   \centering
-<<<<<<< HEAD
   \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/reports}
   \caption{Interfaz para mostrar reportes. Izquierda: Lista de \textit{entries} que conforman el reporte de balance general. Derecha: Lista de categorías que conforman el reporte de categorías}
   \label{fig:interfazReportes}
-=======
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/general_report}
-  \caption{Interfaz para mostrar el balance general}
-  \label{fig:interfazReporteBalanceGeneral}
 \end{figure}
 
-\begin{figure}[ht]
-  \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/categories_report}
-  \caption{Interfaz para mostrar el balance por categorías}
-  \label{fig:interfazReporteCategorias}
->>>>>>> 0dbc8d7b39c359cae802304b2c598725ee6b1532
-\end{figure}
 
 Para mantener la lógica separada de la interfaz gráfica, se utilizó el patrón de arquitectura MVP o Modelo Vista Presentador, descrito en el capítulo 2. De esta manera, toda acción en la vista que requiera realizar operaciones sobre la base de datos, se realizó por medio de una capa intermedia: el presentador. 
 
