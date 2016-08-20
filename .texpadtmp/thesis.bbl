@@ -39,8 +39,9 @@ D.~Garlan and M.~Shaw, {\em An introduction to Software Engineer}.
   consultado el 2 de agosto de 2016.
 
 \bibitem{WBS0}
-``Web service.'' \url{https://en.wikipedia.org/wiki/Web_service}, consultado el
-  2 de agosto de 2016.
+``What are web services.''
+  \url{http://www.tutorialspoint.com/webservices/what_are_web_services.htm},
+  consultado el 19 de agosto de 2016.
 
 \bibitem{HTTP2}
 ``Http made really easy.'' \url{http://www.jmarshall.com/easy/http/#whatis},
@@ -55,6 +56,9 @@ D.~Garlan and M.~Shaw, {\em An introduction to Software Engineer}.
 ``Rfc1341(mime): 7 the multipart content type.''
   \url{https://www.w3.org/Protocols/rfc1341/7_2_Multipart.html}, consultado el
   2 de agosto de 2016.
+
+\bibitem{JSN0}
+``Json.'' \url{http://www.json.org/}, consultado el 9 de agosto de 2016.
 
 \bibitem{POJO0}
 ``Pojo.'' \url{http://www.martinfowler.com/bliki/POJO.html}, consultado el 17
@@ -90,9 +94,7 @@ D.~Garlan and M.~Shaw, {\em An introduction to Software Engineer}.
   26 de julio de 2016.
 
 \bibitem{AND2}
-``Android software development.''
-  \url{https://en.wikipedia.org/wiki/Android_software_development}, consultado
-  el 30 de julio de 2016.
+``Android software development.'' \url{ }, consultado el 30 de julio de 2016.
 
 \bibitem{SQL1}
 ``What is mysql?.''
@@ -100,7 +102,7 @@ D.~Garlan and M.~Shaw, {\em An introduction to Software Engineer}.
   consultado el 26 de julio de 2016.
 
 \bibitem{SQL2}
-``Sqlite.'' \url{https://es.wikipedia.org/wiki/SQLite}, consultado el 30 de
+``About sqlite.'' \url{https://sqlite.org/about.html}, consultado el 30 de
   julio de 2016.
 
 \bibitem{MVN1}
@@ -108,12 +110,13 @@ D.~Garlan and M.~Shaw, {\em An introduction to Software Engineer}.
   consultado el 30 de julio de 2016.
 
 \bibitem{JTY1}
-``Jetty.'' \url{https://es.wikipedia.org/wiki/Jetty}, consultado el 26 de julio
-  de 2016.
+``Jetty - servlet engine and http server.''
+  \url{http://www.eclipse.org/jetty/}, consultado el 30 de julio de 2016.
 
 \bibitem{ASD1}
-``Android studio.'' \url{https://es.wikipedia.org/wiki/Android_Studio},
-  consultado el 26 de julio de 2016.
+``Meet android studio | android studio.''
+  \url{https://developer.android.com/studio/index.html}, consultado el 19 de
+  agosto de 2016.
 
 \bibitem{ECL1}
 ``Eclipse - the eclipse foundation open source community website.''
@@ -128,8 +131,8 @@ S.~Chacon and B.~Straub, {\em Pro Git: Everything you ned to know about Git}.
   \url{http://appfuse.org/display/APF/Home}, consultado el 26 de julio de 2016.
 
 \bibitem{HBR1}
-``Hibernate.'' \url{https://es.wikipedia.org/wiki/Hibernate}, consultado el 26
-  de julio de 2016.
+``Hibernate orm.'' \url{http://hibernate.org/orm/}, consultado el 19 de agosto
+  de 2016.
 
 \bibitem{ATP1}
 ``Apache tapestry home page.'' \url{http://tapestry.apache.org/index.html},
