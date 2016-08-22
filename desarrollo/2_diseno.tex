@@ -31,13 +31,13 @@ Dados los requerimientos anteriores, se diseñó una arquitectura base para solu
 
 Por medio de la aplicación móvil se podrá hacer el registro de los gastos personales. El servidor permitirá la revisión de los reportes de gastos, así como su aprobación o rechazo.
 
-Toda la información relacionada a los gastos (fecha, monto, categorías, fotos) será creada y guardada localmente en cada dispositivo móvil. Cada dispositivo podrá enviar al servidor su reporte de gastos en forma de un archivo PDF. La comunicación entre la aplicación móvil y el servidor se hace por medio de servicios web que presta este último.
+Toda la información relacionada a los gastos (fecha, monto, categorías, fotos) será creada y guardada localmente en cada dispositivo móvil. Cada dispositivo podrá enviar al servidor reportes de gastos en forma de archivos PDF. La comunicación entre la aplicación móvil y el servidor se hace por medio de servicios web que presta este último.
 
 Estos reportes deberán ser guardados en la base de datos del servidor. Además, a través de una aplicación web, se podrá aprobar o rechazar los reportes recibidos.
 
 \subsubsection*{Arquitectura de \textit{software}}
 
-Para los componentes mencionados anteriormente, se definieron los patrones de arquitectura de \textit{software} sobre los cuales se crearon. Para el servidor se utilizó el patrón Modelo Vista Controlador (MVC) y para la aplicación móvil el Modelo Vista Presentador (MVP).
+Para los componentes mencionados anteriormente, se definieron los patrones de arquitectura de \textit{software} sobre los cuales se desarrollaron. Para el servidor se utilizó el patrón Modelo Vista Controlador (MVC) y para la aplicación móvil el Modelo Vista Presentador (MVP).
 
 Tal como se explicó en el capítulo 2, MVC se usa para aislar la lógica de negocio de la interfaz de usuario. En este patrón, el modelo representa todos los datos de la aplicación y las reglas de negocio que se usan para manejar dichos datos. 
 
@@ -83,7 +83,7 @@ A continuación se describirán cada una de estas clases, así como sus atributo
 	\item \textbf{\textit{Photo}}: representa las fotos asociadas a un \textit{entry}. Almacena información de su \textit{id}, y la ruta del archivo dentro del dispositivo móvil.
 \end{itemize}
 
-Por otra parte, en la figura 5.5 se puede observar la estructura de datos del servidor. En este caso, se tienen dos clases: \textit{user} y \textit{report}, y una clase asociación, \textit{reviews}.
+Por otra parte, en la figura 5.5 se puede observar la estructura de datos del servidor. En este caso, se tienen dos clases: \textit{user} y \textit{report}.
 
 \begin{figure}[ht]
   \centering
