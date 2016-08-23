@@ -1,0 +1,12 @@
+\section{REST (\textit{Representational State Transfer})}\label{REST}
+
+Es un estilo de arquitectura de \textit{software} utilizado para la creación de servicios web. Para que un sistema cumpla con esta arquitectura se deben cumplir diversas restricciones \cite{REST0}:
+
+\begin{itemize}
+	\item Cliente-Servidor: Debe existir una separación bien delimitada en cuanto a las ocupaciones del servidor y del cliente.
+	\item Sin estados: Toda petición hecha de un cliente al servidor, debe contener toda la información necesaria para entenderla. De esta forma, la información de contexto de un cliente no puede ser almacenada en el servidor entre peticiones. 
+	\item Cache: La información de una respuesta a una petición debe ser marcada como \textit{cacheable} o no. Si es \textit{cacheable}, para ciertas peticiones del mismo estilo no es necesario realizar una nueva petición, sino que el cliente puede usar la respuesta previa.
+	\item Interfaz uniforme: La característica principal que distingue la arquitectura REST del resto, es el énfasis que se da en tener una interfaz uniforme entre los componentes. Para lograr una interfaz uniforme, es necesario cumplir con las siguientes condiciones: todo recurso debe estar identificado, la manipulación de los recursos debe hacerse bajo representaciones, los mensajes deben ser autodescriptivos, y la hipermedia debe ser el motor del estado de la aplicación.
+	\item Sistema en capas: Los componentes que conforman el sistema deben estar distribuidos en capas. Así, ningún componente podrá ver información que se encuentre en una capa diferente a la cual pertenece.
+	\item 
+\end{itemize}

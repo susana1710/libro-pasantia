@@ -20,18 +20,20 @@ Por último, se quiere que los supervisores de la compañía puedan tener acceso
 
 \subsubsection*{Arquitectura base}
 
-Dados los requerimientos anteriores, se diseñó una arquitectura base para solucionar el problema. Se dividió el sistema según sus componentes: servidor web, dispositivos móviles y cliente web. Como se muestra en la figura 5.1, es una arquitectura cliente-servidor, donde el componente móvil y la aplicación web juegan el papel de cliente. En este caso, la aplicación móvil actúa como un cliente activo, pues es quien manejará los datos relevantes. El servidor solo recibirá esta información, sin poder modificarla. Esto corresponde a una arquitectura del tipo cliente activo-servidor pasivo, descrita en el capítulo 2.
+Dados los requerimientos anteriores, se diseñó una arquitectura base para solucionar el problema. Se dividió el sistema según sus componentes: servidor web, dispositivos móviles y cliente web. 
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.4,type=png,ext=.png,read=.png]{imagenes/arquitectura_base}
+  \includegraphics[scale=0.51,type=png,ext=.png,read=.png]{imagenes/arquitectura_base}
   \caption{Arquitectura base de la solución}
   \label{fig:arquitecturaBase}
 \end{figure}
 
+Como se muestra en la figura~\ref{fig:arquitecturaBase}, es una arquitectura cliente-servidor, donde el componente móvil y la aplicación web juegan el papel de cliente. En este caso, la aplicación móvil actúa como un cliente activo, pues es quien manejará los datos relevantes. El servidor solo recibirá esta información, sin poder modificarla. Esto corresponde a una arquitectura del tipo cliente activo-servidor pasivo, descrita en el capítulo~\ref{chap:Marco Teorico}.
+
 Por medio de la aplicación móvil se podrá hacer el registro de los gastos personales. El servidor permitirá la revisión de los reportes de gastos, así como su aprobación o rechazo.
 
-Toda la información relacionada a los gastos (fecha, monto, categorías, fotos) será creada y guardada localmente en cada dispositivo móvil. Cada dispositivo podrá enviar al servidor reportes de gastos en forma de archivos PDF. La comunicación entre la aplicación móvil y el servidor se hace por medio de servicios web que presta este último.
+Toda la información relacionada a los gastos (fecha, monto, categorías, fotos) será creada y guardada localmente en una base de datos en cada dispositivo móvil. Cada dispositivo podrá enviar al servidor reportes de gastos en forma de archivos PDF. La comunicación entre la aplicación móvil y el servidor se hace por medio de servicios web que presta este último.
 
 Estos reportes deberán ser guardados en la base de datos del servidor. Además, a través de una aplicación web, se podrá aprobar o rechazar los reportes recibidos.
 
@@ -39,40 +41,47 @@ Estos reportes deberán ser guardados en la base de datos del servidor. Además,
 
 Para los componentes mencionados anteriormente, se definieron los patrones de arquitectura de \textit{software} sobre los cuales se desarrollaron. Para el servidor se utilizó el patrón Modelo Vista Controlador (MVC) y para la aplicación móvil el Modelo Vista Presentador (MVP).
 
-Tal como se explicó en el capítulo 2, MVC se usa para aislar la lógica de negocio de la interfaz de usuario. En este patrón, el modelo representa todos los datos de la aplicación y las reglas de negocio que se usan para manejar dichos datos. 
+Tal como se explicó en el capítulo~\ref{chap:Marco Teorico}, MVC se usa para aislar la lógica de negocio de la interfaz de usuario. En este patrón, el modelo representa todos los datos de la aplicación y las reglas de negocio que se usan para manejar dichos datos. 
 
-Como se muestra en la figura 5.2, el modelo incluye tanto los POJO's, DAO's como la base de datos. La vista corresponde a todo lo que son los elementos de la interfaz de usuario que, en este caso, son las vistas de la aplicación web. El controlador se encarga de manejar las acciones del usuario, y se comunica con el modelo o con la vista según sea necesario. El \textit{manager} definido en el capítulo 2 actúa como controlador.
+Como se muestra en la figura~\ref{fig:mvc}, el modelo incluye tanto los POJO's, DAO's como la base de datos. La vista corresponde a todo lo que son los elementos de la interfaz de usuario. En este caso, está compuesta por las vistas de la aplicación web. El controlador se encarga de manejar las acciones del usuario, y se comunica con el modelo o con la vista según sea necesario. El \textit{manager} definido en el capítulo~\ref{chap:Marco Teorico} actúa como controlador.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.6,type=png,ext=.png,read=.png]{imagenes/mvc}
+  \includegraphics[scale=0.56,type=png,ext=.png,read=.png]{imagenes/mvc}
   \caption{Modelo Vista Controlador}
   \label{fig:mvc}
 \end{figure}
 
-Por su parte, MVP es una derivación del patrón MVC, como se observa en la figura 5.3. El modelo incluye tanto la base de datos como los POJO's, los cuales fueron utilizados para establecer una correspondencia entre objetos de la aplicación con registros de la base de datos. La vista está formada por las actividades (\textit{activities}) definidos en el capítulo 2, y las interfaces de usuario.
- 
-En este caso, las acciones de usuario son recibidas por la vista. Luego, la vista se comunica con el presentador, que pide los datos al modelo. Al terminar de trabajo, el modelo notifica al presentador, y este último se encarga de modificar la vista a través de una interfaz.
+
+Por su parte, MVP es una derivación del patrón MVC, como se observa en la figura~\ref{fig:mvp}.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.6,type=png,ext=.png,read=.png]{imagenes/mvp}
+  \includegraphics[scale=0.56,type=png,ext=.png,read=.png]{imagenes/mvp}
   \caption{Modelo Vista Presentador}
   \label{fig:mvp}
 \end{figure}
+
+El modelo incluye tanto la base de datos como los POJO's, los cuales fueron utilizados para establecer una correspondencia entre objetos de la aplicación con registros de la base de datos. La vista está formada por las actividades (\textit{activities}) definidos en el capítulo~\ref{chap:Marco Tecnologico}, y las interfaces de usuario.
+ 
+En este caso, las acciones de usuario son recibidas por la vista. Luego, la vista se comunica con el presentador, que pide los datos al modelo. Al terminar de trabajo, el modelo notifica al presentador, y este último se encarga de modificar la vista a través de una interfaz.
+
+
 
 \subsubsection{Estructura de datos}
 
 Para dar lugar al desarrollo del sistema, fue necesario diseñar un modelo de datos que permita mantener la información necesaria en el dispositivo móvil, y otro para mantener información en el servidor.
 
-En la figura 5.4 se puede observar el diagrama de clases que representa el modelo de datos de la aplicación móvil. 
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.65,type=png,ext=.png,read=.png]{imagenes/class_diagram_mobile}
+  \includegraphics[scale=0.67,type=png,ext=.png,read=.png]{imagenes/class_diagram_mobile}
   \caption{Diagrama de clases de la aplicación móvil}
-  \label{fig:classDiagramMobile}
+  \label{fig:diagramaClasesMovil}
 \end{figure}
+
+En la figura~\ref{fig:diagramaClasesMovil} se puede observar el diagrama de clases que representa el modelo de datos de la aplicación móvil. 
+
 
 A continuación se describirán cada una de estas clases, así como sus atributos:
 
@@ -83,13 +92,13 @@ A continuación se describirán cada una de estas clases, así como sus atributo
 	\item \textbf{\textit{Photo}}: representa las fotos asociadas a un \textit{entry}. Almacena información de su \textit{id}, y la ruta del archivo dentro del dispositivo móvil.
 \end{itemize}
 
-Por otra parte, en la figura 5.5 se puede observar la estructura de datos del servidor. En este caso, se tienen dos clases: \textit{user} y \textit{report}.
+Por otra parte, en la figura~\ref{fig:diagramaClasesServidor} se puede observar la estructura de datos del servidor. En este caso, se tienen dos clases: \textit{user} y \textit{report}.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.65,type=png,ext=.png,read=.png]{imagenes/class_diagram_server}
+  \includegraphics[scale=0.67,type=png,ext=.png,read=.png]{imagenes/class_diagram_server}
   \caption{Diagrama de clases del servidor}
-  \label{fig:classDiagramServer}
+  \label{fig:diagramaClasesServidor}
 \end{figure}
 
 A continuación se describirán cada una de estas clases, así como sus atributos:

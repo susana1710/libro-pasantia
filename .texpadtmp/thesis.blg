@@ -3,51 +3,52 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: /Users/susana/libro-pasantia/.texpadtmp/thesis.aux
 The style file: ieeetr.bst
 Database file #1: ../myrefs.bib
-You're missing a field name---line 168 of file ../myrefs.bib
+You're missing a field name---line 172 of file ../myrefs.bib
  : 
  : % Title = {POST(HTTP)},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--empty year in DSP0
-You've used 38 entries,
+Warning--empty publisher in DSP1
+You've used 41 entries,
             1876 wiz_defined-function locations,
-            638 strings with 8269 characters,
-and the built_in function-call counts, 4242 in all, are:
-= -- 375
-> -- 81
+            648 strings with 8720 characters,
+and the built_in function-call counts, 4582 in all, are:
+= -- 405
+> -- 87
 < -- 0
-+ -- 51
-- -- 13
-* -- 156
-:= -- 443
-add.period$ -- 43
-call.type$ -- 38
-change.case$ -- 38
++ -- 55
+- -- 14
+* -- 166
+:= -- 480
+add.period$ -- 47
+call.type$ -- 41
+change.case$ -- 39
 chr.to.int$ -- 0
-cite$ -- 39
-duplicate$ -- 177
-empty$ -- 695
-format.name$ -- 13
-if$ -- 1176
+cite$ -- 43
+duplicate$ -- 194
+empty$ -- 750
+format.name$ -- 14
+if$ -- 1269
 int.to.chr$ -- 0
-int.to.str$ -- 38
-missing$ -- 10
-newline$ -- 122
-num.names$ -- 5
-pop$ -- 224
+int.to.str$ -- 41
+missing$ -- 12
+newline$ -- 132
+num.names$ -- 6
+pop$ -- 244
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 204
+skip$ -- 217
 stack$ -- 0
 substring$ -- 0
-swap$ -- 5
+swap$ -- 6
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 5
-width$ -- 40
-write$ -- 249
+warning$ -- 2
+while$ -- 6
+width$ -- 43
+write$ -- 268
 (There was 1 error message)
