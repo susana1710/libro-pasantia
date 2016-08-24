@@ -104,3 +104,6 @@
 \contentsline {chapter}{Bibliograf\'{\i }a}{57}{chapter*.25}
 \contentsline {chapter}{\numberline {A}Capturas de pantalla de la aplicaci\IeC {\'o}n m\IeC {\'o}vil}{62}{appendix.Alph1}
 \contentsline {chapter}{\numberline {B}Capturas de pantalla de la aplicaci\IeC {\'o}n web}{66}{appendix.Alph2}
+\contentsline {chapter}{\numberline {C}Artefactos complementarios del sistema de creaci\IeC {\'o}n y control de reportes}{68}{appendix.Alph3}
+\contentsline {section}{\numberline {C.1}Diagrama de componentes del sistema}{68}{section.Alph3.1}
+\contentsline {section}{\numberline {C.2}Diagramas de actividades, estados y secuencia}{70}{section.Alph3.2}
