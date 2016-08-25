@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  24 AUG 2016 17:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  25 AUG 2016 17:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1266,7 +1266,7 @@ LaTeX Info: Redefining \nameref on input line 150.
 \@outlinefile=\write7
 \openout7 = `thesis.out'.
 
- (./intro/portada.tex <imagenes/cebolla.png, id=445, 218.31563pt x 164.11313pt>
+ (./intro/portada.tex <imagenes/cebolla.png, id=453, 218.31563pt x 164.11313pt>
 File: imagenes/cebolla.png Graphic file (type png)
  <use imagenes/cebolla.png>
 Package pdftex.def Info: imagenes/cebolla.png used on input line 6.
@@ -1355,7 +1355,7 @@ l.15 \item S
 Cap\'{\i }tulo 1.
 ) (./empresa/1_descripcion.tex) (./empresa/2_mision.tex) (./empresa/3_vision.tex [3
 
-]) (./empresa/4_estructura_organizacional.tex <imagenes/estructura_empresa.png, id=708, 722.7pt x 542.025pt>
+]) (./empresa/4_estructura_organizacional.tex <imagenes/estructura_empresa.png, id=719, 722.7pt x 542.025pt>
 File: imagenes/estructura_empresa.png Graphic file (type png)
  <use imagenes/estructura_empresa.png>
 Package pdftex.def Info: imagenes/estructura_empresa.png used on input line 7.
@@ -1366,14 +1366,14 @@ Cap\'{\i }tulo 2.
 
 ]) (./marco_teorico/2_patrones_arquitectura.tex) (./marco_teorico/3_cliente_servidor.tex [7]) (./marco_teorico/4_servicio_web.tex) (./marco_teorico/5_http.tex [8]) (./marco_teorico/6_rest.tex [9]) (./marco_teorico/7_json.tex) (./marco_teorico/8_pojo.tex) (./marco_teorico/9_dao.tex [10]) (./marco_teorico/10_manager.tex) (./marco_tecnologico/0_marco_tecnologico.tex [11]
 Cap\'{\i }tulo 3.
-) (./marco_tecnologico/1_herramientas_entornos_lenguajes.tex <imagenes/android_architecture.png, id=786, 375.4025pt x 571.13374pt>
+) (./marco_tecnologico/1_herramientas_entornos_lenguajes.tex <imagenes/android_architecture.png, id=796, 375.4025pt x 571.13374pt>
 File: imagenes/android_architecture.png Graphic file (type png)
  <use imagenes/android_architecture.png>
 Package pdftex.def Info: imagenes/android_architecture.png used on input line 11.
 (pdftex.def)             Requested size: 225.24323pt x 342.68289pt.
  [12
 
-] [13 <./imagenes/android_architecture.png>] [14]) (./marco_tecnologico/2_frameworks_librerias.tex [15]) (./marco_metodologico/0_marco_metodologico.tex [16] [17]
+] [13 <./imagenes/android_architecture.png>] [14]) (./marco_tecnologico/2_frameworks_librerias.tex [15] [16]) (./marco_metodologico/0_marco_metodologico.tex [17]
 Cap\'{\i }tulo 4.
 ) (./marco_metodologico/1_scrum.tex [18
 
@@ -1381,98 +1381,112 @@ Cap\'{\i }tulo 4.
 Cap\'{\i }tulo 5.
 ) (./desarrollo/1_investigacion.tex [22
 
-]) (./desarrollo/2_diseno.tex [23] <imagenes/arquitectura_base.png, id=899, 566.115pt x 504.88625pt>
+]) (./desarrollo/2_diseno.tex [23]
+./desarrollo/2_diseno.tex:19: Undefined control sequence.
+l.19 ... Documento de Historias de Usuario (\texit
+                                                  {Product Backlog}). Éste ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<imagenes/arquitectura_base.png, id=914, 566.115pt x 504.88625pt>
 File: imagenes/arquitectura_base.png Graphic file (type png)
  <use imagenes/arquitectura_base.png>
-Package pdftex.def Info: imagenes/arquitectura_base.png used on input line 27.
+Package pdftex.def Info: imagenes/arquitectura_base.png used on input line 31.
 (pdftex.def)             Requested size: 288.71483pt x 257.48857pt.
- [24 <./imagenes/arquitectura_base.png>] <imagenes/mvc.png, id=911, 626.34pt x 335.2525pt>
+ [24] [25 <./imagenes/arquitectura_base.png>] <imagenes/mvc.png, id=932, 626.34pt x 335.2525pt>
 File: imagenes/mvc.png Graphic file (type png)
  <use imagenes/mvc.png>
-Package pdftex.def Info: imagenes/mvc.png used on input line 50.
+Package pdftex.def Info: imagenes/mvc.png used on input line 54.
 (pdftex.def)             Requested size: 350.748pt x 187.74011pt.
- [25] <imagenes/mvp.png, id=919, 482.80376pt x 365.365pt>
+ <imagenes/mvp.png, id=934, 482.80376pt x 365.365pt>
 File: imagenes/mvp.png Graphic file (type png)
  <use imagenes/mvp.png>
-Package pdftex.def Info: imagenes/mvp.png used on input line 60.
+Package pdftex.def Info: imagenes/mvp.png used on input line 64.
 (pdftex.def)             Requested size: 270.36826pt x 204.603pt.
- [26 <./imagenes/mvc.png> <./imagenes/mvp.png>] <imagenes/class_diagram_mobile.png, id=927, 626.34pt x 545.03625pt>
+ [26 <./imagenes/mvc.png>] <imagenes/class_diagram_mobile.png, id=941, 626.34pt x 545.03625pt>
 File: imagenes/class_diagram_mobile.png Graphic file (type png)
  <use imagenes/class_diagram_mobile.png>
-Package pdftex.def Info: imagenes/class_diagram_mobile.png used on input line 78.
+Package pdftex.def Info: imagenes/class_diagram_mobile.png used on input line 82.
 (pdftex.def)             Requested size: 419.64561pt x 365.1724pt.
- [27 <./imagenes/class_diagram_mobile.png>] <imagenes/class_diagram_server.png, id=935, 603.25375pt x 341.275pt>
+ [27 <./imagenes/mvp.png>] <imagenes/class_diagram_server.png, id=949, 603.25375pt x 341.275pt>
 File: imagenes/class_diagram_server.png Graphic file (type png)
  <use imagenes/class_diagram_server.png>
-Package pdftex.def Info: imagenes/class_diagram_server.png used on input line 99.
+Package pdftex.def Info: imagenes/class_diagram_server.png used on input line 103.
 (pdftex.def)             Requested size: 404.17792pt x 228.65305pt.
-) (./desarrollo/3_sprints.tex [28] [29 <./imagenes/class_diagram_server.png>] <imagenes/dashboard.png, id=946, 479.7925pt x 762.85pt>
+ [28 <./imagenes/class_diagram_mobile.png>]) (./desarrollo/3_sprints.tex [29 <./imagenes/class_diagram_server.png>]
+
+LaTeX Warning: Reference `chap:Screenshots mobile' on page 30 undefined on input line 9.
+
+<imagenes/dashboard.png, id=961, 479.7925pt x 762.85pt>
 File: imagenes/dashboard.png Graphic file (type png)
  <use imagenes/dashboard.png>
 Package pdftex.def Info: imagenes/dashboard.png used on input line 17.
 (pdftex.def)             Requested size: 215.90462pt x 343.27933pt.
- <imagenes/create_entry.png, id=947, 479.7925pt x 762.85pt>
+ <imagenes/create_entry.png, id=962, 479.7925pt x 762.85pt>
 File: imagenes/create_entry.png Graphic file (type png)
  <use imagenes/create_entry.png>
 Package pdftex.def Info: imagenes/create_entry.png used on input line 24.
 (pdftex.def)             Requested size: 215.90462pt x 343.27933pt.
- [30 <./imagenes/dashboard.png> <./imagenes/create_entry.png>] <imagenes/expenses_list.png, id=957, 479.7925pt x 762.85pt>
+ [30 <./imagenes/dashboard.png> <./imagenes/create_entry.png>] <imagenes/expenses_list.png, id=972, 479.7925pt x 762.85pt>
 File: imagenes/expenses_list.png Graphic file (type png)
  <use imagenes/expenses_list.png>
 Package pdftex.def Info: imagenes/expenses_list.png used on input line 39.
 (pdftex.def)             Requested size: 215.90462pt x 343.27933pt.
- <imagenes/incomes_list.png, id=958, 479.7925pt x 762.85pt>
+ <imagenes/incomes_list.png, id=973, 479.7925pt x 762.85pt>
 File: imagenes/incomes_list.png Graphic file (type png)
  <use imagenes/incomes_list.png>
 Package pdftex.def Info: imagenes/incomes_list.png used on input line 46.
 (pdftex.def)             Requested size: 215.90462pt x 343.27933pt.
- <imagenes/expense_categories.png, id=961, 479.7925pt x 762.85pt>
+ [31 <./imagenes/expenses_list.png> <./imagenes/incomes_list.png>] <imagenes/expense_categories.png, id=983, 479.7925pt x 762.85pt>
 File: imagenes/expense_categories.png Graphic file (type png)
  <use imagenes/expense_categories.png>
 Package pdftex.def Info: imagenes/expense_categories.png used on input line 59.
 (pdftex.def)             Requested size: 215.90462pt x 343.27933pt.
- <imagenes/income_categories.png, id=962, 480.79625pt x 762.85pt>
+ <imagenes/income_categories.png, id=984, 480.79625pt x 762.85pt>
 File: imagenes/income_categories.png Graphic file (type png)
  <use imagenes/income_categories.png>
 Package pdftex.def Info: imagenes/income_categories.png used on input line 66.
 (pdftex.def)             Requested size: 216.35631pt x 343.27933pt.
- [31 <./imagenes/expenses_list.png> <./imagenes/incomes_list.png>] <imagenes/active_accounts.png, id=972, 479.7925pt x 762.85pt>
+ <imagenes/active_accounts.png, id=987, 479.7925pt x 762.85pt>
 File: imagenes/active_accounts.png Graphic file (type png)
  <use imagenes/active_accounts.png>
 Package pdftex.def Info: imagenes/active_accounts.png used on input line 82.
 (pdftex.def)             Requested size: 215.90462pt x 343.27933pt.
- <imagenes/archived_accounts.png, id=973, 479.7925pt x 762.85pt>
+ <imagenes/archived_accounts.png, id=988, 479.7925pt x 762.85pt>
 File: imagenes/archived_accounts.png Graphic file (type png)
  <use imagenes/archived_accounts.png>
 Package pdftex.def Info: imagenes/archived_accounts.png used on input line 89.
 (pdftex.def)             Requested size: 215.90462pt x 343.27933pt.
- <imagenes/balance_report.png, id=974, 478.78876pt x 762.85pt>
+ [32 <./imagenes/expense_categories.png> <./imagenes/income_categories.png>] <imagenes/balance_report.png, id=995, 478.78876pt x 762.85pt>
 File: imagenes/balance_report.png Graphic file (type png)
  <use imagenes/balance_report.png>
 Package pdftex.def Info: imagenes/balance_report.png used on input line 100.
 (pdftex.def)             Requested size: 215.45294pt x 343.27933pt.
- <imagenes/categories_report.png, id=975, 479.7925pt x 762.85pt>
+ <imagenes/categories_report.png, id=996, 479.7925pt x 762.85pt>
 File: imagenes/categories_report.png Graphic file (type png)
  <use imagenes/categories_report.png>
 Package pdftex.def Info: imagenes/categories_report.png used on input line 107.
 (pdftex.def)             Requested size: 215.90462pt x 343.27933pt.
- [32 <./imagenes/expense_categories.png> <./imagenes/income_categories.png>] [33 <./imagenes/active_accounts.png> <./imagenes/archived_accounts.png>] [34 <./imagenes/balance_report.png> <./imagenes/categories_report.png>] <imagenes/pending_reports.png, id=1001, 1257.69875pt x 696.6025pt>
+ [33 <./imagenes/active_accounts.png> <./imagenes/archived_accounts.png>] [34 <./imagenes/balance_report.png> <./imagenes/categories_report.png>] <imagenes/pending_reports.png, id=1019, 1257.69875pt x 696.6025pt>
 File: imagenes/pending_reports.png Graphic file (type png)
  <use imagenes/pending_reports.png>
-Package pdftex.def Info: imagenes/pending_reports.png used on input line 140.
+Package pdftex.def Info: imagenes/pending_reports.png used on input line 138.
 (pdftex.def)             Requested size: 477.9305pt x 264.7117pt.
 
-Overfull \hbox (5.89926pt too wide) in paragraph at lines 140--142
+Overfull \hbox (5.89926pt too wide) in paragraph at lines 138--140
  [][] 
  []
 
-<imagenes/reviewed_reports.png, id=1002, 1256.695pt x 695.59875pt>
+<imagenes/reviewed_reports.png, id=1020, 1256.695pt x 695.59875pt>
 File: imagenes/reviewed_reports.png Graphic file (type png)
  <use imagenes/reviewed_reports.png>
-Package pdftex.def Info: imagenes/reviewed_reports.png used on input line 148.
+Package pdftex.def Info: imagenes/reviewed_reports.png used on input line 146.
 (pdftex.def)             Requested size: 477.54907pt x 264.33028pt.
 
-Overfull \hbox (5.51784pt too wide) in paragraph at lines 148--150
+Overfull \hbox (5.51784pt too wide) in paragraph at lines 146--148
  [][] 
  []
 
@@ -1492,62 +1506,62 @@ Overfull \hbox (0.84146pt too wide) in paragraph at lines 19--19
 
 ] [58] [59] [60]) (./apendices/mobile_screenshots.tex [61]
 Ap\'{e}ndice A.
-<imagenes/Screenshots/login_mobile.png, id=1206, 481.8pt x 803.0pt>
+<imagenes/Screenshots/login_mobile.png, id=1226, 481.8pt x 803.0pt>
 File: imagenes/Screenshots/login_mobile.png Graphic file (type png)
  <use imagenes/Screenshots/login_mobile.png>
 Package pdftex.def Info: imagenes/Screenshots/login_mobile.png used on input line 7.
 (pdftex.def)             Requested size: 144.5411pt x 240.90186pt.
- <imagenes/Screenshots/sidebar.png, id=1207, 481.8pt x 803.0pt>
+ <imagenes/Screenshots/sidebar.png, id=1227, 481.8pt x 803.0pt>
 File: imagenes/Screenshots/sidebar.png Graphic file (type png)
  <use imagenes/Screenshots/sidebar.png>
 Package pdftex.def Info: imagenes/Screenshots/sidebar.png used on input line 14.
 (pdftex.def)             Requested size: 144.5411pt x 240.90186pt.
- <imagenes/Screenshots/photo_view1.png, id=1208, 481.8pt x 803.0pt>
+ <imagenes/Screenshots/photo_view1.png, id=1228, 481.8pt x 803.0pt>
 File: imagenes/Screenshots/photo_view1.png Graphic file (type png)
  <use imagenes/Screenshots/photo_view1.png>
 Package pdftex.def Info: imagenes/Screenshots/photo_view1.png used on input line 24.
 (pdftex.def)             Requested size: 144.5411pt x 240.90186pt.
- <imagenes/Screenshots/photo_view2.png, id=1209, 481.8pt x 803.0pt>
+ <imagenes/Screenshots/photo_view2.png, id=1229, 481.8pt x 803.0pt>
 File: imagenes/Screenshots/photo_view2.png Graphic file (type png)
  <use imagenes/Screenshots/photo_view2.png>
 Package pdftex.def Info: imagenes/Screenshots/photo_view2.png used on input line 31.
 (pdftex.def)             Requested size: 144.5411pt x 240.90186pt.
- <imagenes/Screenshots/select_expenses.png, id=1210, 481.8pt x 803.0pt>
+ <imagenes/Screenshots/select_expenses.png, id=1230, 481.8pt x 803.0pt>
 File: imagenes/Screenshots/select_expenses.png Graphic file (type png)
  <use imagenes/Screenshots/select_expenses.png>
 Package pdftex.def Info: imagenes/Screenshots/select_expenses.png used on input line 42.
 (pdftex.def)             Requested size: 144.5411pt x 240.90186pt.
- <imagenes/Screenshots/filter.png, id=1211, 481.8pt x 803.0pt>
+ <imagenes/Screenshots/filter.png, id=1231, 481.8pt x 803.0pt>
 File: imagenes/Screenshots/filter.png Graphic file (type png)
  <use imagenes/Screenshots/filter.png>
 Package pdftex.def Info: imagenes/Screenshots/filter.png used on input line 49.
 (pdftex.def)             Requested size: 144.5411pt x 240.90186pt.
- <imagenes/Screenshots/create_account1.png, id=1212, 481.8pt x 803.0pt>
+ <imagenes/Screenshots/create_account1.png, id=1232, 481.8pt x 803.0pt>
 File: imagenes/Screenshots/create_account1.png Graphic file (type png)
  <use imagenes/Screenshots/create_account1.png>
 Package pdftex.def Info: imagenes/Screenshots/create_account1.png used on input line 60.
 (pdftex.def)             Requested size: 144.5411pt x 240.90186pt.
- <imagenes/Screenshots/select_accounts.png, id=1213, 481.8pt x 803.0pt>
+ <imagenes/Screenshots/select_accounts.png, id=1233, 481.8pt x 803.0pt>
 File: imagenes/Screenshots/select_accounts.png Graphic file (type png)
  <use imagenes/Screenshots/select_accounts.png>
 Package pdftex.def Info: imagenes/Screenshots/select_accounts.png used on input line 67.
 (pdftex.def)             Requested size: 144.5411pt x 240.90186pt.
- <imagenes/Screenshots/create_category1.png, id=1214, 481.8pt x 803.0pt>
+ <imagenes/Screenshots/create_category1.png, id=1234, 481.8pt x 803.0pt>
 File: imagenes/Screenshots/create_category1.png Graphic file (type png)
  <use imagenes/Screenshots/create_category1.png>
 Package pdftex.def Info: imagenes/Screenshots/create_category1.png used on input line 78.
 (pdftex.def)             Requested size: 144.5411pt x 240.90186pt.
- <imagenes/Screenshots/select_categories.png, id=1215, 481.8pt x 803.0pt>
+ <imagenes/Screenshots/select_categories.png, id=1235, 481.8pt x 803.0pt>
 File: imagenes/Screenshots/select_categories.png Graphic file (type png)
  <use imagenes/Screenshots/select_categories.png>
 Package pdftex.def Info: imagenes/Screenshots/select_categories.png used on input line 85.
 (pdftex.def)             Requested size: 144.5411pt x 240.90186pt.
- <imagenes/Screenshots/calculator.png, id=1216, 481.8pt x 803.0pt>
+ <imagenes/Screenshots/calculator.png, id=1236, 481.8pt x 803.0pt>
 File: imagenes/Screenshots/calculator.png Graphic file (type png)
  <use imagenes/Screenshots/calculator.png>
 Package pdftex.def Info: imagenes/Screenshots/calculator.png used on input line 96.
 (pdftex.def)             Requested size: 144.5411pt x 240.90186pt.
- <imagenes/Screenshots/configuration.png, id=1217, 481.8pt x 803.0pt>
+ <imagenes/Screenshots/configuration.png, id=1237, 481.8pt x 803.0pt>
 File: imagenes/Screenshots/configuration.png Graphic file (type png)
  <use imagenes/Screenshots/configuration.png>
 Package pdftex.def Info: imagenes/Screenshots/configuration.png used on input line 104.
@@ -1556,7 +1570,7 @@ Package pdftex.def Info: imagenes/Screenshots/configuration.png used on input li
 
  <./imagenes/Screenshots/login_mobile.png> <./imagenes/Screenshots/sidebar.png>] [63 <./imagenes/Screenshots/photo_view1.png> <./imagenes/Screenshots/photo_view2.png> <./imagenes/Screenshots/select_expenses.png> <./imagenes/Screenshots/filter.png>] [64 <./imagenes/Screenshots/create_account1.png> <./imagenes/Screenshots/select_accounts.png> <./imagenes/Screenshots/create_category1.png> <./imagenes/Screenshots/select_categories.png>] [65 <./imagenes/Screenshots/calculator.png> <./imagenes/Screenshots/configuration.png>]
 Ap\'{e}ndice B.
-<imagenes/login_web.png, id=1234, 985.6825pt x 647.41875pt>
+<imagenes/login_web.png, id=1254, 985.6825pt x 647.41875pt>
 File: imagenes/login_web.png Graphic file (type png)
  <use imagenes/login_web.png>
 Package pdftex.def Info: imagenes/login_web.png used on input line 5.
@@ -1573,13 +1587,17 @@ Package pdftex.def Info: imagenes/reviewed_reports.png used on input line 21.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./apendices/artefactos_complementarios.tex [66
+) (./apendices/product_backlog.tex [66
 
  <./imagenes/login_web.png>] [67]
 Ap\'{e}ndice C.
 [68
 
-] <imagenes/diagrama_componentes.png, id=1249, 1318.9275pt x 907.39pt>
+] [69]) (./apendices/artefactos_complementarios.tex [70]
+Ap\'{e}ndice D.
+[71
+
+] <imagenes/diagrama_componentes.png, id=1281, 1318.9275pt x 907.39pt>
 File: imagenes/diagrama_componentes.png Graphic file (type png)
  <use imagenes/diagrama_componentes.png>
 Package pdftex.def Info: imagenes/diagrama_componentes.png used on input line 8.
@@ -1592,25 +1610,25 @@ Overfull \hbox (48.30316pt too wide) in paragraph at lines 8--9
 
 LaTeX Warning: Float too large for page by 6.16264pt on input line 11.
 
-[69 <./imagenes/diagrama_componentes.png>] <imagenes/actividades_iniciar_sesion.png, id=1255, 615.29875pt x 360.34625pt>
+[72 <./imagenes/diagrama_componentes.png>] <imagenes/actividades_iniciar_sesion.png, id=1287, 615.29875pt x 360.34625pt>
 File: imagenes/actividades_iniciar_sesion.png Graphic file (type png)
  <use imagenes/actividades_iniciar_sesion.png>
 Package pdftex.def Info: imagenes/actividades_iniciar_sesion.png used on input line 19.
 (pdftex.def)             Requested size: 261.5032pt x 153.14787pt.
- <imagenes/actividades_revisar_reporte.png, id=1256, 440.64626pt x 566.115pt>
+ <imagenes/actividades_revisar_reporte.png, id=1288, 440.64626pt x 566.115pt>
 File: imagenes/actividades_revisar_reporte.png Graphic file (type png)
  <use imagenes/actividades_revisar_reporte.png>
 Package pdftex.def Info: imagenes/actividades_revisar_reporte.png used on input line 26.
 (pdftex.def)             Requested size: 189.47418pt x 243.4247pt.
- <imagenes/estado_reporte.png, id=1257, 436.63126pt x 452.69125pt>
+ <imagenes/estado_reporte.png, id=1289, 436.63126pt x 452.69125pt>
 File: imagenes/estado_reporte.png Graphic file (type png)
  <use imagenes/estado_reporte.png>
 Package pdftex.def Info: imagenes/estado_reporte.png used on input line 34.
 (pdftex.def)             Requested size: 261.98077pt x 271.61684pt.
- [70
+ [73
 
 
- <./imagenes/actividades_iniciar_sesion.png> <./imagenes/actividades_revisar_reporte.png>] [71 <./imagenes/estado_reporte.png>] <imagenes/secuencia_crear_entry.png, id=1269, 1389.19pt x 686.565pt>
+ <./imagenes/actividades_iniciar_sesion.png> <./imagenes/actividades_revisar_reporte.png>] [74 <./imagenes/estado_reporte.png>] <imagenes/secuencia_crear_entry.png, id=1303, 1389.19pt x 686.565pt>
 File: imagenes/secuencia_crear_entry.png Graphic file (type png)
  <use imagenes/secuencia_crear_entry.png>
 Package pdftex.def Info: imagenes/secuencia_crear_entry.png used on input line 42.
@@ -1620,7 +1638,7 @@ Overfull \hbox (83.43433pt too wide) in paragraph at lines 42--43
  [][] 
  []
 
-[72 <./imagenes/secuencia_crear_entry.png>] <imagenes/secuencia_generar_reporte.png, id=1275, 1128.215pt x 617.30624pt>
+[75 <./imagenes/secuencia_crear_entry.png>] <imagenes/secuencia_generar_reporte.png, id=1309, 1128.215pt x 617.30624pt>
 File: imagenes/secuencia_generar_reporte.png Graphic file (type png)
  <use imagenes/secuencia_generar_reporte.png>
 Package pdftex.def Info: imagenes/secuencia_generar_reporte.png used on input line 51.
@@ -1630,20 +1648,288 @@ Overfull \hbox (65.77525pt too wide) in paragraph at lines 51--52
  [][] 
  []
 
-[73 <./imagenes/secuencia_generar_reporte.png>] <imagenes/secuencia_revisar_reporte.png, id=1282, 1218.5525pt x 847.165pt>
+[76 <./imagenes/secuencia_generar_reporte.png>] <imagenes/secuencia_revisar_reporte.png, id=1315, 1218.5525pt x 847.165pt>
 File: imagenes/secuencia_revisar_reporte.png Graphic file (type png)
  <use imagenes/secuencia_revisar_reporte.png>
 Package pdftex.def Info: imagenes/secuencia_revisar_reporte.png used on input line 60.
 (pdftex.def)             Requested size: 609.27477pt x 423.58145pt.
- [74 <./imagenes/secuencia_revisar_reporte.png>])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 290.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 290.
+ [77 <./imagenes/secuencia_revisar_reporte.png>]) (./apendices/casos_prueba.tex
+Ap\'{e}ndice E.
+) <apendices/pruebas.pdf, id=1321, 614.295pt x 794.97pt>
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf>
+Package pdftex.def Info: apendices/pruebas.pdf used on input line 289.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf>
+Package pdftex.def Info: apendices/pruebas.pdf used on input line 289.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+ <apendices/pruebas.pdf, id=1324, page=1, 614.295pt x 794.97pt>
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 1>
+Package pdftex.def Info: apendices/pruebas.pdf, page1 used on input line 289.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 1>
+Package pdftex.def Info: apendices/pruebas.pdf, page1 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [78
+
+
+
+
+
+
+
+]
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 1>
+Package pdftex.def Info: apendices/pruebas.pdf, page1 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 1>
+Package pdftex.def Info: apendices/pruebas.pdf, page1 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 1>
+Package pdftex.def Info: apendices/pruebas.pdf, page1 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [79 <./apendices/pruebas.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./apendices/pruebas.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>] <apendices/pruebas.pdf, id=1346, page=2, 614.295pt x 794.97pt>
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 2>
+Package pdftex.def Info: apendices/pruebas.pdf, page2 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 2>
+Package pdftex.def Info: apendices/pruebas.pdf, page2 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 2>
+Package pdftex.def Info: apendices/pruebas.pdf, page2 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [80 <./apendices/pruebas.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./apendices/pruebas.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>] <apendices/pruebas.pdf, id=1361, page=3, 614.295pt x 794.97pt>
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 3>
+Package pdftex.def Info: apendices/pruebas.pdf, page3 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 3>
+Package pdftex.def Info: apendices/pruebas.pdf, page3 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 3>
+Package pdftex.def Info: apendices/pruebas.pdf, page3 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [81 <./apendices/pruebas.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./apendices/pruebas.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>] <apendices/pruebas.pdf, id=1366, page=4, 614.295pt x 794.97pt>
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 4>
+Package pdftex.def Info: apendices/pruebas.pdf, page4 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 4>
+Package pdftex.def Info: apendices/pruebas.pdf, page4 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 4>
+Package pdftex.def Info: apendices/pruebas.pdf, page4 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [82 <./apendices/pruebas.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./apendices/pruebas.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>] <apendices/pruebas.pdf, id=1371, page=5, 614.295pt x 794.97pt>
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 5>
+Package pdftex.def Info: apendices/pruebas.pdf, page5 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 5>
+Package pdftex.def Info: apendices/pruebas.pdf, page5 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 5>
+Package pdftex.def Info: apendices/pruebas.pdf, page5 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [83 <./apendices/pruebas.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./apendices/pruebas.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>] <apendices/pruebas.pdf, id=1376, page=6, 614.295pt x 794.97pt>
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 6>
+Package pdftex.def Info: apendices/pruebas.pdf, page6 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 6>
+Package pdftex.def Info: apendices/pruebas.pdf, page6 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 6>
+Package pdftex.def Info: apendices/pruebas.pdf, page6 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [84 <./apendices/pruebas.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./apendices/pruebas.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>] <apendices/pruebas.pdf, id=1381, page=7, 614.295pt x 794.97pt>
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 7>
+Package pdftex.def Info: apendices/pruebas.pdf, page7 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 7>
+Package pdftex.def Info: apendices/pruebas.pdf, page7 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 7>
+Package pdftex.def Info: apendices/pruebas.pdf, page7 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [85 <./apendices/pruebas.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./apendices/pruebas.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>] <apendices/pruebas.pdf, id=1387, page=8, 614.295pt x 794.97pt>
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 8>
+Package pdftex.def Info: apendices/pruebas.pdf, page8 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 8>
+Package pdftex.def Info: apendices/pruebas.pdf, page8 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 8>
+Package pdftex.def Info: apendices/pruebas.pdf, page8 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [86 <./apendices/pruebas.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./apendices/pruebas.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>] <apendices/pruebas.pdf, id=1392, page=9, 614.295pt x 794.97pt>
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 9>
+Package pdftex.def Info: apendices/pruebas.pdf, page9 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 9>
+Package pdftex.def Info: apendices/pruebas.pdf, page9 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 9>
+Package pdftex.def Info: apendices/pruebas.pdf, page9 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [87 <./apendices/pruebas.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./apendices/pruebas.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>] <apendices/pruebas.pdf, id=1397, page=10, 614.295pt x 794.97pt>
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 10>
+Package pdftex.def Info: apendices/pruebas.pdf, page10 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 10>
+Package pdftex.def Info: apendices/pruebas.pdf, page10 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 10>
+Package pdftex.def Info: apendices/pruebas.pdf, page10 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [88 <./apendices/pruebas.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./apendices/pruebas.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>] <apendices/pruebas.pdf, id=1402, page=11, 614.295pt x 794.97pt>
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 11>
+Package pdftex.def Info: apendices/pruebas.pdf, page11 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 11>
+Package pdftex.def Info: apendices/pruebas.pdf, page11 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 11>
+Package pdftex.def Info: apendices/pruebas.pdf, page11 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [89 <./apendices/pruebas.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./apendices/pruebas.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>] <apendices/pruebas.pdf, id=1407, page=12, 614.295pt x 794.97pt>
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 12>
+Package pdftex.def Info: apendices/pruebas.pdf, page12 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 12>
+Package pdftex.def Info: apendices/pruebas.pdf, page12 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 12>
+Package pdftex.def Info: apendices/pruebas.pdf, page12 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [90 <./apendices/pruebas.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./apendices/pruebas.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>] <apendices/pruebas.pdf, id=1412, page=13, 614.295pt x 794.97pt>
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 13>
+Package pdftex.def Info: apendices/pruebas.pdf, page13 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 13>
+Package pdftex.def Info: apendices/pruebas.pdf, page13 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 13>
+Package pdftex.def Info: apendices/pruebas.pdf, page13 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [91 <./apendices/pruebas.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./apendices/pruebas.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>] <apendices/pruebas.pdf, id=1418, page=14, 614.295pt x 794.97pt>
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 14>
+Package pdftex.def Info: apendices/pruebas.pdf, page14 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 14>
+Package pdftex.def Info: apendices/pruebas.pdf, page14 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 14>
+Package pdftex.def Info: apendices/pruebas.pdf, page14 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [92 <./apendices/pruebas.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./apendices/pruebas.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>] <apendices/pruebas.pdf, id=1423, page=15, 614.295pt x 794.97pt>
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 15>
+Package pdftex.def Info: apendices/pruebas.pdf, page15 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 15>
+Package pdftex.def Info: apendices/pruebas.pdf, page15 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: apendices/pruebas.pdf Graphic file (type pdf)
+ <use apendices/pruebas.pdf, page 15>
+Package pdftex.def Info: apendices/pruebas.pdf, page15 used on input line 289.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [93 <./apendices/pruebas.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./apendices/pruebas.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 293.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 293.
  (/Users/susana/libro-pasantia/.texpadtmp/thesis.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 290.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 290.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 293.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 293.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: AEDD2E0478B41187234C3E52AA8A2CF7;7286.
 
@@ -1651,22 +1937,25 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 29611 strings out of 493014
- 544896 string characters out of 6133351
+ 29700 strings out of 493014
+ 546927 string characters out of 6133351
  717561 words of memory out of 5000000
- 32138 multiletter control sequences out of 15000+600000
- 13231 words of font info for 50 fonts, out of 8000000 for 9000
+ 32197 multiletter control sequences out of 15000+600000
+ 13590 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,77p,1935b,692s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,18n,77p,1935b,692s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on /Users/susana/libro-pasantia/.texpadtmp/thesis.pdf (86 pages, 3998167 bytes).
+Output written on /Users/susana/libro-pasantia/.texpadtmp/thesis.pdf (105 pages, 4159905 bytes).
 PDF statistics:
- 1376 PDF objects out of 1440 (max. 8388607)
- 1201 compressed objects within 13 object streams
- 270 named destinations out of 1000 (max. 500000)
- 1085 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1536 PDF objects out of 1728 (max. 8388607)
+ 1309 compressed objects within 14 object streams
+ 292 named destinations out of 1000 (max. 500000)
+ 1191 words of extra memory for PDF output out of 10000 (max. 10000000)
 

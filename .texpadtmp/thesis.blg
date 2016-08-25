@@ -10,36 +10,36 @@ You're missing a field name---line 172 of file ../myrefs.bib
 I'm skipping whatever remains of this entry
 Warning--empty year in DSP0
 Warning--empty publisher in DSP1
-You've used 41 entries,
+You've used 42 entries,
             1876 wiz_defined-function locations,
-            648 strings with 8721 characters,
-and the built_in function-call counts, 4582 in all, are:
-= -- 405
-> -- 87
+            652 strings with 8799 characters,
+and the built_in function-call counts, 4683 in all, are:
+= -- 414
+> -- 88
 < -- 0
-+ -- 55
++ -- 56
 - -- 14
-* -- 166
-:= -- 480
-add.period$ -- 47
-call.type$ -- 41
-change.case$ -- 39
+* -- 169
+:= -- 489
+add.period$ -- 48
+call.type$ -- 42
+change.case$ -- 40
 chr.to.int$ -- 0
-cite$ -- 43
-duplicate$ -- 194
-empty$ -- 750
+cite$ -- 44
+duplicate$ -- 198
+empty$ -- 768
 format.name$ -- 14
-if$ -- 1269
+if$ -- 1298
 int.to.chr$ -- 0
-int.to.str$ -- 41
+int.to.str$ -- 42
 missing$ -- 12
-newline$ -- 132
+newline$ -- 135
 num.names$ -- 6
-pop$ -- 244
+pop$ -- 250
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 217
+skip$ -- 223
 stack$ -- 0
 substring$ -- 0
 swap$ -- 6
@@ -49,6 +49,6 @@ top$ -- 0
 type$ -- 0
 warning$ -- 2
 while$ -- 6
-width$ -- 43
-write$ -- 268
+width$ -- 44
+write$ -- 274
 (There was 1 error message)

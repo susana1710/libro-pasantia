@@ -6,7 +6,7 @@ Se creó un componente móvil y un servidor para dar solución al problema de re
 
 Para cumplir con los requerimientos del componente móvil, se creó una aplicación para el sistema operativo Android, y se trabajó con el IDE Android Studio. 
 
-El desarrollo de la aplicación implicó la creación de múltiples vistas (tanto interfaces de usuario como la lógica para manejar acciones de usuario), y de diversas consultas a la base de datos, muchas de las cuales realizaban modificaciones a la misma.
+El desarrollo de la aplicación implicó la creación de múltiples vistas (tanto interfaces de usuario como la lógica para manejar acciones de usuario), y de diversas consultas a la base de datos, muchas de las cuales realizaban modificaciones a la misma. Para un mayor detalle de las interfaces de usuario creadas, revisar apéndice ~\ref{chap:Screenshots mobile}.
 
 En primer lugar, se creó la interfaz de la vista principal de la aplicación, donde se muestra el total de ingresos, el total de gastos y el balance general (ver figura~\ref{fig:interfazDashboard}).
 
@@ -117,13 +117,11 @@ Además, también se crearon dos vistas para reportes de gastos: una para report
 
 La vista de reporte de balance general muestra una lista de gastos e ingresos filtrados por fecha. La vista de reporte por categorías muestra una lista de categorías con la suma total de los gastos e ingresos de dichas categorías, filtradas por fecha.
 
-
-
 Para mantener la lógica separada de la interfaz gráfica, se utilizó el patrón de arquitectura MVP o Modelo Vista Presentador, descrito en el capítulo~\ref{chap:Marco Teorico}. De esta manera, toda acción en la vista que requiera realizar operaciones sobre la base de datos, se realizó por medio de una capa intermedia: el presentador. 
 
 Para lograr esto, fue necesario en primer lugar implementar el modelo descrito en la figura~\ref{fig:diagramaClasesMovil}. Se creó la base de datos con cada una de sus tablas, así como las clases (POJO's) que permitieron dar un nivel de abstracción mayor para el mapeo con la base de datos.
 
-También se crearon las vistas necesarias, lo que incluyó tanto las interfaces gráficas como la lógica necesaria para manejar las acciones del usuario (actividades). Para cada vista, se creó una clase que actuó como la capa de presentador, quien era invocado por la vista para realizar acciones sobre el modelo. La vista se encargó de la creación de los objetos correspondientes al modelo, para luego pedir alguna acción al presentador sobre dichos objetos. El presentador tenía la función de invocar al modelo para realizar los cambios necesarios en la base de datos.
+También se crearon las vistas necesarias, lo que incluyó tanto las interfaces gráficas como la lógica necesaria para manejar las acciones del usuario (actividades). Para cada vista, se creó una clase que actuó como la capa de presentador, quien era invocado por la vista para realizar acciones sobre el modelo. La vista se encargó de la creación de los objetos correspondientes al modelo, para luego pedir alguna acción al presentador sobre dichos objetos. El presentador tenía la función de invocar al modelo para realizar los cambios necesarios en la base de datos. Para mayor detalle de la interacción entre la vista, el modelo y el presentador, ver figuras ~\ref{fig:secuenciaCrearEntry} y ~\ref{fig:secuenciaGenerarReporte} del apéndice ~\ref{chap:Artefactos complementarios}.
 
 Dada la naturaleza iterativa del marco de trabajo utilizado, muchas de las funcionalidades implementadas fueron hecha a lo largo de varia iteraciones (\textit{sprints}). Por esta razón, las vistas, presentadores, así como el modelo, fueron creados y actualizados progresivamente en cada iteración.
 
@@ -154,8 +152,7 @@ También se creó una aplicación web que permita aprobar o rechazar los reporte
 
 Se creó una funcionalidad para notificar a los supervisores vía correo electrónico cuando un nuevo reporte es recibido en el servidor. Asimismo, luego de que un supervisor toma la decisión de aprobar o rechazar un reporte, se notifica por correo electrónico al usuario que envió dicho reporte.
 
-Además de esto, la herramienta utilizada para el desarrollo del servidor trae consigo algunas funcionalidades por defecto: iniciar sesión y el manejo de usuarios (agregar, modificar y eliminar usuarios).
-
+Además de esto, la herramienta utilizada para el desarrollo del servidor trae consigo algunas funcionalidades por defectos que permiten iniciar sesión, agregar un usuario, editar un usuario y eliminar un usuario.
 
 El desarrollo del componente servidor se realizó con el IDE Eclipse. Se utilizó el \textit{framework} AppFuse, que integra a su vez otros \textit{frameworks} que facilitan el desarrollo web. En este caso, se trabajó en conjunto con Spring y Tapestry.
 
@@ -165,7 +162,7 @@ Para crear la aplicación web, se utilizó Tapestry. Con Jetty se proveen los se
 
 Por otra parte, a través de la librería Retrofit, la aplicación se comunica con el servidor web utilizando el protocolo HTTP. La comunicación con la base de datos del dispositivo y con los servicios web se realizan en la capa del presentador. Por su parte, en la vista se maneja toda la interfaz gráfica a través de la cual el usuario interactúa con la aplicación, y toda la lógica necesaria para la comunicación con la capa de modelo y el presentador.
 
-El proyecto se desarrolló bajo el marco de trabajo de \textit{Scrum}, descrito en el capítulo~\ref{chap:Marco Metodologico}. Durante la ejecución de las iteraciones, se implementaron las funcionalidades planificadas, así como las pruebas necesarias para validarlas. 
+El proyecto se desarrolló bajo el marco de trabajo de \textit{Scrum}, descrito en el capítulo~\ref{chap:Marco Metodologico}. Durante la ejecución de las iteraciones, se implementaron las funcionalidades planificadas. Para cada una de ellas, se realizaron las pruebas necesarias para validarlas, así como para (para más información, consultar el plan de pruebas en el apéndice ~\ref{chap:Plan de pruebas}). 
 
 A continuación se presentarán las iteraciones (\textit{sprints}), durante las cuales se desarrollaron las funcionalidades descritas en los párrafos anteriores. Para cada iteración, se mencionarán sus objetivos, resultados y una breve descripción de las actividades realizadas.
 
@@ -424,7 +421,7 @@ En primer lugar, se creó dentro del servidor las clases y métodos necesarios p
 
 Este módulo se utilizó para notificar a los supervisores cuando un nuevo reporte llega al servidor (con el archivo PDF adjunto), así como para notificar al usuario correspondiente una vez su reporte ha sido aprobado o rechazado.
 
-%Con esto concluyó el desarrollo del componente servidor, por lo que se procedió a realizar pruebas unitarias de los principales procesos. Se crearon pruebas para verificar que las operaciones CRUD sobre los reportes funcionen correctamente. Esto implicó la creación de métodos que verifiquen que la inserción, eliminación y actualización de registros en la base de datos se hacen correctamente.
+%Con esto concluyó el desarrollo del componente servidor, por lo que se procedió a realizar pruebas unitarias de los principales procesos, utilizando el \textit{framework} JUnit. Se crearon pruebas para verificar que las operaciones CRUD sobre los reportes funcionen correctamente. Esto implicó la creación de métodos que verifiquen que la inserción, eliminación y actualización de registros en la base de datos se hacen correctamente.
 
 %Por otra parte, se creó una funcionalidad que permita cerrar sesión del dispositivo móvil. Esto no implicó ninguna operación sobre la base de datos, por lo que únicamente se creó un menú a través del cual el usuario pudiera cerrar sesión.
 
