@@ -16,13 +16,13 @@ También se quiere poder realizar consultas de los gastos registrados en un rang
 
 Por último, se quiere que los supervisores de la compañía puedan tener acceso a los reportes de gastos mensuales de los trabajadores. Los supervisores deben poder aprobar o rechazar dichos reportes. Además, el archivo PDF de cada reporte debe ser guardado en el servidor.
 
-Para especificar cada uno de estos requerimientos, así como su prioridad, se realizó una primera versión del Documento de Historias de Usuario (\texit{Product Backlog}). Éste fue modificándose a lo largo del desarrollo del proyecto. Para más información de la versión final del documento, ver apéndice~\ref{chap:Product Backlog}.
+Para especificar cada uno de estos requerimientos, así como su prioridad, se realizó una primera versión del Documento de Historias de Usuario (\textit{Product Backlog}). Éste fue modificándose a lo largo del desarrollo del proyecto. Para más información de la versión final del documento, ver apéndice~\ref{chap:Product Backlog}.
 
 Para entender mejor las principales funcionalidades que debe tener el sistema, se realizaron algunos diagramas de estados y actividades, que se pueden revisar en el apéndice ~\ref{chap:Artefactos complementarios}.
 
 \subsection{Diseño de la solución}
 
-\subsubsection*{Arquitectura base}
+\subsubsection{Arquitectura base}
 
 Dados los requerimientos anteriores, se diseñó una arquitectura base para solucionar el problema. Se dividió el sistema según sus componentes: servidor web, dispositivos móviles y cliente web. 
 
@@ -41,7 +41,7 @@ Toda la información relacionada a los gastos (fecha, monto, categorías, fotos)
 
 Estos reportes deberán ser guardados en la base de datos del servidor. Además, a través de una aplicación web, se podrá aprobar o rechazar los reportes recibidos.
 
-\subsubsection*{Arquitectura de \textit{software}}
+\subsubsection{Arquitectura de \textit{software}}
 
 Para los componentes mencionados anteriormente, se definieron los patrones de arquitectura de \textit{software} sobre los cuales se desarrollaron. Para el servidor se utilizó el patrón Modelo Vista Controlador (MVC) y para la aplicación móvil el Modelo Vista Presentador (MVP).
 
@@ -96,7 +96,7 @@ A continuación se describirán cada una de estas clases, así como sus atributo
 	\item \textbf{\textit{Photo}}: representa las fotos asociadas a un \textit{entry}. Almacena información de su \textit{id}, y la ruta del archivo dentro del dispositivo móvil.
 \end{itemize}
 
-Por otra parte, en la figura~\ref{fig:diagramaClasesServidor} se puede observar la estructura de datos del servidor. En este caso, se tienen dos clases: \textit{user} y \textit{report}.
+Por otra parte, en la figura~\ref{fig:diagramaClasesServidor} se puede observar la estructura de datos del servidor. En este caso, se tienen cuatro clases: \textit{User} (que puede ser \textit{Default} o \textit{Administrator}) y \textit{Report}.
 
 \begin{figure}[ht]
   \centering
@@ -108,8 +108,11 @@ Por otra parte, en la figura~\ref{fig:diagramaClasesServidor} se puede observar 
 A continuación se describirán cada una de estas clases, así como sus atributos:
 
 \begin{itemize}
-	\item \textbf{\textit{User}}: representa los usuarios registrados en el sistema. Almacena información del nombre, apellido, nombre de usuario y contraseña.
+	\item \textbf{\textit{User}}: representa los usuarios registrados en el sistema. Almacena información del nombre, apellido, nombre de usuario y contraseña. 
+	\item \textbf(\textit{Administrator}): representa un usuario administrador del sistema. Los usuarios administradores son los únicos que pueden aprobar o rechazar un reporte.
+	\item \textbf(\textit{Default}): representa cualquier usuario del sistema que no sea administrador.
 	\item \textbf{\textit{Report}}: representa un reporte enviado por un usuario, que contiene información de la suma total de \textit{entries} pertenecientes a ciertas categorías. Almacena información de su \textit{id}, monto total de entries de cuatro categorías: comida (\textit{food}), transporte (\textit{transportation}), salud (\textit{health}) y deporte (\textit{fitness}). Además, también almacena la fecha en que se envió el reporte, su estado (aprobado, rechazado o sin revisar) y la fecha en que fue revisado. Por último, tiene la ruta del archivo PDF correspondiente al reporte.
+	\item \textbf{Role}: representa el rol que tiene un usuario dentro del sistema, el cual indica 	qué privilegios tendrá. Almacena información de su \textit{id}, nombre y descripción.
 \end{itemize} 
 
 Estos diagramas sirvieron como base para la creación del modelo tanto del servidor como de la aplicación móvil. 

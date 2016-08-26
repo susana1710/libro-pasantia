@@ -8,25 +8,26 @@ Para cumplir con los requerimientos del componente móvil, se creó una aplicaci
 
 El desarrollo de la aplicación implicó la creación de múltiples vistas (tanto interfaces de usuario como la lógica para manejar acciones de usuario), y de diversas consultas a la base de datos, muchas de las cuales realizaban modificaciones a la misma. Para un mayor detalle de las interfaces de usuario creadas, revisar apéndice ~\ref{chap:Screenshots mobile}.
 
-En primer lugar, se creó la interfaz de la vista principal de la aplicación, donde se muestra el total de ingresos, el total de gastos y el balance general (ver figura~\ref{fig:interfazDashboard}).
-
 \begin{figure}[ht]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/dashboard}
+  \includegraphics[scale=0.4,type=png,ext=.png,read=.png]{imagenes/dashboard}
   \captionsetup{justification=centering}
   \captionof{figure}{Interfaz principal de la\\ aplicación}
   \label{fig:interfazDashboard}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
 \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/create_entry}
+  \includegraphics[scale=0.4,type=png,ext=.png,read=.png]{imagenes/create_entry}
   \captionsetup{justification=centering}
   \captionof{figure}{Interfaz para crear o editar gastos o ingresos}
   \label{fig:interfazCrearEntry}
 \end{minipage}
 \end{figure}
+
+
+En primer lugar, se creó la interfaz de la vista principal de la aplicación, donde se muestra el total de ingresos, el total de gastos y el balance general (ver figura~\ref{fig:interfazDashboard}).
 
 Se implementó una vista para crear y editar gastos (ver figura~\ref{fig:interfazCrearEntry}). Para estos gastos, se debe guardar su monto, fecha, descripción, fotos de recibos y categoría a la que pertenecen. Posteriormente, se decidió extender la funcionalidad de creación de gastos para permitir también el manejo de ingresos. 
 
@@ -36,14 +37,14 @@ Para mostrar los gastos e ingresos guardados, se creó una vista para listarlos 
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/expenses_list}
+  \includegraphics[scale=0.4,type=png,ext=.png,read=.png]{imagenes/expenses_list}
   \captionsetup{justification=centering}
   \captionof{figure}{Interfaz para listar gastos}
   \label{fig:interfazListarExpenses}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
 \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/incomes_list}
+  \includegraphics[scale=0.4,type=png,ext=.png,read=.png]{imagenes/incomes_list}
   \captionsetup{justification=centering}
   \captionof{figure}{Interfaz para listar ingresos}
   \label{fig:interfazListarIncomes}
@@ -56,14 +57,14 @@ También se crearon vistas para el manejo de categorías. Se creó una vista par
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/expense_categories}
+  \includegraphics[scale=0.4,type=png,ext=.png,read=.png]{imagenes/expense_categories}
   \captionsetup{justification=centering}
   \captionof{figure}{Interfaz para listar categorías\\ de gastos}
   \label{fig:interfazListarExpenseCategories}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
 \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/income_categories}
+  \includegraphics[scale=0.4,type=png,ext=.png,read=.png]{imagenes/income_categories}
   \captionsetup{justification=centering}
   \captionof{figure}{Interfaz para listar categorías\\ de ingresos}
   \label{fig:interfazListarIncomeCategories}
@@ -79,14 +80,14 @@ Además, también se creó una vista para poder listar las cuentas creadas y gua
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/active_accounts}
+  \includegraphics[scale=0.4,type=png,ext=.png,read=.png]{imagenes/active_accounts}
   \captionsetup{justification=centering}
   \captionof{figure}{Interfaz para listar cuentas\\ activas}
   \label{fig:interfazListarActiveAccounts}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
 \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/archived_accounts}
+  \includegraphics[scale=0.4,type=png,ext=.png,read=.png]{imagenes/archived_accounts}
   \captionsetup{justification=centering}
   \captionof{figure}{Interfaz para listar cuentas archivadas}
   \label{fig:interfazListarArchivedAccounts}
@@ -97,14 +98,14 @@ Además, también se creó una vista para poder listar las cuentas creadas y gua
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/balance_report}
+  \includegraphics[scale=0.4,type=png,ext=.png,read=.png]{imagenes/balance_report}
   \captionsetup{justification=centering}
   \captionof{figure}{Interfaz para mostrar reporte\\ de balance general}
   \label{fig:interfazBalanceReport}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
 \centering
-  \includegraphics[scale=0.45,type=png,ext=.png,read=.png]{imagenes/categories_report}
+  \includegraphics[scale=0.4,type=png,ext=.png,read=.png]{imagenes/categories_report}
   \captionsetup{justification=centering}
   \captionof{figure}{Interfaz para mostrar reporte\\ por categorías}
   \label{fig:interfazCategoriesReport}
@@ -121,11 +122,14 @@ Para mantener la lógica separada de la interfaz gráfica, se utilizó el patró
 
 Para lograr esto, fue necesario en primer lugar implementar el modelo descrito en la figura~\ref{fig:diagramaClasesMovil}. Se creó la base de datos con cada una de sus tablas, así como las clases (POJO's) que permitieron dar un nivel de abstracción mayor para el mapeo con la base de datos.
 
-También se crearon las vistas necesarias, lo que incluyó tanto las interfaces gráficas como la lógica necesaria para manejar las acciones del usuario (actividades). Para cada vista, se creó una clase que actuó como la capa de presentador, quien era invocado por la vista para realizar acciones sobre el modelo. La vista se encargó de la creación de los objetos correspondientes al modelo, para luego pedir alguna acción al presentador sobre dichos objetos. El presentador tenía la función de invocar al modelo para realizar los cambios necesarios en la base de datos. Para mayor detalle de la interacción entre la vista, el modelo y el presentador, ver figuras ~\ref{fig:secuenciaCrearEntry} y ~\ref{fig:secuenciaGenerarReporte} del apéndice ~\ref{chap:Artefactos complementarios}.
+También se crearon las vistas necesarias, lo que incluyó tanto las interfaces gráficas como la lógica necesaria para manejar las acciones del usuario (actividades). Para cada vista, se creó una clase que actuó como la capa de presentador, quien era invocado por la vista para realizar acciones sobre el modelo. La vista se encargó de la creación de los objetos correspondientes al modelo, para luego pedir alguna acción al presentador sobre dichos objetos. El presentador tenía la función de invocar al modelo para realizar los cambios necesarios en la base de datos. Para mayor detalle de la interacción entre la vista, el modelo y el presentador, ver figuras~\ref{fig:secuenciaCrearEntry} y~\ref{fig:secuenciaGenerarReporte} del apéndice~\ref{chap:Artefactos complementarios}.
 
 Dada la naturaleza iterativa del marco de trabajo utilizado, muchas de las funcionalidades implementadas fueron hecha a lo largo de varia iteraciones (\textit{sprints}). Por esta razón, las vistas, presentadores, así como el modelo, fueron creados y actualizados progresivamente en cada iteración.
 
-Por otra parte, se creó un servidor al que se pueda enviar información desde la aplicación móvil. Todos los servicios web se crearon basándose en el estilo arquitectónico REST (ver capítulo~\ref{chap:Marco Teorico}).
+Por otra parte, se creó un servidor al que se pueda enviar información desde la aplicación móvil. 
+Para esto fue necesario implementar el modelo de datos mostrado en la figura~\ref{fig:diagramaClasesServidor}. La herramienta utilizada para el desarrollo web crea por defecto una \textit{User}, una tabla \textit{Role} y otra tabla \textit{UserRole}. La tabla \textit{UserRole} especifica el rol que tiene un usuario dentro del sistema; esto se pudo adaptar al modelo de datos diseñado para el servidor, utilizando esta tabla para especificar si un usuario es administrador o no.
+
+Todos los servicios web se crearon basándose en el estilo arquitectónico REST (ver capítulo~\ref{chap:Marco Teorico}). 
 
 Para permitir el acceso a la aplicación móvil, se creó un servicio web que permita hacer la autenticación del usuario. La aplicación envía al servidor un JSON con los datos del usuario (nombre de usuario y contraseña) por medio de una petición HTTP POST.
 
@@ -152,7 +156,7 @@ También se creó una aplicación web que permita aprobar o rechazar los reporte
 
 Se creó una funcionalidad para notificar a los supervisores vía correo electrónico cuando un nuevo reporte es recibido en el servidor. Asimismo, luego de que un supervisor toma la decisión de aprobar o rechazar un reporte, se notifica por correo electrónico al usuario que envió dicho reporte.
 
-Además de esto, la herramienta utilizada para el desarrollo del servidor trae consigo algunas funcionalidades por defectos que permiten iniciar sesión, agregar un usuario, editar un usuario y eliminar un usuario.
+Además de esto, la herramienta utilizada para el desarrollo del servidor trae consigo algunas funcionalidades por defecto (incluyendo las vistas necesarias) que permiten iniciar sesión, agregar un usuario, editar un usuario y eliminar un usuario. 
 
 El desarrollo del componente servidor se realizó con el IDE Eclipse. Se utilizó el \textit{framework} AppFuse, que integra a su vez otros \textit{frameworks} que facilitan el desarrollo web. En este caso, se trabajó en conjunto con Spring y Tapestry.
 
@@ -201,8 +205,8 @@ Por otro lado se implementó una vista que permite crear un nuevo gasto, con su 
 \begin{itemize}
 \item Se creó una vista para mostrar la lista de categorías a las que puede pertenecer un gasto.
 \item Se adaptó y reutilizó la vista existente para crear un gasto para permitir la creación de un ingreso.
-\item Se agregó la funcionalidad para tomar fotos relacionadas a un ingreso/gasto.
-\item Se agregó la funcionalidad para poder asociar un ingreso/gasto a una categoría existente.
+\item Se agregó una funcionalidad para tomar fotos relacionadas a un ingreso/gasto.
+\item Se agregó una funcionalidad para poder asociar un ingreso/gasto a una categoría existente.
 
 \end{itemize}
 
@@ -233,9 +237,9 @@ Se tenía como requerimiento guardar las cuatro categorías que se utilizaron m�
 
 \subsubsection{Resultados}
 \begin{itemize}
-\item Se creó la vista para mostrar una lista con los gastos y otra con los ingresos del mes actual.
-\item Se agregó la funcionalidad para ver los detalles de un ingreso/gasto ya existente, y poder editarlo.
-\item Se agregó la funcionalidad para eliminar ingresos/gastos
+\item Se creó una vista para mostrar una lista con los gastos y otra con los ingresos del mes actual.
+\item Se agregó una funcionalidad para ver los detalles de un ingreso/gasto ya existente, y poder editarlo.
+\item Se agregó una funcionalidad para eliminar ingresos/gastos
 \item Se creó una interfaz para usar una calculadora que permita ingresar el monto de un ingreso/gasto.
 \end{itemize}
 
@@ -265,12 +269,12 @@ Para la calculadora, se tenía que mostrar el símbolo decimal de acuerdo con el
 \begin{itemize}
 
 \item Se creó una vista para crear una nueva cuenta.
-\item Se implementó la funcionalidad para listar las cuentas del usuario.
-\item Se implementó la funcionalidad para cambiar de cuenta.
-\item Se implementó la funcionalidad para editar el nombre de una cuenta existente.
-\item Se implementó la funcionalidad para eliminar cuentas existentes.
-\item Se implementó la funcionalidad para cambiar el estado de una cuenta: activa o archivada.
-\item Se implementó la funcionalidad para ver una lista con los ingresos y gastos de una cuenta.
+\item Se implementó una funcionalidad para listar las cuentas del usuario.
+\item Se implementó una funcionalidad para cambiar de cuenta.
+\item Se implementó una funcionalidad para editar el nombre de una cuenta existente.
+\item Se implementó una funcionalidad para eliminar cuentas existentes.
+\item Se implementó una funcionalidad para cambiar el estado de una cuenta: activa o archivada.
+\item Se implementó una funcionalidad para ver una lista con los ingresos y gastos de una cuenta.
 
 \end{itemize}
 
@@ -300,12 +304,12 @@ Por último, se adapto la vista existente para mostrar la lista de ingresos/gast
 
 \subsubsection{Resultados}
 \begin{itemize}
-\item Se agregó la funcionalidad para ver las fotos de un ingreso/gasto.
-\item Se agregó la funcionalidad para borrar las fotos de un ingreso/gasto.
-\item Se agregó la funcionalidad para cambiar la ubicación en el dispositivo de las fotos tomadas de un ingreso/gasto.
-\item Se agregó la funcionalidad para crear una categoría.
-\item Se agregó la funcionalidad para eliminar una categoría existente.
-\item Se agregó la funcionalidad para editar una categoría existentes.
+\item Se agregó una funcionalidad para ver las fotos de un ingreso/gasto.
+\item Se agregó una funcionalidad para borrar las fotos de un ingreso/gasto.
+\item Se agregó una funcionalidad para cambiar la ubicación en el dispositivo de las fotos tomadas de un ingreso/gasto.
+\item Se agregó una funcionalidad para crear una categoría.
+\item Se agregó una funcionalidad para eliminar una categoría existente.
+\item Se agregó una funcionalidad para editar una categoría existentes.
 \end{itemize}
 
 \subsubsection{Actividades}
@@ -317,7 +321,7 @@ Por otra parte, se creo la vista de configuraciones de la aplicación, a través
 
 Se creó una interfaz donde se muestra la ubicación actual (carpeta) de las fotos. Además, se agregaron dos opciones para cambiar la ubicación en el dispositivo en la que se guardan los archivos de las fotos: memoria interna o memoria extraíble (ver apéndice~\ref{fig:interfazConfiguracion}). También fue necesario crear la lógica que se encarga de cambiar a la nueva ubicación las fotos tomadas anteriormente.
 
-La segunda parte del \textit{sprint} se dedicó al manejo de las categorías. 
+La segunda parte de la iteración se dedicó al manejo de las categorías. 
 
 Se creó la vista para agregar una nueva categoría, lo que implicó la creación de una interfaz de usuario con elementos que permiten ingresar el nombre de la categoría y un ícono (ver apéndice~\ref{fig:interfazCrearCategoria}). Las imágenes de los íconos a los cuales se puede asociar una categoría están guardadas por defecto dentro de la aplicación. Se creó un campo a través del cual se muestran los íconos que aún no han sido utilizados, y de los cuales se debe escoger uno. La consulta para agregar una nueva categoría a la base de datos fue creada en la iteración 2, como se mencionó anteriormente.
 
@@ -336,11 +340,11 @@ Por último, se agregó una funcionalidad para poder eliminar categorías. Para 
 
 \subsubsection{Resultados}
 \begin{itemize}
-\item Se implementó la funcionalidad para listar los ingresos/gastos de una cuenta en el rango de fecha ingresado por el usuario.
-\item Se implementó la funcionalidad para listar el balance total de las categorías de una cuenta en el rango de fecha ingresado por el usuario.
-\item Se creó la funcionalidad para compartir el reporte con la lista de gastos e ingresos, incluyendo las fotos, de la cuenta en el rango de fecha ingresado.
-\item Se creó la funcionalidad para compartir el reporte con la lista de gastos e ingresos, sin incluir las fotos, de la cuenta en el rango de fecha ingresado.
-\item Se creó la funcionalidad para compartir el reporte con el balance total de las categorías de la cuenta en el rango de fecha ingresado.
+\item Se implementó una funcionalidad para listar los ingresos/gastos de una cuenta en el rango de fecha ingresado por el usuario.
+\item Se implementó una funcionalidad para listar el balance total de las categorías de una cuenta en el rango de fecha ingresado por el usuario.
+\item Se creó una funcionalidad para compartir el reporte con la lista de gastos e ingresos, incluyendo las fotos, de la cuenta en el rango de fecha ingresado.
+\item Se creó una funcionalidad para compartir el reporte con la lista de gastos e ingresos, sin incluir las fotos, de la cuenta en el rango de fecha ingresado.
+\item Se creó una funcionalidad para compartir el reporte con el balance total de las categorías de la cuenta en el rango de fecha ingresado.
 \end{itemize}
 
 \subsubsection{Actividades}
@@ -370,8 +374,8 @@ Por último, se creó la funcionalidad para compartir este archivo PDF con otras
 \subsubsection{Resultados}
 \begin{itemize}
 \item Se diseñó e implementó el modelo de datos del servidor web.
-\item Se creó un servicio al cual la aplicación móvil se puede conectar para la autenticación de usuarios.
-\item Se creó un servicio a través del cual la aplicación móvil puede enviar reportes de gastos.
+\item Se creó un servicio web al cual la aplicación móvil se puede conectar para la autenticación de usuarios.
+\item Se creó un servicio web a través del cual la aplicación móvil puede enviar reportes de gastos.
 \item Se creó una aplicación web, a través de la cual se permite la creación de nuevos usuarios y el manejo de reportes (listar, aprobar y rechazar reportes recibidos).
 \end{itemize}
 
@@ -379,7 +383,7 @@ Por último, se creó la funcionalidad para compartir este archivo PDF con otras
 
 En esta iteración se creó el servidor web al cual la aplicación móvil puede enviar peticiones.
 
-En primer lugar, se creó el proyecto en AppFuse, con Tapestry como \textit{framework} para el desarrollo de la aplicación web. Utilizando Hibernate con MySQL, se crearon los POJO's y las tablas necesarias para implementar el modelo de datos mostrado en la figura 5.5.
+En primer lugar, se creó el proyecto en AppFuse, con Tapestry como \textit{framework} para el desarrollo de la aplicación web. Utilizando Hibernate con MySQL, se crearon los POJO's y las tablas necesarias para implementar el modelo de datos mostrado en la figura~\ref{fig:diagramaClasesServidor}. Como se mencionó anteriormente, AppFuse crea por defecto una base de datos y las tablas \textit{User}, \textit{Role} y \textit{UserRole}. La tabla \textit{UserRole} fue utilizada para especificar qué usuarios son administradores, por lo que únicamente fue necesario implementar la clase \textit{Report}.
 
 Luego, se utilizó Spring para crear el servicio web que permitiera la autenticación de un usuario. En él se recibe un nombre de usuario y una contraseña, y se verifica en la base de datos esta información. Fue necesario crear una clase DAO y otra \textit{Manager} (descritas en el capítulo~\ref{chap:Marco Teorico}) que permitan acceder a la base de datos para la verificación. A través de una librería de Java, se permitió exponer como servicio web el método creado en el \textit{Manager} para la autenticación.
 
