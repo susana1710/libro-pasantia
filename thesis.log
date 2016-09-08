@@ -1405,4 +1405,81 @@ Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@Sect
+\Hy@SectionHShift=\skip85
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 105.
+
+
+Package hyperref Warning: Option `backref' has already been used,
+(hyperref)                setting the option has no effect on input line 105.
+
+
+Package hyperref Warning: Option `pdftex' has already been used,
+(hyperref)                setting the option has no effect on input line 105.
+
+\glswrite=\write7
+\glo@main@file=\write8
+\openout8 = `thesis.glo'.
+
+Package glossaries Info: Writing glossary file thesis.glo on input line 126.
+\glo@acronym@file=\write9
+\openout9 = `thesis.acn'.
+
+Package glossaries Info: Writing glossary file thesis.acn on input line 126.
+(./apendices/glosario.tex)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/textpos/textpos.sty
+Package: textpos 2014/01/03 v1.7j
+
+Package: textpos 2014/01/03 1.7j, absolute positioning of text on the page
+\TP@textbox=\box72
+\TP@holdbox=\box73
+\TPHorizModule=\dimen269
+\TPVertModule=\dimen270
+\TP@margin=\dimen271
+\TP@absmargin=\dimen272
+Grid set 16 x 16 = 38.39343pt x 49.68562pt
+\TPboxrulesize=\dimen273
+\TP@ox=\dimen274
+\TP@oy=\dimen275
+\TP@tbargs=\toks64
+\TP@prevdepth=\dimen276
+TextBlockOrigin set to 0pt x 0pt
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+)
+(./thesis.aux
+LaTeX Info: Redefining \. on input line 28.
+LaTeX Info: Redefining \% on input line 28.
+
+
+LaTeX Warning: Label `sect:Patrones de arquitectura' multiply defined.
+
+)
+Runaway argument?
+{{5.14}{34}{Interfaz para mostrar reporte\\ de balance 
+./thesis.tex:150: File ended while scanning use of \@newl@bel.
+<inserted text> 
+                \par 
+l.150 \begin{document}
+                      
+? 
+./thesis.tex:150: Emergency stop.
+<inserted text> 
+                \par 
+l.150 \begin{document}
+                      
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 27972 strings out of 493014
+ 516035 string characters out of 6133351
+ 708318 words of memory out of 5000000
+ 30957 multiletter control sequences out of 15000+600000
+ 3938 words of font info for 15 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,0n,72p,1935b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
+./thesis.tex:150:  ==> Fatal error occurred, no output PDF file produced!
