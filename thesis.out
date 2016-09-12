@@ -57,4 +57,49 @@
 \BOOKMARK [3][-]{subsubsection.4.1.2.2}{Ejecuci\363n de la iteraci\363n \(Sprint execution\)}{subsection.4.1.2}% 57
 \BOOKMARK [3][-]{subsubsection.4.1.2.3}{Reuni\363n diaria \(Daily scrum\)}{subsection.4.1.2}% 58
 \BOOKMARK [3][-]{subsubsection.4.1.2.4}{Revisi\363n de la iteraci\363n \(Sprint review\)}{subsection.4.1.2}% 59
-\BOOKMARK [3][-]{subsubsection.4.1.2.5}{Re
+\BOOKMARK [3][-]{subsubsection.4.1.2.5}{Retrospectiva de la iteraci\363n \(Sprint retrospective\)}{subsection.4.1.2}% 60
+\BOOKMARK [2][-]{subsection.4.1.3}{Artefactos}{section.4.1}% 61
+\BOOKMARK [3][-]{subsubsection.4.1.3.1}{Documento de historias de usuario \(Product backlog\)}{subsection.4.1.3}% 62
+\BOOKMARK [3][-]{subsubsection.4.1.3.2}{Lista de tareas de la iteraci\363n \(Sprint backlog\)}{subsection.4.1.3}% 63
+\BOOKMARK [0][-]{chapter.5}{Desarrollo de la aplicaci\363n}{}% 64
+\BOOKMARK [1][-]{section.5.1}{Investigaci\363n}{chapter.5}% 65
+\BOOKMARK [1][-]{section.5.2}{An\341lisis y dise\361o de la soluci\363n}{chapter.5}% 66
+\BOOKMARK [2][-]{subsection.5.2.1}{An\341lisis del problema}{section.5.2}% 67
+\BOOKMARK [2][-]{subsection.5.2.2}{Dise\361o de la soluci\363n}{section.5.2}% 68
+\BOOKMARK [3][-]{subsubsection.5.2.2.1}{Arquitectura base}{subsection.5.2.2}% 69
+\BOOKMARK [3][-]{subsubsection.5.2.2.2}{Arquitectura de software}{subsection.5.2.2}% 70
+\BOOKMARK [3][-]{subsubsection.5.2.2.3}{Estructura de datos}{subsection.5.2.2}% 71
+\BOOKMARK [1][-]{section.5.3}{Desarrollo}{chapter.5}% 72
+\BOOKMARK [2][-]{subsection.5.3.1}{Iteraci\363n 1}{section.5.3}% 73
+\BOOKMARK [3][-]{subsubsection.5.3.1.1}{Objetivos}{subsection.5.3.1}% 74
+\BOOKMARK [3][-]{subsubsection.5.3.1.2}{Resultados}{subsection.5.3.1}% 75
+\BOOKMARK [2][-]{subsection.5.3.2}{Iteraci\363n 2}{section.5.3}% 76
+\BOOKMARK [3][-]{subsubsection.5.3.2.1}{Objetivos}{subsection.5.3.2}% 77
+\BOOKMARK [3][-]{subsubsection.5.3.2.2}{Resultados}{subsection.5.3.2}% 78
+\BOOKMARK [2][-]{subsection.5.3.3}{Iteraci\363n 3}{section.5.3}% 79
+\BOOKMARK [3][-]{subsubsection.5.3.3.1}{Objetivos}{subsection.5.3.3}% 80
+\BOOKMARK [3][-]{subsubsection.5.3.3.2}{Resultados}{subsection.5.3.3}% 81
+\BOOKMARK [2][-]{subsection.5.3.4}{Iteraci\363n 4}{section.5.3}% 82
+\BOOKMARK [3][-]{subsubsection.5.3.4.1}{Objetivos}{subsection.5.3.4}% 83
+\BOOKMARK [3][-]{subsubsection.5.3.4.2}{Resultados}{subsection.5.3.4}% 84
+\BOOKMARK [2][-]{subsection.5.3.5}{Iteraci\363n 5}{section.5.3}% 85
+\BOOKMARK [3][-]{subsubsection.5.3.5.1}{Objetivos}{subsection.5.3.5}% 86
+\BOOKMARK [3][-]{subsubsection.5.3.5.2}{Resultados}{subsection.5.3.5}% 87
+\BOOKMARK [2][-]{subsection.5.3.6}{Iteraci\363n 6}{section.5.3}% 88
+\BOOKMARK [3][-]{subsubsection.5.3.6.1}{Objetivos}{subsection.5.3.6}% 89
+\BOOKMARK [3][-]{subsubsection.5.3.6.2}{Resultados}{subsection.5.3.6}% 90
+\BOOKMARK [2][-]{subsection.5.3.7}{Iteraci\363n 7}{section.5.3}% 91
+\BOOKMARK [3][-]{subsubsection.5.3.7.1}{Objetivos}{subsection.5.3.7}% 92
+\BOOKMARK [3][-]{subsubsection.5.3.7.2}{Resultados}{subsection.5.3.7}% 93
+\BOOKMARK [2][-]{subsection.5.3.8}{Iteraci\363n 8}{section.5.3}% 94
+\BOOKMARK [3][-]{subsubsection.5.3.8.1}{Objetivos}{subsection.5.3.8}% 95
+\BOOKMARK [3][-]{subsubsection.5.3.8.2}{Resultados}{subsection.5.3.8}% 96
+\BOOKMARK [0][-]{chapter.6}{Conclusiones y Recomendaciones}{}% 97
+\BOOKMARK [0][-]{chapter*.23}{Bibliograf\355a}{}% 98
+\BOOKMARK [0][-]{appendix.Alph1}{Capturas de pantalla de la aplicaci\363n m\363vil}{}% 99
+\BOOKMARK [0][-]{appendix.Alph2}{Capturas de pantalla de la aplicaci\363n web}{}% 100
+\BOOKMARK [0][-]{appendix.Alph3}{Documento de Historias de Usuario \(Product Backlog\)}{}% 101
+\BOOKMARK [0][-]{appendix.Alph4}{Artefactos complementarios del sistema de creaci\363n y control de reportes}{}% 102
+\BOOKMARK [1][-]{section.Alph4.1}{Diagrama de componentes del sistema}{appendix.Alph4}% 103
+\BOOKMARK [1][-]{section.Alph4.2}{Diagramas de actividades, estados y secuencia}{appendix.Alph4}% 104
+\BOOKMARK [0][-]{appendix.Alph5}{Plan de pruebas}{}% 105

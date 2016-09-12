@@ -10,9 +10,9 @@ E.~Gamma, R.~Helm, R.~Johnson, and J.~Vlissides, {\em Dessign Patterns.
 \newblock Addison-Wesley, 1~ed.
 
 \bibitem{DSP1}
-E.~Freeman, E.~Freeman, K.~Sierra, and B.~Bates, {\em Head First: Design
-  Patterns}.
-\newblock O'Reilly, 1~ed., 2004.
+R.~Fielding, {\em Architectural Styles and the Design of Network-based Software
+  Architectures}.
+\newblock 2000.
 
 \bibitem{ACS0}
 D.~Garlan and M.~Shaw, {\em An introduction to Software Engineer}.
@@ -47,15 +47,20 @@ D.~Garlan and M.~Shaw, {\em An introduction to Software Engineer}.
 ``Http made really easy.'' \url{http://www.jmarshall.com/easy/http/#whatis},
   consultado el 15 de agosto de 2016.
 
+\bibitem{HTTP1}
+``Rfc1341(mime): 7 the multipart content type.''
+  \url{https://www.w3.org/Protocols/rfc1341/7_2_Multipart.html}, consultado el
+  2 de agosto de 2016.
+
 \bibitem{HTTP3}
 ``Http methods get vs post.''
   \url{http://www.w3schools.com/tags/ref_httpmethods.asp}, consultado el 15 de
   agosto de 2016.
 
-\bibitem{HTTP1}
-``Rfc1341(mime): 7 the multipart content type.''
-  \url{https://www.w3.org/Protocols/rfc1341/7_2_Multipart.html}, consultado el
-  2 de agosto de 2016.
+\bibitem{REST0}
+E.~Gamma, R.~Helm, R.~Johnson, and J.~Vlissides, {\em Architectural Styles and
+  the Design of Network-based Software Architectures}.
+\newblock Doctoral dissertation, University of California, Irvine, 2000.
 
 \bibitem{JSN0}
 ``Json.'' \url{http://www.json.org/}, consultado el 9 de agosto de 2016.
@@ -84,9 +89,19 @@ D.~Garlan and M.~Shaw, {\em An introduction to Software Engineer}.
   30 de julio de 2016.
 
 \bibitem{AND3}
-``Android architecture.''
-  \url{http://www.tutorialspoint.com/android/android_architecture.htm},
-  consultado el 16 de agosto de 2016.
+``Platform architecture | android developers.''
+  \url{https://developer.android.com/guide/platform/index.html}, consultado el
+  23 de agosto de 2016.
+
+\bibitem{AND6}
+``Activity | android developers.''
+  \url{https://developer.android.com/reference/android/app/Activity.html},
+  consultado el 23 de agosto de 2016.
+
+\bibitem{AND5}
+``Android interfaces and architecture | android open source project.''
+  \url{https://source.android.com/devices/}, consultado el 22 de agosto de
+  2016.
 
 \bibitem{JAV1}
 ``What is java? definition and meaning.''
@@ -94,7 +109,9 @@ D.~Garlan and M.~Shaw, {\em An introduction to Software Engineer}.
   26 de julio de 2016.
 
 \bibitem{AND2}
-``Android software development.'' \url{ }, consultado el 30 de julio de 2016.
+``Application fundamentals | android developers.''
+  \url{https://developer.android.com/guide/components/fundamentals.html},
+  consultado el 23 de agosto de 2016.
 
 \bibitem{SQL1}
 ``What is mysql?.''
@@ -123,7 +140,7 @@ D.~Garlan and M.~Shaw, {\em An introduction to Software Engineer}.
   \url{http://www.eclipse.org/home}, consultado el 30 de julio de 2016.
 
 \bibitem{GIT1}
-S.~Chacon and B.~Straub, {\em Pro Git: Everything you ned to know about Git}.
+S.~Chacon and B.~Straub, {\em Pro Git: Everything you need to know about Git}.
 \newblock Apress, 2~ed., 2014.
 
 \bibitem{APF1}
@@ -133,6 +150,9 @@ S.~Chacon and B.~Straub, {\em Pro Git: Everything you ned to know about Git}.
 \bibitem{HBR1}
 ``Hibernate orm.'' \url{http://hibernate.org/orm/}, consultado el 19 de agosto
   de 2016.
+
+\bibitem{SPRNG0}
+``Spring.'' \url{https://spring.io/}, consultado el 25 de agosto de 2016.
 
 \bibitem{ATP1}
 ``Apache tapestry home page.'' \url{http://tapestry.apache.org/index.html},
