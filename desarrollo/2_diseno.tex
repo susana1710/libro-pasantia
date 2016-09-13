@@ -1,14 +1,14 @@
 \section{Análisis y diseño de la solución} \label{sect:Diseno}
 
-En esta fase tuvo lugar dos etapas fundamentales para el desarrollo: análisis del problema y diseño de la solución.
+En esta fase tuvieron lugar dos etapas fundamentales para el desarrollo: análisis del problema y diseño de la solución.
 
-Para comprender mejor el problema presentado, se realizó una reunión con el dueño del producto (\textit{product owner}). En esta reunión se realizó el primer levantamiento y refinamiento de requerimientos. A partir de estos requerimientos, se diseñó una arquitectura base que diera solución al problema.
+Para comprender mejor el problema presentado, se realizó una reunión con el dueño del producto (\textit{product owner}). En esta reunión se realizó el primer levantamiento y refinamiento de requerimientos. A partir de estos requerimientos, se diseñó una arquitectura base que diera solución al problema (ver sección~\ref{section:Arquitectura base}).
 
 \subsection{Análisis del problema}
 
 Se necesita una aplicación móvil que permita a los trabajadores de la compañía registrar gastos personales que posteriormente serán reembolsados. El reporte de estos gastos debe ser enviado a un servidor web como un archivo con formato PDF. También se requiere una aplicación web que permita aprobar o rechazar los reportes enviados.
 
-La aplicación móvil debe permitir la creación de cuentas con diferentes monedas. Para cada una de estas cuentas, se pueden registrar gastos, a los cuales se puede asociar un monto, una fecha y una descripción. Además, se pueden tomar fotos de las facturas o recibos de dichos gastos.
+La aplicación móvil debe permitir la creación de cuentas con diferentes monedas. Las cuentas pueden tener dos estados: activas o archivadas. Para cada una de estas cuentas, se pueden registrar gastos, a los cuales se puede asociar un monto, una fecha y una descripción. Además, se pueden tomar fotos de las facturas o recibos de dichos gastos.
 
 Dado que la empresa realiza el reembolso de gastos en determinadas áreas, es necesario que estos gastos puedan asociarse a categorías que los identifiquen. Además, se debe permitir la creación de nuevas categorías en caso de que en algún momento la empresa decida incluir nuevos rubros.
 
@@ -16,13 +16,13 @@ También se quiere poder realizar consultas de los gastos registrados en un rang
 
 Por último, se quiere que los supervisores de la compañía puedan tener acceso a los reportes de gastos mensuales de los trabajadores. Los supervisores deben poder aprobar o rechazar dichos reportes. Además, el archivo PDF de cada reporte debe ser guardado en el servidor.
 
-Para especificar cada uno de estos requerimientos, así como su prioridad, se realizó una primera versión del Documento de Historias de Usuario (\textit{Product Backlog}). Éste fue modificándose a lo largo del desarrollo del proyecto. Para más información de la versión final del documento, ver apéndice~\ref{chap:Product Backlog}.
+Para especificar cada uno de estos requerimientos, así como su prioridad, se realizó una primera versión del Documento de Historias de Usuario (\textit{Product Backlog}). Éste fue modificándose a lo largo del desarrollo del proyecto (ver apéndice~\ref{chap:Product Backlog}).
 
-Para entender mejor las principales funcionalidades que debe tener el sistema, se realizaron algunos diagramas de estados y actividades, que se pueden revisar en el apéndice ~\ref{chap:Artefactos complementarios}.
+Para entender mejor las principales funcionalidades que debe tener el sistema, se realizaron algunos diagramas de estados y actividades, que se pueden revisar en el apéndice~\ref{chap:Artefactos complementarios}.
 
 \subsection{Diseño de la solución}
 
-\subsubsection{Arquitectura base}
+\subsubsection{Arquitectura base} \label{section:Arquitectura base}
 
 Dados los requerimientos anteriores, se diseñó una arquitectura base para solucionar el problema. Se dividió el sistema según sus componentes: servidor web, dispositivos móviles y cliente web. 
 
@@ -68,7 +68,7 @@ Por su parte, MVP es una derivación del patrón MVC, como se observa en la figu
 
 El modelo incluye tanto la base de datos como los POJO's, los cuales fueron utilizados para establecer una correspondencia entre objetos de la aplicación con registros de la base de datos. La vista está formada por las actividades (\textit{activities}) definidos en el capítulo~\ref{chap:Marco Tecnologico}, y las interfaces de usuario.
  
-En este caso, las acciones de usuario son recibidas por la vista. Luego, la vista se comunica con el presentador, que pide los datos al modelo. Al terminar de trabajo, el modelo notifica al presentador, y este último se encarga de modificar la vista a través de una interfaz.
+En este caso, las acciones de usuario son recibidas por la vista. Luego, la vista se comunica con el presentador, que pide los datos al modelo. Al terminar su trabajo, el modelo notifica al presentador, y este último se encarga de modificar la vista a través de una interfaz.
 
 
 
@@ -109,10 +109,10 @@ A continuación se describirán cada una de estas clases, así como sus atributo
 
 \begin{itemize}
 	\item \textbf{\textit{User}}: representa los usuarios registrados en el sistema. Almacena información del nombre, apellido, nombre de usuario y contraseña. 
-	\item \textbf(\textit{Administrator}): representa un usuario administrador del sistema. Los usuarios administradores son los únicos que pueden aprobar o rechazar un reporte.
-	\item \textbf(\textit{Default}): representa cualquier usuario del sistema que no sea administrador.
+	\item \textbf{\textit{Administrator}}: representa un usuario administrador del sistema. Los usuarios administradores son los únicos que pueden aprobar o rechazar un reporte.
+	\item \textbf{\textit{Default}}: representa cualquier usuario del sistema que no sea administrador.
 	\item \textbf{\textit{Report}}: representa un reporte enviado por un usuario, que contiene información de la suma total de \textit{entries} pertenecientes a ciertas categorías. Almacena información de su \textit{id}, monto total de entries de cuatro categorías: comida (\textit{food}), transporte (\textit{transportation}), salud (\textit{health}) y deporte (\textit{fitness}). Además, también almacena la fecha en que se envió el reporte, su estado (aprobado, rechazado o sin revisar) y la fecha en que fue revisado. Por último, tiene la ruta del archivo PDF correspondiente al reporte.
-	\item \textbf{Role}: representa el rol que tiene un usuario dentro del sistema, el cual indica 	qué privilegios tendrá. Almacena información de su \textit{id}, nombre y descripción.
+	\item \textbf{Role}: representa el rol que tiene un usuario dentro del sistema, el cual indica sus privilegios. Almacena información de su \textit{id}, nombre y descripción.
 \end{itemize} 
 
 Estos diagramas sirvieron como base para la creación del modelo tanto del servidor como de la aplicación móvil. 

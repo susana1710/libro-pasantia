@@ -2,15 +2,19 @@
 
 En este proyecto de pasantía, realizado para la empresa Digitalica Group C.A, se diseñó y desarrolló un prototipo funcional de una aplicación móvil para el registro de gastos e ingresos, así como un servidor web que se comunica con ella.  La aplicación fue desarrollada para el sistema operativo Android. Con ella, se permite registrar ingresos y gastos, a los cuales se puede asociar un monto, fecha, descripción, fotos y categoría. El servidor web permite hacer la autenticación de usuarios, así como el envío de reportes compuestos por un conjunto de gastos.
 
+Se estudiaron conceptos que facilitaron el desarrollo de la solución propuesta al problema planteado. Utilizando los patrones de arquitectura MVC en el servidor y MVP en la aplicación móvil, se logró hacer una separación clara de las interfaces de usuario de los modelos de datos y controladores/presentadores. Con ello, se permite introducir cambios en algún componente sin afectar los demás.
+
+En cuanto a los requerimientos establecidos para la aplicación móvil y el servidor, fueron implementados en su totalidad.
+
 El uso de Scrum como marco de trabajo permitió desarrollar el proyecto progresivamente, y tener una parte del producto funcional luego de cada iteración. Esto fue de gran ventaja porque le facilitaba al dueño del producto (\textit{Product Owner}) evaluar constantemente las funcionalidades, verificar que cumplieran con las necesidades del producto y modificarlas de ser necesario. Además, las reuniones diarias (\textit{Daily Scrum}) le permitía a todo el equipo de trabajo estar informado de la evolución del producto, además de ser una oportunidad en que el equipo de desarrollo (en este caso integrado únicamente por el pasante) pudiera solventar cualquier duda o impedimento que surgiera.
 
-A partir de la experiencia que se obtuvo durante el desarrollo del proyecto, complementado con el aprendizaje adquirido a lo largo de toda la carrera universitaria, se identificaron distintas funcionalidades que pudieran ser añadidas o mejoradas.
+A partir del aprendizaje adquirido a lo largo de toda la carrera universitaria, así como la experiencia que se obtuvo durante el desarrollo del proyecto, se identificaron distintas funcionalidades que pudieran ser añadidas o mejoradas.
 
 Actualmente, toda la información es guardada en el dispositivo móvil. El servidor tiene únicamente información de los reportes que son enviados por la aplicación móvil, lo cual es un subconjunto  muy limitado de todos los datos presentes en el dispositivo. Se recomienda sincronizar toda esta información con el servidor, para permitir el inicio de sesión de varios usuarios en un mismo dispositivo. De esta manera, al iniciar sesión, se piden al servidor los datos del usuario correspondiente. De lo contrario, la información presente en el dispositivo será siempre la misma. 
 
-Por otra parte, una de las funcionalidades que tiene la aplicación es poder tomar fotos para cada ingreso/gasto. Estas fotos se hacen a través de la aplicación de cámara instalada por defecto en el dispositivo móvil, lo que implica que se está delegando en una aplicación externa la elección de la resolución en que se tomarán las fotos. Esto significa que la foto pudiera estar tomándose con una calidad muy baja o que, por el contrario, la resolución sea demasiado alta y para guardarla en el dispositivo se estaría gastando más espacio del necesario. Por esta razón, se recomienda a la empresa capturar las fotos internamente, sin hacer uso de otra aplicación. Para lograr esto, Android ofrece un API que permite construir un \textit{activity} para el uso personalizado de la cámara \cite{AND4}.
+Por otra parte, una de las funcionalidades que tiene la aplicación es tomar fotos para cada ingreso/gasto. Estas fotos se capturan a través de la aplicación de cámara instalada por defecto en el dispositivo móvil, lo que implica que se está delegando en una aplicación externa la elección de la resolución en que se tomarán las fotos. Esto significa que la foto pudiera estar tomándose con una calidad muy baja o que, por el contrario, la resolución sea demasiado alta y para guardarla en el dispositivo se estaría gastando más espacio del necesario. Por esta razón, se recomienda a la empresa capturar las fotos internamente, sin hacer uso de otra aplicación. Para lograr esto, Android ofrece un API que permite construir un \textit{activity} para el uso personalizado de la cámara \cite{AND4}.
 
-Para la creación del archivo PDF se presentaron diferentes dificultades. En primer lugar, las librerías existentes en Java para generar archivos con dicha extension hacen uso de otras librerías, las cuales no son soportadas directamente en la plataforma de Android. Por esta razón, en un principio se decidió utilizar una adaptación de una librería de Java para poder ser utilizada en Android. Sin embargo, no se encontró documentación suficiente que permitiera entender su uso. Por esta razón, se decidió utilizar una librería nativa de Android que facilita la creación de archivos PDF, pero que sólo está disponible para versiones de Android a partir de la 4.4. Esta decisión se apoyó en el hecho de que aproximadamente el 80\% de los usuarios de Android utilizan una versión mayor o igual a 4.4, como se puede ver en el cuadro~\ref{table:androidUsageTable} \cite{USG1}. 
+Para la creación del archivo PDF se presentaron diferentes dificultades. Las librerías existentes en Java para generar archivos con dicha extension hacen uso de otras librerías, que no están soportadas directamente en la plataforma de Android. Por esta razón, se decidió utilizar una librería nativa de Android que facilita la creación de archivos PDF, pero que sólo está disponible para versiones de Android a partir de la 4.4. Esta decisión se apoyó en el hecho de que más del 80\% de los usuarios de Android utilizan una versión mayor o igual a 4.4, como se puede ver en el cuadro~\ref{table:androidUsageTable} (datos obtenidos del sitio web oficial para desarrolladores de Android) \cite{USG1}. 
 
 \begin{table}[ht]
 \centering
@@ -20,25 +24,24 @@ Para la creación del archivo PDF se presentaron diferentes dificultades. En pri
 \hline 
 2.2 & Froyo & 8 & 0.1\% \\ 
 \hline 
-2.3.x & Gingergread & 15 & 1.7\% \\
+2.3.x & Gingergread & 15 & 1.5\% \\
  
 \hline 
-4.0.3 & Ice Cream & 15 & 1.6\% \\ 
-4.0.4 & Sandwich & & \\
+4.0.x & Ice Cream Sandwich & 15 & 1.4\% \\ 
 \hline 
-4.1.x & Jelly Bean & 16 & 6.0\% \\
-4.2.x & & 17 & 8.3\% \\
-4.3 & & 18 & 2.4\% \\
+4.1.x & Jelly Bean & 16 & 5.6\% \\
+4.2.x & & 17 & 7.7\% \\
+4.3 & & 18 & 2.3\% \\
 \hline 
-4.4 & KitKat & 19 & 29.2\% \\ 
+4.4 & KitKat & 19 & 27.7\% \\ 
 \hline 
-5.0 & Lollipop & 21 & 14.1\% \\
-5.1 & & 22 & 21.4\% \\ 
+5.0 & Lollipop & 21 & 13.1\% \\
+5.1 & & 22 & 21.9\% \\ 
 \hline 
-6.0 & Marshmallow & 23 & 15.2\% \\ 
+6.0 & Marshmallow & 23 & 18.7\% \\ 
 \hline
 \end{tabular} 
-\caption{Porcentaje de uso de las versiones de Android}
+\caption{Porcentaje de uso de las versiones de Android. No se muestran versiones con menos de 0.1\% de distribución}
 \label{table:androidUsageTable}
 \end{table}
 
