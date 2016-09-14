@@ -123,10 +123,10 @@
 }
 
 % Crea el glosario
-\makeglossaries
+%\makeglossaries
 
 % Incluye el glosario
-\input{apendices/glosario.tex}
+%\input{apendices/glosario.tex}
 
 % Para crear la hoja escaneada de las firmas
 \usepackage[absolute]{textpos}
@@ -270,12 +270,15 @@
 
 
 % Crea el glosario 
-%\makeglossaries
-\printglossaries
+%\printglossaries
 
 % Establece las citas y bibliografia
 \bibliographystyle{ieeetr}
 \bibliography{myrefs}
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Glosario}
+\input{apendices/glosario.tex}
 
 % Crea el apendice
 \appendix
@@ -288,6 +291,5 @@
 \input{apendices/casos_prueba.tex}
 \includepdf[pages=-]{apendices/pruebas.pdf}
 
-\printglossary
 
 \end{document}
