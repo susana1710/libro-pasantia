@@ -2,7 +2,7 @@
 
 En esta fase tuvieron lugar dos etapas fundamentales para el desarrollo: análisis del problema y diseño de la solución.
 
-Para comprender mejor el problema presentado, se realizó una reunión con el dueño del producto (\textit{product owner}). En esta reunión se realizó el primer levantamiento y refinamiento de requerimientos. A partir de estos requerimientos, se diseñó una arquitectura base que permite solucionar el problema (ver sección~\ref{section:Arquitectura base}).
+Para comprender mejor el problema presentado, se realizó una reunión con el dueño del producto (\textit{product owner}). En esta reunión se realizó el primer levantamiento de requerimientos. A partir de estos requerimientos, se diseñó una arquitectura base que permite solucionar el problema (ver sección~\ref{section:Arquitectura base}).
 
 \subsection{Análisis del problema}
 
@@ -42,6 +42,8 @@ Por medio de la aplicación móvil se podrá hacer el registro de los gastos per
 Toda la información relacionada a los gastos (fecha, monto, categorías, fotos) será creada y guardada localmente en una base de datos en cada dispositivo móvil. Cada dispositivo podrá enviar al servidor reportes de gastos en forma de archivos PDF. La comunicación entre la aplicación móvil y el servidor se hace por medio de servicios web que presta este último.
 
 Estos reportes deberán ser guardados en la base de datos del servidor. Además, a través de una aplicación web, se podrá aprobar o rechazar los reportes recibidos.
+
+La aplicación móvil es la que se encarga de crear y mantener los datos correspondientes a los reportes, mientras que el servidor contiene información únicamente de los reportes que son recibidos a través del servicio web correspondiente. Por esta razón, el cliente (en este caso, el usuario de la aplicación móvil) se encargará de mantener la consistencia entre los datos que se encuentran en el dispositivo móvil, y los que tiene el servidor. En este sentido, si en algún momento se hacen cambios locales (es decir, dentro del dispositivo móvil) a información que esté contenida dentro de un reporte que se haya enviado al servidor, es responsabilidad del usuario de la aplicación enviar nuevamente el reporte, de manera que los datos que tiene el dispositivo sean consistentes con los que tenga el servidor.
 
 \subsubsection{Arquitectura de \textit{software}}
 
@@ -93,8 +95,8 @@ A continuación se describirán cada una de estas clases, así como sus atributo
 
 \begin{itemize}
 	\item \textbf{\textit{Account}}: representa un conjunto de registros de movimientos de dinero. Almacena información de su nombre, estado (activa o archivada) y la moneda en la que estarán los montos de los registros dentro de la cuenta.
-	\item \textbf{\textit{Entry}}: representa un registro dentro de una cuenta, y puede ser de dos tipos: ingreso o gasto. Almacena información de su \textit{id}, monto, fecha y descripción.
-	\item \textbf{\textit{Category}}: representa las áreas a las que puede pertenecer un \textit{entry}. Puede ser de dos tipos: categoría de ingresos o categoría de gastos. Almacena información de su nombre y un ícono que la representa.
+	\item \textbf{\textit{Entry}}: representa un registro dentro de una cuenta, y puede ser de dos tipos: ingreso (\textit{Income}) o gasto (\textit{Expense}). Almacena información de su \textit{id}, monto, fecha y descripción.
+	\item \textbf{\textit{Category}}: representa las áreas a las que puede pertenecer un \textit{entry}. Puede ser de dos tipos: categoría de ingresos (\textit{IncomeCategory}) o categoría de gastos (\textit{ExpenseCategory}). Almacena información de su nombre y un ícono que la representa.
 	\item \textbf{\textit{Photo}}: representa las fotos asociadas a un \textit{entry}. Almacena información de su \textit{id}, y la ruta del archivo dentro del dispositivo móvil.
 \end{itemize}
 
