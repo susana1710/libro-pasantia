@@ -160,7 +160,7 @@ Además de esto, la herramienta utilizada para el desarrollo del servidor trae c
 
 El desarrollo del componente servidor se realizó con el IDE Eclipse. Se utilizó el \textit{framework} AppFuse, que unifica a su vez otros \textit{frameworks} que facilitan el desarrollo web. En este caso, se trabajó en conjunto con Spring y Tapestry.
 
-Se utilizó Spring para la implementación de los servicios web que permiten recibir datos desde la aplicación móvil. Estos servicios se implementaron utilizando el patrón \textit{Facade}, mediante una clase \textit{Manager}, la cual accede a los POJO's mediante un DAO (para más información, ver capítulo~\ref{chap:Marco Teorico}). Además, Spring también cuenta con el \textit{framework} Hibernate para la persistencia de los datos, utilizando como manejador de base de datos MySQL.
+Se utilizó Spring para la implementación de los servicios web que permiten recibir datos desde la aplicación móvil. Estos servicios se implementaron utilizando el patrón Fachada o \textit{Facade} (ver capítulo~\ref{Marco Teorico}); se implementó una clase \textit{Manager} para exponer los servicios web, que actúa como una fachada para los DAO. Además, AppFuse también cuenta con el \textit{framework} Hibernate para la persistencia de los datos, utilizando como manejador de base de datos MySQL.
 
 Para crear la aplicación web, se utilizó Tapestry. Con Jetty se proveen los servicios, mediante el protocolo HTTP, que permiten la comunicación con la aplicación web y la aplicación  móvil.
 

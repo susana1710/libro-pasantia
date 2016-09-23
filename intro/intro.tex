@@ -2,20 +2,23 @@
 %\pdfbookmark[0]{Introducción}{introduccion} % Sets a PDF bookmark for the dedication
 
 \vspace{5 mm}
-En la actualidad, muchas empresas le ofrecen a sus empleados el beneficio de realizar gastos personales y posteriormente iniciar un proceso de reembolso. Este proceso puede tomar mucho tiempo y puede resultar difícil si se hace manualmente, pues implica que el trabajador debe guardar todas las facturas o recibos de los gastos implicados. También dificulta la organización de estos registros por parte de la empresa, porque al mantener todos los recibos en físico, estos se pueden extraviar. 
+En la actualidad, empresas como Digitalica Group, C.A., le ofrecen a sus empleados el beneficio de realizar cierta cantidad de gastos mensuales y posteriormente iniciar un proceso de reembolso. Este proceso puede tomar mucho tiempo y puede resultar difícil si se hace manualmente, pues implica que el trabajador debe guardar todas las facturas durante el mes; al finalizar el mes debe entregar las facturas a la empresa y esta última inicia un proceso de verificación para culminar con el proceso de reembolso. Igualmente, para que la empresa pueda mantener un control y registro de todos los gastos que han sido reembolsados, debe guardar todos los meses las facturas de todos sus trabajadores, para lo que es necesario contar con un espacio físico que lo permita. 
 
-Dada la necesidad de agilizar el proceso de reembolso, la empresa Digitalica Group, C.A. decidió crear una aplicación móvil\footnote{Para efectos de simplicidad, se utilizará a lo largo del libro el término \textit{aplicación móvil} para hacer referencia a aplicaciones que se ejecutan en dispositivos móviles.} que permita a sus trabajadores mantener un registro de gastos dentro de un dispositivo móvil.
+Dado que Digitalica Group, C.A. es una empresa dedicada al desarrollo de \textit{software}, decidió automatizar todo el proceso de reembolso, mediante la creación de una aplicación móvil\footnote{Para efectos de simplicidad, se utilizará a lo largo del libro el término \textit{aplicación móvil} para hacer referencia a aplicaciones que se ejecutan en dispositivos móviles.} y un servidor que emulen cada uno de los pasos descritos anteriormente. De esta manera, con la aplicación los trabajadores pueden mantener un registro de gastos dentro de un dispositivo móvil, y con el servidor web se mantiene organizada y centralizada la información de estos gastos.
+%Dada la necesidad de agilizar el proceso de reembolso, la empresa Digitalica Group, C.A. decidió crear una aplicación móvil\footnote{Para efectos de simplicidad, se utilizará a lo largo del libro el término \textit{aplicación móvil} para hacer referencia a aplicaciones que se ejecutan en dispositivos móviles.} que permita a sus trabajadores mantener un registro de gastos dentro de un dispositivo móvil.
 
-Actualmente existen aplicaciones móviles que sirven para llevar un registro de gastos. Sin embargo, estas aplicaciones no satisfacen las necesidades de Digitalica Group, C.A. por diversas razones:
+%Actualmente existen aplicaciones móviles que sirven para llevar un registro de gastos. Sin embargo, estas aplicaciones no satisfacen las necesidades de Digitalica Group, C.A. por diversas razones:
 
-\begin{itemize}
-\item La empresa realiza el reembolso de gastos en ciertos rubros y para esto se debe especificar a qué categoría pertenece cada gasto. Las aplicaciones ya existentes pueden limitar el proceso al no contar con la posibilidad de poder asociar un gasto a un rubro cubierto por la empresa.
-\item Se desea crear archivos de reportes de los gastos registrados por los trabajadores. Se desea que estos reportes puedan ser personalizados y presenten una estructura particular.
-\item Se desea mantener centralizada toda la información referente a estos reportes, de manera que se pueda acceder a la misma de una manera más fácil.
-\item Si el proceso de reembolso sufre alguna modificación, se desea contar con una aplicación que tome en cuenta los nuevos cambios.
-\end{itemize}
+%\begin{itemize}
 
-Por las razones expuestas anteriormente, la empresa decidió crear una aplicación móvil que permita llevar un registro de gastos. Esta aplicación debe contar con las siguientes funcionalidades:
+%\item La empresa realiza el reembolso de gastos en ciertos rubros y para esto se debe especificar a qué categoría pertenece cada gasto. Las aplicaciones ya existentes pueden limitar el proceso al no contar con la posibilidad de poder asociar un gasto a un rubro cubierto por la empresa.
+
+%\item Se desea crear archivos de reportes de los gastos registrados por los trabajadores. Se desea que estos reportes puedan ser personalizados y presenten una estructura particular.
+%\item Se desea mantener centralizada toda la información referente a estos reportes, de manera que se pueda acceder a la misma de una manera más fácil.
+%\item Si el proceso de reembolso sufre alguna modificación, se desea contar con una aplicación que tome en cuenta los nuevos cambios.
+%\end{itemize}
+
+Esta aplicación debe contar con las siguientes funcionalidades:
 
 \begin{itemize}
 \item Registrar gastos con su fecha, monto, una breve descripción, fotos y categoría a la que pertenecen.

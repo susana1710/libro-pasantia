@@ -6,17 +6,14 @@ Para comprender mejor el problema presentado, se realizó una reunión con el du
 
 \subsection{Análisis del problema}
 
-Se necesita una aplicación móvil que permita a los trabajadores de la compañía registrar gastos personales que posteriormente serán reembolsados. Adicionalmente, se desea permitir el registro de ingresos. 
-
-Con la aplicación móvil, se pueden generar reportes de gastos, que deben ser enviados a un servidor web como un archivo con formato PDF. También se requiere una aplicación web que permita aprobar o rechazar los reportes enviados.
-
-La aplicación móvil debe permitir la creación de cuentas con diferentes monedas. Para cada una de estas cuentas, se pueden registrar ingresos y gastos, a los cuales se puede asociar un monto, una fecha y una descripción. Además, se pueden tomar fotos para cada ingreso y gasto. Un ingreso/gasto puede tener un máximo de tres fotos.
-
-Dado que la empresa realiza el reembolso de gastos en determinadas áreas, es necesario que estos gastos puedan asociarse a categorías que los identifiquen. Igualmente, los ingresos pueden pertenecer a alguna categoría. Además, se debe permitir la creación de nuevas categorías en caso de que en algún momento la empresa decida incluir nuevos rubros.
+Se necesita una aplicación móvil que permita a los trabajadores de la compañía registrar gastos personales que posteriormente serán reembolsados. Para estos gastos, se requiere mantener información de su fecha, monto y descripción. También se requiere que a través de la aplicación, los trabajadores puedan capturar fotos de las facturas de los gastos; un gasto puede tener un máximo de tres fotos.
+Dado que la empresa realiza el reembolso de gastos en determinadas áreas, es necesario que estos gastos puedan asociarse a categorías que los identifiquen
 
 También se quiere realizar consultas de los gastos registrados en un rango de fechas y generar un reporte de dichos gastos. Este reporte debe ser enviado a un servidor como un archivo de formato PDF.
 
-Por último, se quiere que los supervisores de la compañía puedan revisar los reportes de gastos mensuales de los trabajadores. Los supervisores deben poder aprobar o rechazar dichos reportes. Además, el archivo PDF de cada reporte debe ser guardado en el servidor.
+Se quiere que los supervisores de la compañía puedan revisar los reportes de gastos mensuales de los trabajadores. Los supervisores deben poder aprobar o rechazar dichos reportes. Además, el archivo PDF de cada reporte debe ser guardado en el servidor.
+
+Por otra parte, se quiere que la aplicación, además de solucionar el problema de la empresa, pueda ser utilizada en un futuro por el público en general. Por esta razón, se quiere que, además de gastos, se puedan registrar ingresos; los requerimientos para los ingresos son los mencionados anteriormente para gastos. Adicionalmente, la aplicación móvil debe permitir la creación de cuentas con diferentes monedas. Estas cuentas sirven de mecanismo para agrupar ingresos y gastos según desee el usuario. También se requiere que el usuario pueda manejar sus propias categorías, es decir, que pueda crear nuevas categorías y editar las ya existentes.
 
 Para especificar cada uno de estos requerimientos, así como su prioridad, se realizó una primera versión del Documento de Historias de Usuario (\textit{Product Backlog}). Éste fue modificándose a lo largo del desarrollo del proyecto (ver apéndice~\ref{chap:Product Backlog}).
 
@@ -83,7 +80,7 @@ Para dar lugar al desarrollo del sistema, fue necesario diseñar un modelo de da
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[scale=0.67,type=png,ext=.png,read=.png]{imagenes/class_diagram_mobile}
+  \includegraphics[scale=0.52,type=png,ext=.png,read=.png]{imagenes/class_diagram_mobile}
   \caption{Diagrama de clases de la aplicación móvil}
   \label{fig:diagramaClasesMovil}
 \end{figure}
@@ -94,6 +91,7 @@ En la figura~\ref{fig:diagramaClasesMovil} se puede observar el diagrama de clas
 A continuación se describirán cada una de estas clases, así como sus atributos:
 
 \begin{itemize}
+  \item \textbf{\textit{User}}: representa un usuario de la aplicación móvil. Almacena información de su nombre de usuario, nombre, apellido y correo electrónico.
 	\item \textbf{\textit{Account}}: representa un conjunto de registros de movimientos de dinero. Almacena información de su nombre, estado (activa o archivada) y la moneda en la que estarán los montos de los registros dentro de la cuenta.
 	\item \textbf{\textit{Entry}}: representa un registro dentro de una cuenta, y puede ser de dos tipos: ingreso (\textit{Income}) o gasto (\textit{Expense}). Almacena información de su \textit{id}, monto, fecha y descripción.
 	\item \textbf{\textit{Category}}: representa las áreas a las que puede pertenecer un \textit{entry}. Puede ser de dos tipos: categoría de ingresos (\textit{IncomeCategory}) o categoría de gastos (\textit{ExpenseCategory}). Almacena información de su nombre y un ícono que la representa.
