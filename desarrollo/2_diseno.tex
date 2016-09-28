@@ -47,9 +47,6 @@ La aplicación móvil es la que se encarga de crear y mantener los datos corresp
 Para los componentes mencionados anteriormente, se definieron los patrones de arquitectura de \textit{software} sobre los cuales se desarrollaron. Para el servidor se utilizó el patrón Modelo Vista Controlador (MVC) y para la aplicación móvil el Modelo Vista Presentador (MVP).
 
 Tal como se explicó en el capítulo~\ref{chap:Marco Teorico}, MVC se usa para aislar la lógica de negocio de la interfaz de usuario. En este patrón, el modelo representa todos los datos de la aplicación y las reglas de negocio que se usan para manejar dichos datos. 
-
-Como se muestra en la figura~\ref{fig:mvc}, el modelo incluye tanto los POJO's, DAO's como la base de datos. La vista corresponde a todo lo que son los elementos de la interfaz de usuario. En este caso, está compuesta por las vistas de la aplicación web. El controlador se encarga de manejar las acciones del usuario, y se comunica con el modelo o con la vista según sea necesario. El \textit{manager} definido en el capítulo~\ref{chap:Marco Teorico} actúa como controlador.
-
 \begin{figure}[ht]
   \centering
   \includegraphics[scale=0.56,type=png,ext=.png,read=.png]{imagenes/mvc}
@@ -57,6 +54,7 @@ Como se muestra en la figura~\ref{fig:mvc}, el modelo incluye tanto los POJO's, 
   \label{fig:mvc}
 \end{figure}
 
+Como se muestra en la figura~\ref{fig:mvc}, el modelo incluye la base de datos, los POJO's que permiten darle un nivel de abstracción a las tablas de la base de datos, los DAO's que proveen una interfaz sencilla para realizar operaciones sobre la base de datos, y los managers que contienen la lógica de negocio y actúan como fachada para los DAO's (implementando el patrón de diseño \textit{Facade} mencionado en el capítulo~\ref{chap:Marco Teorico} ). La vista corresponde a todo lo que son los elementos de la interfaz de usuario. En este caso, está compuesta por las interfaces de la aplicación web. El controlador es la capa que recibe las acciones del usuario y se encarga de manejarlas, comunicándose con el modelo o con la vista según sea necesario.
 
 Por su parte, MVP es una derivación del patrón MVC, como se observa en la figura~\ref{fig:mvp}.
 
@@ -67,11 +65,9 @@ Por su parte, MVP es una derivación del patrón MVC, como se observa en la figu
   \label{fig:mvp}
 \end{figure}
 
-El modelo incluye tanto la base de datos como los POJO's, los cuales fueron utilizados para establecer una correspondencia entre objetos de la aplicación con registros de la base de datos. La vista está formada por las actividades (\textit{activities}) definidos en el capítulo~\ref{chap:Marco Tecnologico}, y las interfaces de usuario.
+El modelo incluye tanto la base de datos como los POJO's, los cuales fueron utilizados para establecer una correspondencia entre objetos de la aplicación con tablas de la base de datos. La vista está formada por las actividades (\textit{activities}) definidos en el capítulo~\ref{chap:Marco Tecnologico}, y las interfaces de usuario.
  
-En este caso, las acciones de usuario son recibidas por la vista. Luego, la vista se comunica con el presentador, que pide los datos al modelo. Al terminar su trabajo, el modelo notifica al presentador, y este último se encarga de modificar la vista a través de una interfaz.
-
-
+En este caso, las acciones de usuario son recibidas por la vista. Luego, la vista se comunica con el presentador, que pide los datos al modelo. Al obtener los datos necesarios, el presentador invoca a la vista a través de una interfaz para que ésta actualice su contenido.
 
 \subsubsection{Estructura de datos}
 
