@@ -6,14 +6,14 @@ Para comprender mejor el problema presentado, se realizó una reunión con el du
 
 \subsection{Análisis del problema}
 
-Se necesita una aplicación móvil que permita a los trabajadores de la compañía registrar gastos personales que posteriormente serán reembolsados. Para estos gastos, se requiere mantener información de su fecha, monto y descripción. También se requiere que a través de la aplicación, los trabajadores puedan capturar fotos de las facturas de los gastos; un gasto puede tener un máximo de tres fotos.
+Se necesita una aplicación móvil que permita a los empleados de la compañía registrar gastos personales que posteriormente serán reembolsados. Para estos gastos, se requiere mantener información de su fecha, monto y descripción. También se requiere que a través de la aplicación, los empleados puedan capturar fotos de las facturas de los gastos; un gasto puede tener un máximo de tres fotos.
 Dado que la empresa realiza el reembolso de gastos en determinadas áreas, es necesario que estos gastos puedan asociarse a categorías que los identifiquen
 
 También se quiere realizar consultas de los gastos registrados en un rango de fechas y generar un reporte de dichos gastos. Este reporte debe ser enviado a un servidor como un archivo de formato PDF.
 
 Se quiere que los supervisores de la compañía puedan revisar los reportes de gastos mensuales de los trabajadores. Los supervisores deben poder aprobar o rechazar dichos reportes. Además, el archivo PDF de cada reporte debe ser guardado en el servidor.
 
-Por otra parte, se quiere que la aplicación, además de solucionar el problema de la empresa, pueda ser utilizada en un futuro por el público en general. Por esta razón, se quiere que, además de gastos, se puedan registrar ingresos; los requerimientos para los ingresos son los mencionados anteriormente para gastos. Adicionalmente, la aplicación móvil debe permitir la creación de cuentas con diferentes monedas. Estas cuentas sirven de mecanismo para agrupar ingresos y gastos según desee el usuario. También se requiere que el usuario pueda manejar sus propias categorías, es decir, que pueda crear nuevas categorías y editar las ya existentes.
+Por otra parte, se quiere que la aplicación, además de solucionar el problema de la empresa, pueda ser utilizada en un futuro por el público en general. Por esta razón, se quiere que, además de gastos, se puedan registrar ingresos; los requerimientos para los ingresos son los mencionados anteriormente para gastos. Adicionalmente, la aplicación móvil debe permitir la creación de múltiples cuentas con diferentes monedas. Estas cuentas sirven de mecanismo para agrupar ingresos y gastos según desee el usuario. También se requiere que el usuario pueda manejar sus propias categorías, es decir, que pueda crear nuevas categorías y editar las ya existentes.
 
 Para especificar cada uno de estos requerimientos, así como su prioridad, se realizó una primera versión del Documento de Historias de Usuario (\textit{Product Backlog}). Éste fue modificándose a lo largo del desarrollo del proyecto (ver apéndice~\ref{chap:Product Backlog}).
 
@@ -21,9 +21,9 @@ Para entender mejor las principales funcionalidades que debe tener el sistema, s
 
 \subsection{Diseño de la solución}
 
-\subsubsection{Arquitectura base} \label{section:Arquitectura base}
+\subsubsection{Arquitectura de la solución} \label{section:Arquitectura base}
 
-Dados los requerimientos anteriores, se diseñó una arquitectura base para solucionar el problema. Se dividió el sistema según sus componentes: servidor web, dispositivos móviles y cliente web. 
+Dados los requerimientos anteriores, se diseñó una arquitectura base para solucionar el problema. Se dividió el sistema según sus componentes: servidor web, cliente móvil y cliente web. 
 
 \begin{figure}[ht]
   \centering
@@ -88,13 +88,13 @@ A continuación se describirán cada una de estas clases, así como sus atributo
 
 \begin{itemize}
   \item \textbf{\textit{User}}: representa un usuario de la aplicación móvil. Almacena información de su nombre de usuario, nombre, apellido y correo electrónico.
-	\item \textbf{\textit{Account}}: representa un conjunto de registros de movimientos de dinero. Almacena información de su nombre, estado (activa o archivada) y la moneda en la que estarán los montos de los registros dentro de la cuenta.
+	\item \textbf{\textit{Account}}: representa un conjunto de gastos e ingresos. Almacena información de su nombre, estado (activa o archivada) y la moneda en la que estarán los montos de los gastos e ingresos.
 	\item \textbf{\textit{Entry}}: representa un registro dentro de una cuenta, y puede ser de dos tipos: ingreso (\textit{Income}) o gasto (\textit{Expense}). Almacena información de su \textit{id}, monto, fecha y descripción.
 	\item \textbf{\textit{Category}}: representa las áreas a las que puede pertenecer un \textit{entry}. Puede ser de dos tipos: categoría de ingresos (\textit{IncomeCategory}) o categoría de gastos (\textit{ExpenseCategory}). Almacena información de su nombre y un ícono que la representa.
 	\item \textbf{\textit{Photo}}: representa las fotos asociadas a un \textit{entry}. Almacena información de su \textit{id}, y la ruta del archivo dentro del dispositivo móvil.
 \end{itemize}
 
-Por otra parte, en la figura~\ref{fig:diagramaClasesServidor} se puede observar la estructura de datos del servidor. En este caso, se tienen cuatro clases: \textit{User} (que puede ser \textit{Default} o \textit{Administrator}) y \textit{Report}.
+Por otra parte, en la figura~\ref{fig:diagramaClasesServidor} se puede observar la estructura de datos del servidor. En este caso, se tienen tres clases: \textit{User} (que puede ser \textit{Administrator}) y \textit{Report}.
 
 \begin{figure}[ht]
   \centering
@@ -108,7 +108,6 @@ A continuación se describirán cada una de estas clases, así como sus atributo
 \begin{itemize}
 	\item \textbf{\textit{User}}: representa los usuarios registrados en el sistema. Almacena información del nombre, apellido, nombre de usuario y contraseña. 
 	\item \textbf{\textit{Administrator}}: representa un usuario administrador del sistema. Los usuarios administradores son los únicos que pueden aprobar o rechazar un reporte.
-	\item \textbf{\textit{Default}}: representa cualquier usuario del sistema que no sea administrador.
 	\item \textbf{\textit{Report}}: representa un reporte enviado por un usuario, que contiene información de la suma total de \textit{entries} pertenecientes a ciertas categorías. Almacena información de su \textit{id}, monto total de entries de cuatro categorías: comida (\textit{food}), transporte (\textit{transportation}), salud (\textit{health}) y deporte (\textit{fitness}). Además, también almacena la fecha en que se envió el reporte, su estado (aprobado, rechazado o sin revisar) y la fecha en que fue revisado. Por último, tiene la ruta del archivo PDF correspondiente al reporte.
 \end{itemize} 
 

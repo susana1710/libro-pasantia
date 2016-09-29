@@ -1,10 +1,10 @@
 \section{Desarrollo} \label{sect:desarrollo}
 
-Durante esta fase se implementó progresivamente un prototipo funcional de la aplicación móvil y el servidor web, para dar solución al problema de registro y control de gastos. 
+Durante esta fase se implementó progresivamente la versión alfa de una aplicación móvil y servidor web, para dar solución al problema de registro y control de gastos. 
 
 Para cumplir con los requerimientos del componente móvil, se creó una aplicación para el sistema operativo Android, y se trabajó con el IDE Android Studio. 
 
-El desarrollo de la aplicación implicó la creación de múltiples vistas (tanto interfaces de usuario como la lógica para manejar acciones de usuario), y de diversas consultas a la base de datos, muchas de las cuales realizaban modificaciones a la misma. Para un mayor detalle de las interfaces de usuario creadas, revisar apéndice~\ref{chap: Screenshots mobile}.
+El desarrollo de la aplicación implicó la creación de múltiples vistas (tanto interfaces de usuario como la lógica para manejar acciones de usuario), y de diversas consultas a la base de datos, muchas de las cuales realizan modificaciones a la misma. Para un mayor detalle de las interfaces de usuario creadas, revisar apéndice~\ref{chap: Screenshots mobile}.
 
 En primer lugar, se creó la vista principal de la aplicación, donde se muestra el total de ingresos, el total de gastos y el balance general (ver figura~\ref{fig:interfazDashboard}).
 
@@ -112,11 +112,11 @@ Además, se creó una vista para listar las cuentas creadas y guardadas en el di
 \end{minipage}
 \end{figure}
 
-Como se explicó en la sección anterior, es necesario guardar toda esta información en la base de datos local de cada dispositivo. Para ello, se utilizó la librería SQLite.
-
 Además, también se crearon dos vistas para reportes de gastos: una para reportes de balance general, y otra para reporte de gastos e ingresos agrupados por categorías (ver figuras~\ref{fig:interfazBalanceReport} y~\ref{fig:interfazCategoriesReport}).
 
 La vista de reporte de balance general muestra una lista de gastos e ingresos filtrados por fecha. La vista de reporte por categorías muestra una lista de categorías con la suma total de los gastos e ingresos de dichas categorías, filtradas por fecha.
+
+Como se explicó en la sección anterior, es necesario guardar toda esta información en la base de datos local de cada dispositivo. Para ello, se utilizó la librería SQLite.
 
 Para mantener la lógica separada de la interfaz gráfica, se utilizó el patrón de arquitectura MVP o Modelo Vista Presentador, descrito en el capítulo~\ref{chap:Marco Teorico}. De esta manera, toda acción en la vista que requiera realizar operaciones sobre la base de datos, se implementa por medio de una capa intermedia, conocida como presentador. Dado que el presentador es el que se comunica con el modelo para modificarlo, puede existir la necesidad de realizar estas operaciones en un hilo diferente al principal (que se encarga de actualizar la vista). Por esta razón, para la creación de las clases que actúan como presentadores, se utilizó el patrón de diseño \textit{Singleton} (ver capítulo~\ref{chap:Marco Teorico}). Con esto, se asegura la existencia de una sola instancia de cada presentador. 
 
@@ -133,9 +133,9 @@ Todos los servicios web se crearon basándose en el estilo arquitectónico REST 
 
 Para permitir el acceso a la aplicación móvil, se creó un servicio web que permita hacer la autenticación del usuario. La aplicación envía al servidor un JSON con los datos del usuario (nombre de usuario y contraseña) por medio de una petición HTTP POST.
 
-Se creó un servicio web que recibe un archivo PDF cuyo contenido es un reporte de gastos e ingresos. Además del archivo, recibe un JSON que contiene la suma de gastos por cada categoría de interés para la empresa, el mes y el año del reporte. Estos datos se enviaron por medio de una petición HTTP Post Multipart, compuesta por un archivo y un JSON. Para la conversión de objetos de Java a JSON, y viceversa, se utilizó la librería GSON tanto en el servidor como en la aplicación móvil. Para persistir esta información, se utilizó Hibernate y MySQL como manejador de base de datos.
+Se creó un servicio web que recibe un archivo PDF cuyo contenido es un reporte de gastos e ingresos. Además del archivo, recibe un JSON que contiene la suma de gastos por cada categoría de interés para la empresa, el mes y el año del reporte. Estos datos se enviaron por medio de una petición HTTP POST con Content-Type Multipart, cuyo cuerpo está compuesto por un archivo y un JSON. Para la conversión de objetos de Java a JSON, y viceversa, se utilizó la librería GSON tanto en el servidor como en la aplicación móvil. Para persistir esta información, se utilizó Hibernate y MySQL como manejador de base de datos.
 
-También se creó una aplicación web que permite aprobar o rechazar los reportes enviados al servidor, así como ver los reportes recibidos y ya revisados (ver figuras~\ref{fig:interfazListarReportesPendientes} y~\ref{fig:interfazListarReportesRevisados}). 
+También se desarrolló una aplicación web que permite aprobar o rechazar los reportes enviados al servidor, así como ver los reportes recibidos y ya revisados (ver figuras~\ref{fig:interfazListarReportesPendientes} y~\ref{fig:interfazListarReportesRevisados}). 
 
 \begin{figure}[ht]
   \centering
@@ -156,7 +156,7 @@ También se creó una aplicación web que permite aprobar o rechazar los reporte
 
 Se creó una funcionalidad para notificar a los supervisores vía correo electrónico cuando un nuevo reporte es recibido en el servidor; este correo electrónico incluye el archivo PDF del reporte. Asimismo, cuando un supervisor toma la decisión de aprobar o rechazar un reporte, se notifica por correo electrónico al usuario que envió dicho reporte.
 
-Además de esto, la herramienta utilizada para el desarrollo del servidor trae consigo algunas funcionalidades por defecto (incluyendo los servicios y las vistas web necesarios) que permiten iniciar sesión, agregar un usuario, editar un usuario y eliminar un usuario. 
+Además de esto, la herramienta utilizada para el desarrollo del servidor trae consigo algunas funcionalidades por defecto (incluyendo las vistas web necesarias) que permiten iniciar sesión, agregar un usuario, editar un usuario y eliminar un usuario. 
 
 El desarrollo del componente servidor se realizó con el IDE Eclipse. Se utilizó el \textit{framework} AppFuse, que unifica a su vez otros \textit{frameworks} que facilitan el desarrollo web. En este caso, se trabajó en conjunto con Spring y Tapestry.
 
