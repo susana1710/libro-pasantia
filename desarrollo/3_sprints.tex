@@ -1,6 +1,6 @@
 \section{Desarrollo} \label{sect:desarrollo}
 
-Durante esta fase se implementó progresivamente la versión alfa de una aplicación móvil y servidor web, para dar solución al problema de registro y control de gastos. 
+Durante esta fase se implementó progresivamente la versión alfa de una aplicación móvil y servidor web, para dar solución al problema decontrol y reportes de gastos. 
 
 Para cumplir con los requerimientos del componente móvil, se creó una aplicación para el sistema operativo Android, y se trabajó con el IDE Android Studio. 
 
@@ -26,7 +26,7 @@ En primer lugar, se creó la vista principal de la aplicación, donde se muestra
 \end{minipage}
 \end{figure}
 
-Se implementó una vista para crear y editar gastos (ver figura~\ref{fig:interfazCrearEntry}). Para estos gastos, se debe guardar su monto, fecha, descripción, fotos de recibos y categoría a la que pertenecen. Posteriormente, se extendió la funcionalidad de creación de gastos para permitir también el manejo de ingresos. 
+Se implementó una vista para crear y editar gastos (ver figura~\ref{fig:interfazCrearEntry}). Para estos gastos, se puede guardar su monto, fecha, descripción, fotos de recibos y categoría a la que pertenecen. Posteriormente, se extendió la funcionalidad de creación de gastos para permitir también el manejo de ingresos. 
 
 Para mostrar los gastos e ingresos guardados, se creó una vista para listarlos (ver figuras~\ref{fig:interfazListarExpenses} y~\ref{fig:interfazListarIncomes}). En las listas se muestran la descripción/categoría a la que pertenece cada entrada, su monto y su fecha. A través de cada lista, se permite ver los detalles de cada gasto/ingreso, editarlos y eliminarlos. Además, también se permite filtrar las listas por palabras claves. 
 
@@ -71,7 +71,7 @@ También se crearon vistas para el manejo de categorías. Se creó una vista par
 \end{minipage}
 \end{figure}
 
-Posteriormente, se implementaron funcionalidades que permiten el manejo de cuentas de ingresos/gastos. Por esta razón, también se creó una funcionalidad para agregar nuevas cuentas, y poder crear nuevos gastos e ingresos dentro de dichas cuentas. Estas cuentas pueden ser de dos tipos: activas o archivadas; la navegación entre cuentas se hace únicamente para las cuentas activas. 
+Posteriormente, se implementaron funcionalidades que permiten el manejo de cuentas de ingresos/gastos. Por esta razón, también se creó una funcionalidad para agregar nuevas cuentas, y poder crear nuevos gastos e ingresos dentro de dichas cuentas. Estas cuentas pueden ser de dos tipos: activas o archivadas. Las cuentas archivadas son aquéllas que el usuario creó, pero que ya no desea guardar más información dentro de ellas.
 
 Además, se creó una vista para listar las cuentas creadas y guardadas en el dispositivo (ver figuras~\ref{fig:interfazListarActiveAccounts} y~\ref{fig:interfazListarArchivedAccounts}). A partir de esta vista, se puede editar, eliminar o cambiar el estado de las cuentas (activa o archivada).
 
@@ -114,7 +114,7 @@ Además, se creó una vista para listar las cuentas creadas y guardadas en el di
 
 Además, también se crearon dos vistas para reportes de gastos: una para reportes de balance general, y otra para reporte de gastos e ingresos agrupados por categorías (ver figuras~\ref{fig:interfazBalanceReport} y~\ref{fig:interfazCategoriesReport}).
 
-La vista de reporte de balance general muestra una lista de gastos e ingresos filtrados por fecha. La vista de reporte por categorías muestra una lista de categorías con la suma total de los gastos e ingresos de dichas categorías, filtradas por fecha.
+La vista de reporte de balance general muestra una lista de gastos e ingresos filtrados por fecha. La vista de reporte por categorías muestra una lista con la suma total de los gastos e ingresos agrupados por categorías y filtrados por fecha.
 
 Como se explicó en la sección anterior, es necesario guardar toda esta información en la base de datos local de cada dispositivo. Para ello, se utilizó la librería SQLite.
 
@@ -133,7 +133,7 @@ Todos los servicios web se crearon basándose en el estilo arquitectónico REST 
 
 Para permitir el acceso a la aplicación móvil, se creó un servicio web que permita hacer la autenticación del usuario. La aplicación envía al servidor un JSON con los datos del usuario (nombre de usuario y contraseña) por medio de una petición HTTP POST.
 
-Se creó un servicio web que recibe un archivo PDF cuyo contenido es un reporte de gastos e ingresos. Además del archivo, recibe un JSON que contiene la suma de gastos por cada categoría de interés para la empresa, el mes y el año del reporte. Estos datos se enviaron por medio de una petición HTTP POST con Content-Type Multipart, cuyo cuerpo está compuesto por un archivo y un JSON. Para la conversión de objetos de Java a JSON, y viceversa, se utilizó la librería GSON tanto en el servidor como en la aplicación móvil. Para persistir esta información, se utilizó Hibernate y MySQL como manejador de base de datos.
+Se creó un servicio web que recibe un archivo PDF cuyo contenido es un reporte de gastos e ingresos. Además del archivo, recibe un JSON que contiene la suma de gastos por cada categoría de interés para la empresa, el mes y el año del reporte. El servicio web es utilizado por la aplicación móvil para enviar los datos de los reportes de gastos de los usuarios. Estos datos se envían por medio de una petición HTTP POST con Content-Type Multipart, cuyo cuerpo está compuesto por uel archivo PDF y el JSON mencionados. Para la conversión de objetos de Java a JSON, y viceversa, se utilizó la librería GSON tanto en el servidor como en la aplicación móvil. Para persistir esta información, se utilizó Hibernate y MySQL como manejador de base de datos.
 
 También se desarrolló una aplicación web que permite aprobar o rechazar los reportes enviados al servidor, así como ver los reportes recibidos y ya revisados (ver figuras~\ref{fig:interfazListarReportesPendientes} y~\ref{fig:interfazListarReportesRevisados}). 
 
@@ -160,7 +160,7 @@ Además de esto, la herramienta utilizada para el desarrollo del servidor trae c
 
 El desarrollo del componente servidor se realizó con el IDE Eclipse. Se utilizó el \textit{framework} AppFuse, que unifica a su vez otros \textit{frameworks} que facilitan el desarrollo web. En este caso, se trabajó en conjunto con Spring y Tapestry.
 
-Se utilizó Spring para la implementación de los servicios web que permiten recibir datos desde la aplicación móvil. Estos servicios se implementaron utilizando el patrón Fachada o \textit{Facade} (ver capítulo~\ref{chap:Marco Teorico}); se implementó una clase \textit{Manager} para exponer los servicios web, que actúa como una fachada para los DAO. Además, AppFuse también cuenta con el \textit{framework} Hibernate para la persistencia de los datos, utilizando como manejador de base de datos MySQL.
+Se utilizó Spring para la implementación de los servicios web que permiten recibir datos desde la aplicación móvil. Estos servicios se implementaron utilizando el patrón Fachada o \textit{Facade} (ver capítulo~\ref{chap:Marco Teorico}); se creó una clase \textit{Manager} para exponer los servicios web, que actúa como una fachada para los DAO. Además, AppFuse también cuenta con el \textit{framework} Hibernate para la persistencia de los datos, utilizando como manejador de base de datos MySQL.
 
 Para crear la aplicación web, se utilizó Tapestry. Con Jetty se proveen los servicios, mediante el protocolo HTTP, que permiten la comunicación con la aplicación web y la aplicación  móvil.
 
@@ -248,7 +248,7 @@ Se tenía como requerimiento guardar las cuatro categorías que se utilizaron m�
 
 Para este último requerimiento fue necesario crear un teclado virtual personalizado, pues el teclado numérico del dispositivo no incluye los operadores matemáticos básicos. Para esto se creó una interfaz en la que se especificó la disposición de las teclas de la calculadora (ver figura~\ref{fig:interfazCalculadora}). También se tuvo que manejar el uso de las teclas: dentro de la vista, se creó la lógica para detectar qué tecla fue presionada y realizar una acción en base a esto. Para realizar los cálculos, se utilizó una librería que evalúa fórmulas dada una cadena de caracteres. En este caso, la cadena de caracteres representa las teclas presionadas.
 
-Para la calculadora, se tiene que mostrar el símbolo decimal de acuerdo con el país para el cual está configurado el teléfono, ya que en algunos países se usa la coma (,) como separador y en otros el punto (.). Por esta razón, se debe obtener el país de configuración del teléfono y, en base a eso, decidir qué símbolo decimal mostrar.
+Para la calculadora, se tiene que mostrar el símbolo decimal de acuerdo con el país para el cual está configurado el teléfono, ya que en algunos países se usa la coma (,) como separador y en otros el punto (.). Por esta razón, se crearon los métodos necesrios con los cuales se puede obtener el país de configuración del teléfono y, en base a eso, mostrar el símbolo decimal adecuado.
 
 \end{itemize}
 %
@@ -391,7 +391,7 @@ Se tenía como requerimiento que el usuario pueda escoger generar un archivo con
 \item Se creó el proyecto en AppFuse, con Tapestry como \textit{framework} para el desarrollo de la aplicación web. Se crearon los POJO's y, utilizando Hibernate con MySQL, se crearon las tablas necesarias para implementar el modelo de datos mostrado en la figura~\ref{fig:diagramaClasesServidor}. Como se mencionó anteriormente, AppFuse crea por defecto una base de datos y las tablas \textit{User}, \textit{Role} y \textit{UserRole}. La tabla \textit{UserRole} fue utilizada para especificar qué usuarios son administradores, por lo que únicamente fue necesario implementar la clase \textit{Report} del modelo de datos del servidor.
 \item Se creó un servicio web al cual la aplicación móvil se puede conectar para la autenticación de usuarios. Se utilizó Spring para crear el servicio, el cual recibe un archivo JSON con el nombre de usuario y una contraseña, y verifica en la base de datos del servidor esta información. Posteriormente, envía una respuesta a la aplicación indicando si las credenciales son válidas o no. Fue necesario crear una clase DAO y otra \textit{Manager} (descritas en el capítulo~\ref{chap:Marco Teorico}) que permiten acceder a la base de datos para la verificación. A través de una librería de Java, se permitió exponer como servicio web el método creado en el \textit{Manager} para la autenticación.
 También se implementó en la aplicación móvil una funcionalidad que permite iniciar sesión en el dispositivo. Para esto fue necesario crear una vista con una interfaz de usuario con campos para ingresar el nombre y la contraseña (ver figura~\ref{fig:interfazLoginMobile}). Se crearon los métodos necesarios para enviar un archivo JSON con el nombre de usuario y la contraseña al servicio web para la autenticación. Se utilizó la librería Retrofit (ver capítulo~\ref{chap:Marco Tecnologico}) para hacer la conexión mediante el protocolo HTTP, utilizando una petición POST.
-\item Se creó un servicio web a través del cual se reciben archivos PDF de reportes de gastos, lo que permite que la aplicación móvil pueda enviar al servidor reportes de gastos. Los archivos de estos reportes son guardados dentro del servidor, y dentro de la base de datos se guarda la ubicación de los mismos. Al igual que con la autenticación de usuario, fue necesario crear un DAO y un \textit{Manager} que permiten guardar en la base de datos los reportes recibidos. Es necesario enviar tanto el archivo PDF con la información de los gastos, como un resumen de los totales por las categorías de interés para la empresa. Por esta razón, la comunicación entre la aplicación móvil y el servidor para el envío de reportes se hizo a través de una petición HTTP POST Multipart, que contiene el archivo PDF y un JSON con el resumen mencionado anteriormente.
+\item Se creó un servicio web a través del cual se reciben archivos PDF de reportes de gastos, lo que permite que la aplicación móvil pueda enviar al servidor reportes de gastos. Los archivos de estos reportes son guardados dentro del servidor, y dentro de la base de datos se guarda la ubicación de los mismos. Al igual que con la autenticación de usuario, fue necesario crear un DAO y un \textit{Manager} que permiten guardar en la base de datos los reportes recibidos. Es necesario enviar tanto el archivo PDF con la información de los gastos, como un resumen de los totales por las categorías de interés para la empresa. Por esta razón, la comunicación entre la aplicación móvil y el servidor para el envío de reportes se hizo a través de una petición HTTP POST con Content-Type Multipart; el cuerpo de la petición contiene el archivo PDF y un JSON con el resumen mencionado anteriormente.
 
 \item Se creó una aplicación web a través de la cual se permite listar, aprobar y rechazar reportes recibidos por el servidor. Mediante la aplicación web, los supervisores pueden hacer una consulta a la base de datos del servidor para obtener los reportes que han sido enviados. Además, a través de la misma, también se permite aprobar y rechazar reportes; esto quiere decir que utilizando la aplicación web, un supervisor puede realizar consultas para modificar el estado (aprobado o rechazado) de un reporte. Para esto, se creó una vista y un controlador que permitan el manejo de las acciones de usuario. 
 
