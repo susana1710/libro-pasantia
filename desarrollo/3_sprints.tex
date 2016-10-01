@@ -342,15 +342,15 @@ Se creó una interfaz donde se muestra la ubicación actual (carpeta) de las fot
 \subsection{Iteración 6}
 \subsubsection{Objetivos}
 \begin{itemize}
-\item Mostrar un reporte con la lista de ingresos/gastos asociados a una cuenta, en un rango de fecha dado.
-\item Mostrar un reporte con el balance total por categorías asociadas a una cuenta, en un rango de fecha dado.
+\item Mostrar un reporte con la lista de ingresos/gastos asociados a una cuenta, en un rango de fechas dado.
+\item Mostrar un reporte con el balance total por categorías asociadas a una cuenta, en un rango de fechas dado.
 \item Permitir el envío de los reportes en un archivo PDF a otras personas.
 
 \end{itemize}
 
 \subsubsection{Resultados}
 \begin{itemize}
-\item Se implementó una funcionalidad que permite al usuario crear dos tipos de reportes: reporte de balance general y reporte por categoría. El reporte de balance general incluye la lista de todos los ingresos/gastos dentro del rango de fechas establecido. El reporte por categorías incluye únicamente el monto total de todos los ingresos/gastos (es decir, la suma de ingresos y gastos) separados por categorías, en el rango de fechas escogido. Esta funcionalidad permite al usuario realizar consultas a la base de datos para obtener los ingresos/gastos de una cuenta en un rango de fecha determinado, y otra lista con el balance total de cada categoría de una cuenta en dicho rango.
+\item Se implementó una funcionalidad que permite al usuario crear dos tipos de reportes: reporte de balance general y reporte por categoría. El reporte de balance general incluye la lista de todos los ingresos/gastos dentro del rango de fechas establecido. El reporte por categorías incluye únicamente el monto total de todos los ingresos/gastos (es decir, la suma de ingresos y gastos) separados por categorías, en el rango de fechas escogido. Esta funcionalidad permite al usuario realizar consultas a la base de datos para obtener los ingresos/gastos de una cuenta en un rango de fechas determinado, y otra lista con el balance total de cada categoría de una cuenta en dicho rango.
 
 Se creó una única vista para mostrar el reporte de balance general y el reporte por categorías. Esto implicó la creación de una interfaz para mostrar la lista de ingresos/gastos o de categorías, según sea el caso. Se agregó además un elemento que permite cambiar de un reporte a otro. Se creó la lógica necesaria para poder identificar qué tipo de reporte se debe mostrar (ver figuras~\ref{fig:interfazBalanceReport} y~\ref{fig:interfazCategoriesReport}).
 %\item Se implementó una funcionalidad para listar el balance total de las categorías de una cuenta en el rango de fecha ingresado por el usuario.
