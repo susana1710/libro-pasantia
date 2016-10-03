@@ -7,7 +7,7 @@ Para comprender mejor el problema presentado, se realizó una reunión con el du
 \subsection{Análisis del problema}
 
 Se necesita una aplicación móvil que permita a los empleados de la compañía registrar gastos personales que posteriormente serán reembolsados. Para estos gastos, se requiere mantener información de su fecha, monto y descripción. También se requiere que a través de la aplicación, los empleados puedan capturar fotos de las facturas de los gastos; un gasto puede tener un máximo de tres fotos.
-Dado que la empresa realiza el reembolso de gastos en determinadas áreas, es necesario que estos gastos puedan asociarse a categorías que los identifiquen
+Dado que la empresa realiza el reembolso de gastos en determinadas áreas, es necesario que estos gastos puedan asociarse a categorías que los identifiquen.
 
 También se quiere realizar consultas de los gastos registrados en un rango de fechas y generar un reporte de dichos gastos. Este reporte debe ser enviado a un servidor como un archivo de formato PDF.
 
@@ -108,7 +108,7 @@ A continuación se describirán cada una de estas clases, así como sus atributo
 \begin{itemize}
 	\item \textbf{\textit{User}}: representa los usuarios registrados en el sistema. Almacena información del nombre, apellido, nombre de usuario y contraseña. 
 	\item \textbf{\textit{Administrator}}: representa un usuario administrador del sistema. Los usuarios administradores son los únicos que pueden aprobar o rechazar un reporte.
-	\item \textbf{\textit{Report}}: representa un reporte enviado por un usuario, que contiene información de la suma total de \textit{entries} pertenecientes a ciertas categorías. Almacena información de su \textit{id}, monto total de entries de cuatro categorías: comida (\textit{food}), transporte (\textit{transportation}), salud (\textit{health}) y deporte (\textit{fitness}). Además, también almacena la fecha en que se envió el reporte, su estado (aprobado, rechazado o sin revisar) y la fecha en que fue revisado. Por último, tiene la ruta del archivo PDF correspondiente al reporte.
+	\item \textbf{\textit{Report}}: representa un reporte enviado por un usuario, que contiene información de la suma total de \textit{entries} pertenecientes a ciertas categorías. Almacena información de su \textit{id}, monto total de \textit{entries} de cuatro categorías: comida (\textit{food}), transporte (\textit{transportation}), salud (\textit{health}) y deporte (\textit{fitness}). Además, también almacena la fecha en que se envió el reporte, su estado (aprobado, rechazado o sin revisar) y la fecha en que fue revisado. Por último, tiene la ruta del archivo PDF correspondiente al reporte.
 \end{itemize} 
 
 Estos diagramas sirvieron como base para la creación del modelo tanto del servidor como de la aplicación móvil. 
